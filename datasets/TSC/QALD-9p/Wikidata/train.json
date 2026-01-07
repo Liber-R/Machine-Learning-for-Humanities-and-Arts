@@ -1,0 +1,1486 @@
+[
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:instance of wd:board game . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:board game wdt:instance of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Skype wdt:developer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:developer wd:Skype . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:place of birth wd:Heraklion . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Heraklion wdt:place of birth ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Area 51 wdt:located in the administrative territorial entity ?var1 . ?var1 wdt:located in the administrative territorial entity ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:located in the administrative territorial entity wd:Area 51 . ?var1 wdt:located in the administrative territorial entity ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:New York City wdt:head of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of government wd:New York City . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Abraham Lincoln wdt:place of death ?var0 } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of death wd:Abraham Lincoln } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Air China wdt:airline hub ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:airline hub wd:Air China . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:director wd:William Shatner ; wdt:cast member wd:William Shatner   . ?var1 wdt:cast member ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:director wd:William Shatner ; wdt:cast member wd:William Shatner   . ?var0 wdt:cast member ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Philippines wdt:official language ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:official language wd:Philippines . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:film . ?var0 wdt:instance of ?var1 ; wdt:country of origin wd:Denmark . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film wdt:subclass of* ?var1 . ?var0 wdt:instance of ?var1 ; wdt:country of origin wd:Denmark . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:film . ?var0 wdt:instance of ?var1 ; wdt:cast member wd:Brad Pitt ; wdt:director wd:Guy Ritchie . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film wdt:subclass of* ?var1 . ?var0 wdt:instance of ?var1 ; wdt:cast member wd:Brad Pitt ; wdt:director wd:Guy Ritchie . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Bruce Lee wdt:child ?var1 . ?var1 wdt:child ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:child wd:Bruce Lee . ?var1 wdt:child ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:weapon . wd:Uzi wdt:designed by ?var2 . ?var0 wdt:subclass of ?var1 ; wdt:designed by ?var2 . FILTER (?var0 != wd:Uzi) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:weapon wdt:subclass of* ?var1 . wd:Uzi wdt:designed by ?var2 . ?var0 wdt:subclass of ?var1 ; wdt:designed by ?var2 . FILTER (?var0 != wd:Uzi) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Universal Pictures wdt:owned by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:owned by wd:Universal Pictures . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:U.S. state ; wdt:area ?var1 ; wdt:population ?var2 . BIND((?var2\/?var1) AS ?var4) . } ORDER BY DESC(?var4) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var2 wdt:instance of wd:U.S. state ; wdt:area ?var1 ; wdt:population ?var0 . BIND((?var2\/?var1) AS ?var4) . } ORDER BY DESC(?var4) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:monarch ; wdt:spouse ?var1 . ?var1 wdt:country of citizenship wd:Germany . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:monarch ; wdt:spouse ?var1 . wd:Germany wdt:country of citizenship ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:organization . ?var0 wdt:instance of ?var1 . ?var0 wdt:inception ?var2 . FILTER CONTAINS(STR(?var2), \"1950\") }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:organization wdt:subclass of* ?var1 . ?var0 wdt:instance of ?var1 . ?var0 wdt:inception ?var2 . FILTER CONTAINS(STR(?var2), \"1950\") }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Captain America wdt:creator ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:creator wd:Captain America . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Apollo 14 wdt:crew member ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:crew member wd:Apollo 14 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Pillars of the Earth wdt:author ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:The Pillars of the Earth . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:U.S. state ; wdt:area ?var1 ; wdt:population ?var2 . BIND((?var2\/?var1) AS ?var4) . } ORDER BY DESC(?var4) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:U.S. state ; wdt:area ?var0 ; wdt:population ?var2 . BIND((?var2\/?var1) AS ?var4) . } ORDER BY DESC(?var4) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:start point wd:Baikonur Cosmodrome }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Baikonur Cosmodrome wdt:start point ?var0 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:conductor ; wdt:instrument wd:trumpet . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:conductor wdt:occupation ?var0 ; wdt:instrument wd:trumpet . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Utah wdt:located in time zone ?var1 . ?var0 wdt:instance of wd:U.S. state ; wdt:located in time zone ?var1 . FILTER(?var0 != wd:Utah) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Utah wdt:located in time zone ?var1 . ?var1 wdt:instance of wd:U.S. state ; wdt:located in time zone ?var0 . FILTER(?var0 != wd:Utah) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Ingrid Bergman wdt:child ?var1 . ?var1 wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Ingrid Bergman wdt:child ?var1 . ?var0 wdt:spouse ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:instance of wd:museum . ?var0 wdt:location wd:London . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:museum wdt:instance of ?var0 . ?var0 wdt:location wd:London . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:member of sports team wd:Atlanta Falcons ; wdt:height ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:member of sports team wd:Atlanta Falcons ; wdt:height ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:occupation wd:writer . ?var0 wdt:award received wd:Nobel Prize in Literature . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:writer wdt:occupation ?var0 . ?var0 wdt:award received wd:Nobel Prize in Literature . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:basketball player . ?var0 wdt:height ?var1 .  FILTER(?var1 > 200)}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:basketball player wdt:occupation ?var0 . ?var0 wdt:height ?var1 .  FILTER(?var1 > 200)}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Statue of Liberty wdt:inception ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:inception wd:Statue of Liberty . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Illinois wdt:shares border with ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:shares border with wd:Illinois . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Minecraft wdt:developer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:developer wd:Minecraft . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Hillel Slovak wdt:place of death ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of death wd:Hillel Slovak . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:cast member wd:None . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:None wdt:cast member ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:swimmer ; wdt:place of birth wd:Moscow . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Moscow wdt:occupation wd:swimmer ; wdt:place of birth ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:occupation wd:astronaut . { ?var0 wdt:country of citizenship wd:Soviet Union } UNION { ?var0 wdt:country of citizenship wd:Russia } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:astronaut  wdt:occupation ?var0 . { ?var0 wdt:country of citizenship wd:Soviet Union } UNION { ?var0 wdt:country of citizenship wd:Russia } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:nonprofit organization . { ?var0 wdt:headquarters location wd:Switzerland . } UNION { ?var0 wdt:headquarters location ?var1 . ?var1 wdt:instance of wd:municipality of Switzerland } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:nonprofit organization . { ?var0 wdt:headquarters location wd:Switzerland . } UNION { ?var0 wdt:headquarters location ?var1 . wd:municipality of Switzerland wdt:instance of ?var1 } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:position held\/wdt:subclass of wd:president . ?var0 wdt:date of birth ?var1 . FILTER(year(?var1)=1945) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:president wdt:position held\/wdt:subclass of ?var0 . ?var0 wdt:date of birth ?var1 . FILTER(year(?var1)=1945) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Lou Reed wdt:genre ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:genre wd:Lou Reed . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Boston Red Sox wdt:home venue ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:home venue wd:Boston Red Sox }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:association football club ; wdt:league or competition wd:None . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:association football club wdt:instance of ?var0 ; wdt:league or competition wd:None . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:bridge ; wdt:crosses wd:Seine . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:bridge wdt:instance of ?var0 ; wdt:crosses wd:Seine . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(?var0) as ?var1) WHERE { ?var0 wdt:producer wd:Hal Roach . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(?var0) as ?var1) WHERE { wd:Hal Roach wdt:producer ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:film . ?var0 wdt:instance of ?var1 ; wdt:country of origin wd:Denmark . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:film . ?var1 wdt:instance of ?var0 ; wdt:country of origin wd:Denmark . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var1 wdt:cause of death ?var0 . } GROUP BY ?var0 ORDER BY DESC(COUNT(DISTINCT ?var1)) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:cause of death ?var1 . } GROUP BY ?var0 ORDER BY DESC(COUNT(DISTINCT ?var1)) LIMIT 1"
+  },
+  {
+    "output":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:occupation wd:basketball player ; wdt:date of birth ?var1 ; wdt:award received ?var2 . ?var2 rdfs:label ?var2Label FILTER (CONTAINS(STR(?var2Label), \"MVP\") || CONTAINS(STR(?var2Label), \"Most Valuable Player\")) . FILTER (LANGMATCHES(LANG(?var2Label), \"EN\" ) ) } ORDER BY DESC(?var1) LIMIT 4",
+    "input":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:occupation wd:basketball player ; wdt:date of birth ?var1 ; wdt:award received ?var2 . ?var2 rdfs:label ?var2Label FILTER (CONTAINS(STR(?var2Label), \"MVP\") || CONTAINS(STR(?var2Label), \"Most Valuable Player\")) . FILTER (LANGMATCHES(LANG(?var2Label), \"EN\" ) ) } ORDER BY DESC(?var1) LIMIT 4"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:business . ?var0 wdt:instance of ?var1 ; wdt:headquarters location wd:Munich . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:business wdt:subclass of* ?var1 . ?var0 wdt:instance of ?var1 ; wdt:headquarters location wd:Munich . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Himalayas wdt:country ?var1 . ?var1 wdt:capital ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Himalayas wdt:country ?var1 . ?var0 wdt:capital ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE {  ?var0 wdt:director wd:Park Chan-wook . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE {  wd:Park Chan-wook wdt:director ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:river . ?var1 wdt:instance of wd:lake ; wdt:country wd:183 . ?var0 wdt:inflows ?var1 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:river . ?var1 wdt:instance of wd:lake ; wdt:country wd:183 . ?var1 wdt:inflows ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var0) WHERE { ?var0 wdt:instance of wd:airline }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var0) WHERE { wd:airline wdt:instance of ?var0 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:island ; wdt:country wd:Japan . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Japan wdt:instance of wd:island ; wdt:country ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Maribor wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Maribor . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Apollo 14 wdt:crew member ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:crew member wd:Apollo 14 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:business . ?var0 wdt:instance of ?var1 ; wdt:employees ?var2 . FILTER(?var2 > 1000000) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:business . ?var2 wdt:instance of ?var1 ; wdt:employees ?var0 . FILTER(?var2 > 1000000) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:film . ?var0 wdt:director wd:Garry Marshall . ?var0 wdt:cast member wd:Julia Roberts . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:film . ?var0 wdt:director wd:Garry Marshall . wd:Julia Roberts wdt:cast member ?var0 . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:association football club . ?var0 wdt:league or competition wd:Premier League . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:association football club . wd:Premier League wdt:league or competition ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Ural Mountains wdt:highest point ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:highest point wd:Ural Mountains . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Wyoming wdt:head of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of government wd:Wyoming . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Eiffel Tower wdt:architect ?var1 . ?var1 wdt:educated at ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:architect wd:Eiffel Tower . ?var1 wdt:educated at ?var0 }"
+  },
+  {
+    "output":"PREFIX xsd: <http:\/\/www.w3.org\/2001\/XMLSchema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:World Heritage Site ; wdt:time of discovery or invention ?var1 . BIND(xsd:integer(YEAR(?var1)) as ?var2) . BIND(xsd:integer(YEAR(NOW())) as ?var3) . FILTER(?var2 < ?var3 && ?var2 < (?var3 - 2)) . }",
+    "input":"PREFIX xsd: <http:\/\/www.w3.org\/2001\/XMLSchema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:World Heritage Site ; wdt:time of discovery or invention ?var0 . BIND(xsd:integer(YEAR(?var1)) as ?var2) . BIND(xsd:integer(YEAR(NOW())) as ?var3) . FILTER(?var2 < ?var3 && ?var2 < (?var3 - 2)) . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:actor ; wdt:place of birth wd:Paris ; wdt:date of birth ?var1 . BIND(YEAR(?var1) as ?var2) . FILTER(?var2 > 1950) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:occupation wd:actor ; wdt:place of birth wd:Paris ; wdt:date of birth ?var0 . BIND(YEAR(?var1) as ?var2) . FILTER(?var2 > 1950) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:cast member wd:Elizabeth Taylor . ?var0 wdt:cast member wd:Richard Burton . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:cast member wd:Elizabeth Taylor . wd:Richard Burton wdt:cast member ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:nonprofit organization . { ?var0 wdt:headquarters location|wdt:country wd:Australia . } UNION { ?var0 wdt:headquarters location|wdt:country ?var1 . ?var1 wdt:headquarters location wd:Australia } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:nonprofit organization . { wd:Australia wdt:headquarters location|wdt:country ?var0 . } UNION { ?var0 wdt:headquarters location|wdt:country ?var1 . ?var1 wdt:headquarters location wd:Australia } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:John Paul II <http:\/\/www.wikidata.org\/prop\/P39> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P39> wd:pope . ?var1 <http:\/\/www.wikidata.org\/prop\/qualifier\/P1366> ?var0 } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:John Paul II <http:\/\/www.wikidata.org\/prop\/P39> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P39> wd:pope . ?var0 <http:\/\/www.wikidata.org\/prop\/qualifier\/P1366> ?var1 } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:position held wd:President of Pakistan . ?var0 p:P39 ?var1 . ?var1 pq:P580 ?var2 ; pq:P582 ?var3 . FILTER(YEAR(?var2) <= 1978 && YEAR(?var3) >= 1978) . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> SELECT DISTINCT ?var0 WHERE { wd:President of Pakistan wdt:position held ?var0 . ?var0 p:P39 ?var1 . ?var1 pq:P580 ?var2 ; pq:P582 ?var3 . FILTER(YEAR(?var2) <= 1978 && YEAR(?var3) >= 1978) . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Rolls-Royce wdt:owned by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:owned by wd:Rolls-Royce . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:museum ; wdt:located in the administrative territorial entity wd:Paris . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Paris wdt:instance of wd:museum ; wdt:located in the administrative territorial entity ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:John F. Kennedy wdt:place of death ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of death wd:John F. Kennedy . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:position held wd:Federal Chancellor of Germany . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Federal Chancellor of Germany wdt:position held ?var0 . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wd:beer wd:beer brand } ?var0 wdt:instance of ?var1 ; wdt:country wd:Ireland . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wd:beer wd:beer brand } ?var0 wdt:instance of ?var1 ; wdt:country wd:Ireland . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Himalayas wdt:country ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:country wd:Himalayas . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:film actor . { ?var0 wdt:place of birth wd:Germany . } UNION { ?var0 wdt:place of birth\/wdt:country wd:Germany . } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film actor wdt:occupation ?var0 . { ?var0 wdt:place of birth wd:Germany . } UNION { ?var0 wdt:place of birth\/wdt:country wd:Germany . } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:film . ?var1 wdt:producer ?var0 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:film . ?var0 wdt:producer ?var1 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Google wdt:employees ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:employees wd:Google . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:actor ; wdt:place of birth wd:Berlin . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:actor wdt:occupation ?var0 ; wdt:place of birth wd:Berlin . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Goofy wdt:creator ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:creator wd:Goofy . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { wd:Last Christmas wdt:part of ?var0 . } UNION { VALUES ?var1 { wd:album wd:studio album } ?var0 wdt:instance of|wdt:form of creative work ?var1 ; wdt:tracklist wd:Last Christmas . }}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { wd:Last Christmas wdt:part of ?var0 . } UNION { VALUES ?var1 { wd:album wd:studio album } wd:Last Christmas wdt:instance of|wdt:form of creative work ?var1 ; wdt:tracklist ?var0 . }}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Alberta wdt:inception ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:inception wd:Alberta . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 wdt:part of wd:Soyuz programme }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { wd:Soyuz programme wdt:part of ?var0 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var1 wdt:subclass of* wd:television program . ?var0 wdt:cast member wd:Neil Patrick Harris . ?var0 wdt:instance of ?var1 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var1 wdt:subclass of* wd:television program . wd:Neil Patrick Harris wdt:cast member ?var0 . ?var0 wdt:instance of ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Hells Angels wdt:inception ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:inception wd:Hells Angels . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Apple Inc. wdt:net profit ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:net profit wd:Apple Inc. . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:instance of wd:public holidays in Sweden . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:public holidays in Sweden wdt:instance of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Juliana of the Netherlands wdt:place of burial ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of burial wd:Juliana of the Netherlands . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:musical ; wdt:composer wd:Leonard Bernstein . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Leonard Bernstein wdt:instance of wd:musical ; wdt:composer ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:business ; wdt:industry wd:marketing . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:business wdt:instance of ?var0 ; wdt:industry wd:marketing . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:John Lennon wdt:killed by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:killed by wd:John Lennon . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:writer . ?var0 wdt:educated at\/wdt:located in the administrative territorial entity  wd:Istanbul . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:writer . wd:Istanbul wdt:educated at\/wdt:located in the administrative territorial entity  ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:musical group ; wdt:country of origin wd:Australia ; wdt:genre wd:metalcore . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:metalcore wdt:instance of wd:musical group ; wdt:country of origin wd:Australia ; wdt:genre ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:country . ?var0 wdt:currency wd:euro   . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:country . wd:euro wdt:currency ?var0   . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:subclass of wd:eating disorder . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:eating disorder wdt:subclass of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Marc Chagall wdt:ethnic group wd:Jewish people . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Jewish people wdt:ethnic group wd:Marc Chagall . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { wd:Brazil men's national football team p:P1352 ?var1 . ?var1 pq:P459 wd:FIFA World Rankings ; ps:P1352 ?var0 . } ORDER BY DESC(?var0) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var1 p:P1352 wd:Brazil men's national football team . ?var1 pq:P459 wd:FIFA World Rankings ; ps:P1352 ?var0 . } ORDER BY DESC(?var0) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 wdt:instance of wd:film ; wdt:cast member wd:Leonardo DiCaprio . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { wd:film wdt:instance of ?var0 ; wdt:cast member wd:Leonardo DiCaprio . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Margaret Thatcher wdt:occupation wd:chemist . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:chemist wdt:occupation wd:Margaret Thatcher . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Utah wdt:located in time zone ?var1 . ?var0 wdt:instance of wd:U.S. state ; wdt:located in time zone ?var1 . FILTER(?var0 != wd:Utah) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Utah wdt:located in time zone ?var1 . wd:U.S. state wdt:instance of ?var0 ; wdt:located in time zone ?var1 . FILTER(?var0 != wd:Utah) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:book . ?var0 wdt:author wd:Danielle Steel . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:book . wd:Danielle Steel wdt:author ?var0 . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:country . ?var0 wdt:official language ?var1 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:country wdt:instance of ?var0 . ?var0 wdt:official language ?var1 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Chewbacca wdt:performer ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:performer wd:Chewbacca }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:library ; wdt:inception ?var1 . FILTER (YEAR(?var1) < 1400 ) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:library wdt:instance of ?var0 ; wdt:inception ?var1 . FILTER (YEAR(?var1) < 1400 ) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:programming language ; wdt:influenced by wd:None . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:None wdt:instance of wd:programming language ; wdt:influenced by ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Denali wdt:located in the administrative territorial entity ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:located in the administrative territorial entity wd:Denali}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:airline alliance wd:SkyTeam . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:SkyTeam wdt:airline alliance ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:politician ; wdt:religion or worldview wd:Methodism . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:politician wdt:occupation ?var0 ; wdt:religion or worldview wd:Methodism . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Fault in Our Stars wdt:author ?var1 . ?var0 wdt:author ?var1 . FILTER(?var0 != wd:The Fault in Our Stars) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:author wd:The Fault in Our Stars . ?var0 wdt:author ?var1 . FILTER(?var0 != wd:The Fault in Our Stars) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain ; wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:mountain ; wdt:elevation above sea level ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 (COUNT(?var1) as ?var2 ) WHERE { ?var0  wdt:occupation  wd:poet . ?var1  wdt:author  ?var0 . ?var1  wdt:instance of  wd:book .  } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 (COUNT(?var1) as ?var2 ) WHERE { ?var0  wdt:occupation  wd:poet . ?var1  wdt:author  ?var0 . wd:book  wdt:instance of  ?var1 .  } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:None wdt:influenced by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:influenced by wd:None . }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0  WHERE { ?var0 wdt:occupation wd:musician . ?var1 wdt:instance of wd:book ; wdt:author ?var0 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0  WHERE { wd:musician wdt:occupation ?var0 . ?var1 wdt:instance of wd:book ; wdt:author ?var0 . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0  WHERE { ?var0 wdt:director wd:Clint Eastwood ; wdt:cast member wd:Clint Eastwood . }",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0  WHERE { wd:Clint Eastwood wdt:director ?var0 ; wdt:cast member wd:Clint Eastwood . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:developer ?var1 ; wdt:instance of* wd:software category . ?var2 wdt:subclass of* wd:business . ?var1 wdt:instance of ?var2 ; wdt:location of formation wd:California . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:developer ?var1 ; wdt:instance of* wd:software category . ?var2 wdt:subclass of* wd:business . ?var2 wdt:instance of ?var1 ; wdt:location of formation wd:California . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Cat Stevens wdt:instrument ?var0 . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instrument wd:Cat Stevens . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { ?var0 wdt:airline alliance wd:Star Alliance . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { wd:Star Alliance wdt:airline alliance ?var0 . }"
+  },
+  {
+    "output":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:actor ; rdfs:label ?var1 . FILTER(CONTAINS(?var1, \"Baldwin\"))}",
+    "input":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:actor wdt:occupation ?var0 ; rdfs:label ?var1 . FILTER(CONTAINS(?var1, \"Baldwin\"))}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Hunger Games wdt:author ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:The Hunger Games . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Elvis Presley's albums in chronological order wdt:has part(s) ?var1 . ?var1 wdt:publication date ?var2 . ?var1 wdt:record label ?var0 . } ORDER BY ?var2 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Elvis Presley's albums in chronological order wdt:has part(s) ?var1 . ?var2 wdt:publication date ?var1 . ?var1 wdt:record label ?var0 . } ORDER BY ?var2 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Batman Begins wdt:cast member wd:Christian Bale }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Christian Bale wdt:cast member wd:Batman Begins }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Prime Minister of Spain wdt:official residence ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:official residence wd:Prime Minister of Spain }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:actor . ?var1 wdt:cast member ?var0 . } GROUP BY ?var0 ORDER BY DESC(COUNT(DISTINCT(?var1))) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:actor . ?var0 wdt:cast member ?var1 . } GROUP BY ?var0 ORDER BY DESC(COUNT(DISTINCT(?var1))) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:country . ?var0 wdt:official language ?var1 . } GROUP BY ?var0 HAVING(COUNT(?var1)>2)",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:country wdt:instance of ?var0 . ?var0 wdt:official language ?var1 . } GROUP BY ?var0 HAVING(COUNT(?var1)>2)"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:song ; wdt:publication date ?var1 ; wdt:performer wd:Bruce Springsteen . BIND(YEAR(?var1) as ?var2) . FILTER(?var2 >= 1980 && ?var2 <= 1990) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Bruce Springsteen wdt:instance of wd:song ; wdt:publication date ?var1 ; wdt:performer ?var0 . BIND(YEAR(?var1) as ?var2) . FILTER(?var2 >= 1980 && ?var2 <= 1990) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:television series  . { ?var0 wdt:creator wd:John Cleese . } UNION { ?var0 wdt:creator\/wdt:has part(s) wd:John Cleese . }  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:television series  . { ?var0 wdt:creator wd:John Cleese . } UNION { wd:John Cleese wdt:creator\/wdt:has part(s) ?var0 . }  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Latvia <http:\/\/www.wikidata.org\/prop\/P463> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P463> wd:European Union . ?var1 <http:\/\/www.wikidata.org\/prop\/qualifier\/P580> ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Latvia <http:\/\/www.wikidata.org\/prop\/P463> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P463> wd:European Union . ?var0 <http:\/\/www.wikidata.org\/prop\/qualifier\/P580> ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:association football player ; wdt:place of birth ?var1 . ?var1 wdt:country wd:Malta . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:association football player ; wdt:place of birth ?var1 . wd:Malta wdt:country ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 wdt:occupation wd:politician ; wdt:educated at wd:Columbia University . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { wd:Columbia University wdt:occupation wd:politician ; wdt:educated at ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Charmed wdt:cast member\/wdt:date of birth ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:cast member\/wdt:date of birth wd:Charmed . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { ?var0 wdt:instance of wd:organization } UNION { ?var0 wdt:instance of\/(wdt:subclass of*) wd:organization } . ?var0 wdt:industry wd:telecommunications .  ?var0 wdt:country wd:Belgium . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { ?var0 wdt:instance of wd:organization } UNION { ?var0 wdt:instance of\/(wdt:subclass of*) wd:organization } . wd:Belgium wdt:industry wd:telecommunications .  ?var0 wdt:country ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:lake ; wdt:country wd:Denmark . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:lake wdt:instance of ?var0 ; wdt:country wd:Denmark . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { wd:Eddie Murphy wdt:child ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 wdt:child wd:Eddie Murphy . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var1 wdt:subclass of* wd:Gothic architecture . ?var0 wdt:architectural style ?var1 ; wdt:historic county wd:Kent . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Gothic architecture wdt:subclass of* ?var1 . ?var0 wdt:architectural style ?var1 ; wdt:historic county wd:Kent . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:currency wd:West African CFA franc . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:West African CFA franc wdt:currency ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:subclass of* wd:holiday . ?var0 wdt:instance of ?var1 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:holiday wdt:subclass of* ?var1 . ?var0 wdt:instance of ?var1 . }"
+  },
+  {
+    "output":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:river . ?var0 p:P2043 ?var1. ?var1 psv:P2043 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . ?var2 wikibase:quantityLowerBound ?var5. ?var2 wikibase:quantityUpperBound ?var6. BIND((?var6-?var5)\/2 AS ?var8). BIND(IF(?var8=0, ?var3, (CONCAT(str(?var3), \"±\", str(?var8)))) AS ?var32). ?var4 p:P2370 ?var4stmnode . ?var4stmnode psv:P2370 ?var4valuenode . ?var4valuenode wikibase:quantityAmount ?var13 . ?var4valuenode wikibase:quantityUnit wd:metre . BIND(?var3 * ?var13 AS ?var3_in_m) . } ORDER BY DESC(?var3_in_m) LIMIT 1",
+    "input":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { wd:river wdt:instance of ?var0 . ?var0 p:P2043 ?var1. ?var1 psv:P2043 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . ?var2 wikibase:quantityLowerBound ?var5. ?var2 wikibase:quantityUpperBound ?var6. BIND((?var6-?var5)\/2 AS ?var8). BIND(IF(?var8=0, ?var3, (CONCAT(str(?var3), \"±\", str(?var8)))) AS ?var32). ?var4 p:P2370 ?var4stmnode . ?var4stmnode psv:P2370 ?var4valuenode . ?var4valuenode wikibase:quantityAmount ?var13 . ?var4valuenode wikibase:quantityUnit wd:metre . BIND(?var3 * ?var13 AS ?var3_in_m) . } ORDER BY DESC(?var3_in_m) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var0 wdt:inception ?var1 . ?var0 wdt:instance of\/wdt:located in the administrative territorial entity* wd:organization . FILTER(year(?var1) = 1930) . } ",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var0 wdt:inception ?var1 . wd:organization wdt:instance of\/wdt:located in the administrative territorial entity* ?var0 . FILTER(year(?var1) = 1930) . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Angela Merkel wdt:birth name ?var0 . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:birth name wd:Angela Merkel . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Tom Cruise wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:spouse wd:Tom Cruise . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:manufacturer wd:Heckler & Koch . ?var0 wdt:subclass of*\/wdt:instance of wd:weapon family . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:manufacturer wd:Heckler & Koch . wd:weapon family wdt:subclass of*\/wdt:instance of ?var0 . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:country wd:Germany . ?var0 wdt:instance of\/wdt:subclass of* wd:city . ?var0 wdt:population ?var1 . } ORDER BY ?var1 LIMIt 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:country wd:Germany . ?var0 wdt:instance of\/wdt:subclass of* wd:city . ?var1 wdt:population ?var0 . } ORDER BY ?var1 LIMIt 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var1 wdt:instance of wd:human . ?var1 p:P39 _:a ._:a ps:P39 wd:Mayor of Lisbon ._:a pq:P580 ?var2 . ?var1 wdt:member of political party ?var0 . } ORDER BY DESC(?var2) LIMIT 1",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var1 wdt:instance of wd:human . _:a p:P39 ?var1 ._:a ps:P39 wd:Mayor of Lisbon ._:a pq:P580 ?var2 . ?var1 wdt:member of political party ?var0 . } ORDER BY DESC(?var2) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var0 wdt:instance of wd:moon of Jupiter . ?var0 wdt:mass ?var1 . } ORDER BY ?var1 LIMIT 1",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { wd:moon of Jupiter wdt:instance of ?var0 . ?var0 wdt:mass ?var1 . } ORDER BY ?var1 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { wd:None wdt:employees ?var0 . } ",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { ?var0 wdt:employees wd:None . } "
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(?var0) AS ?var1) WHERE { ?var0 wdt:season wd:The Sopranos, season 1 . }",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(?var0) AS ?var1) WHERE { wd:The Sopranos, season 1 wdt:season ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Battlestar Galactica wdt:number of episodes ?var0 . wd:Battlestar Galactica wdt:number of episodes ?var1 . FILTER (?var0 > ?var1) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Battlestar Galactica wdt:number of episodes ?var0 . ?var1 wdt:number of episodes wd:Battlestar Galactica . FILTER (?var0 > ?var1) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:film . ?var0 wdt:producer wd:Hal Roach . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film wdt:instance of ?var0 . ?var0 wdt:producer wd:Hal Roach . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { wd:The Matrix p:P161 _:a ._:a pq:P453 wd:Agent Smith ._:a ps:P161 ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { _:a p:P161 wd:The Matrix ._:a pq:P453 wd:Agent Smith ._:a ps:P161 ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:political party ; wdt:country wd:Greece ; wdt:political ideology wd:pro-Europeanism . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:political party wdt:instance of ?var0 ; wdt:country wd:Greece ; wdt:political ideology wd:pro-Europeanism . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:occupation wd:bandleader . ?var0 wdt:instrument wd:trumpet . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:occupation wd:bandleader . wd:trumpet wdt:instrument ?var0 . }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:mountain . ?var0 wdt:elevation above sea level ?var1 . ?var0 wdt:continent\/wdt:part of wd:Earth . } ORDER BY DESC(?var1) LIMIT 1 OFFSET 1",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:mountain . ?var1 wdt:elevation above sea level ?var0 . ?var0 wdt:continent\/wdt:part of wd:Earth . } ORDER BY DESC(?var1) LIMIT 1 OFFSET 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { { SELECT ?var0 WHERE { ?var0 wdt:instance of wd:city . ?var0 wdt:country wd:Egypt . ?var0 wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1 } wd:Egypt wdt:capital ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { { SELECT wd:city WHERE { ?var0 wdt:instance of ?var0 . ?var0 wdt:country wd:Egypt . ?var0 wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1 } wd:Egypt wdt:capital ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:subclass of* wd:rocket . ?var0 wdt:start point wd:Baikonur Cosmodrome  . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:rocket wdt:subclass of* ?var0 . ?var0 wdt:start point wd:Baikonur Cosmodrome  . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:programming language . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { wd:programming language wdt:instance of\/wdt:subclass of* ?var0 . }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of birth _:a . ?var0 wdt:place of death _:a . ?var0 wdt:occupation\/wdt:subclass of* wd:chess player . }",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0 WHERE { _:a wdt:place of birth ?var0 . ?var0 wdt:place of death _:a . ?var0 wdt:occupation\/wdt:subclass of* wd:chess player . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Meta wdt:owned by ?var0 . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:owned by wd:Meta . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:cast member wd:Tom Cruise. }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Tom Cruise. wdt:cast member ?var0 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Fort Knox wdt:located in the administrative territorial entity+ ?var0 . ?var0 wdt:instance of wd:U.S. state . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:located in the administrative territorial entity+ wd:Fort Knox . ?var0 wdt:instance of wd:U.S. state . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:city . ?var0 wdt:located in the administrative territorial entity+ wd:New Jersey . ?var0 wdt:population ?var1 . FILTER(?var1 > 100000) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:city . wd:New Jersey wdt:located in the administrative territorial entity+ ?var0 . ?var0 wdt:population ?var1 . FILTER(?var1 > 100000) }"
+  },
+  {
+    "output":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain . ?var0 p:P2044 ?var1. ?var1 psv:P2044 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . wd:Nanga Parbat wdt:elevation above sea level ?var3NangaParbat . FILTER(?var4 = wd:metre) FILTER (?var3 > ?var3NangaParbat) }",
+    "input":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain . ?var0 p:P2044 ?var1. ?var1 psv:P2044 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var4 wikibase:quantityUnit ?var2 . wd:Nanga Parbat wdt:elevation above sea level ?var3NangaParbat . FILTER(?var4 = wd:metre) FILTER (?var3 > ?var3NangaParbat) }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var0 wdt:performer wd:Ramones . ?var0 p:P1433 _:a ._:a pq:P2868 wd:B-side . }",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { wd:Ramones wdt:performer ?var0 . ?var0 p:P1433 _:a ._:a pq:P2868 wd:B-side . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Olof Palme <http:\/\/www.wikidata.org\/prop\/P570> ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 <http:\/\/www.wikidata.org\/prop\/P570> wd:Olof Palme }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var0 wdt:position held wd:King of Rome . }",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { wd:King of Rome wdt:position held ?var0 . }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE {{ ?var0 wdt:place of birth\/wdt:located in the administrative territorial entity* wd:Vienna . { SELECT ?var0 WHERE { ?var0 wdt:place of death wd:Berlin . }}} UNION { ?var0 wdt:place of death\/wdt:located in the administrative territorial entity* wd:Berlin . { SELECT ?var0 WHERE { ?var0 wdt:place of birth wd:Vienna . }}} UNION { ?var0 wdt:place of birth\/wdt:located in the administrative territorial entity+ wd:Vienna . { SELECT ?var0 WHERE { ?var0 wdt:place of death\/wdt:located in the administrative territorial entity+ wd:Berlin . }}}}",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE {{ ?var0 wdt:place of birth\/wdt:located in the administrative territorial entity* wd:Vienna . { SELECT ?var0 WHERE { ?var0 wdt:place of death wd:Berlin . }}} UNION { ?var0 wdt:place of death\/wdt:located in the administrative territorial entity* wd:Berlin . { SELECT ?var0 WHERE { wd:Berlin wdt:place of birth wd:Vienna . }}} UNION { ?var0 wdt:place of birth\/wdt:located in the administrative territorial entity+ wd:Vienna . { SELECT ?var0 WHERE { ?var0 wdt:place of death\/wdt:located in the administrative territorial entity+ ?var0 . }}}}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Darth Vader wdt:child wd:Luke Skywalker . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Luke Skywalker wdt:child wd:Darth Vader . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:brewery . ?var0 wdt:country wd:Australia . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:brewery wdt:instance of ?var0 . ?var0 wdt:country wd:Australia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:producer wd:Steven Spielberg ; wdt:instance of\/wdt:subclass of* wd:film ; wdt:capital cost ?var1 . FILTER(?var1 > 80000000)}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Steven Spielberg wdt:producer ?var0 ; wdt:instance of\/wdt:subclass of* wd:film ; wdt:capital cost ?var1 . FILTER(?var1 > 80000000)}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:association football club . ?var0 wdt:country wd:Spain . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:association football club . wd:Spain wdt:country ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:film . ?var1 wdt:cast member wd:Natalie Portman . ?var1 wdt:producer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film wdt:instance of ?var1 . ?var1 wdt:cast member wd:Natalie Portman . ?var1 wdt:producer ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:subclass of* wd:German Shepherd FILTER(?var0 != wd:German Shepherd) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:German Shepherd wdt:subclass of* ?var0 FILTER(?var0 != wd:German Shepherd) }"
+  },
+  {
+    "output":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 ?var1 WHERE { ?var0 wdt:member of sports team wd:Chicago Bulls ; p:P54 ?var2 . ?var2 a wikibase:BestRank; ?var3 wd:Chicago Bulls ; pq:P580 ?var4 . MINUS { ?var2 pq:P582 ?var5 . } MINUS { ?var0 wdt:work period (end) ?var6 . } ?var0 p:P2067 ?var7 . ?var7 psv:P2067 ?var8 . ?var8 wikibase:quantityAmount ?var9 . ?var8 wikibase:quantityUnit ?var10 . BIND(IF(?var10 = wd:kilogram, ?var9, ?var9*0.453592) AS ?var1) } ORDER BY DESC(?var1)",
+    "input":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 ?var1 WHERE { ?var0 wdt:member of sports team wd:Chicago Bulls ; p:P54 ?var2 . ?var2 a wikibase:BestRank; ?var3 wd:Chicago Bulls ; pq:P580 ?var4 . MINUS { ?var2 pq:P582 ?var5 . } MINUS { ?var0 wdt:work period (end) ?var6 . } ?var0 p:P2067 ?var7 . ?var8 psv:P2067 ?var7 . ?var8 wikibase:quantityAmount ?var9 . ?var8 wikibase:quantityUnit ?var10 . BIND(IF(?var10 = wd:kilogram, ?var9, ?var9*0.453592) AS ?var1) } ORDER BY DESC(?var1)"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT * WHERE { wd:Estonia wdt:language used ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT * WHERE { ?var0 wdt:language used wd:Estonia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> prefix rdfs:   <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>  SELECT DISTINCT * WHERE { ?var0 wdt:instance of wd:country . ?var0 wdt:area ?var1 . ?var0 rdfs:label ?var2 } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> prefix rdfs:   <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>  SELECT DISTINCT * WHERE { ?var0 wdt:instance of wd:country . ?var1 wdt:area ?var0 . ?var0 rdfs:label ?var2 } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:country wd:United States . ?var0 wdt:instance of\/wdt:subclass of* wd:city . ?var0 wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:country wd:United States . wd:city wdt:instance of\/wdt:subclass of* ?var0 . ?var0 wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/>  SELECT ?var0 WHERE { wd:Vatican Media wdt:inception ?var1 . ?var0 wdt:position held wd:pope . ?var0 p:P39 _:a . _:a ps:P39 wd:pope . _:a pq:P580 ?var2 . _:a pq:P582 ?var3 . FILTER( ?var2 <= ?var1 && ?var1 <= ?var3) . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/>  SELECT ?var0 WHERE { wd:Vatican Media wdt:inception ?var1 . ?var0 wdt:position held wd:pope . ?var0 p:P39 _:a . wd:pope ps:P39 _:a . _:a pq:P580 ?var2 . _:a pq:P582 ?var3 . FILTER( ?var2 <= ?var1 && ?var1 <= ?var3) . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Ceres wdt:discoverer or inventor ?var0  . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:discoverer or inventor wd:Ceres  . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Netherlands wdt:head of state ?var0 . ?var0 wdt:position held wd:King of the Netherlands . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:head of state wd:Netherlands . ?var0 wdt:position held wd:King of the Netherlands . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:cola wdt:subclass of+ wd:drink . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:drink wdt:subclass of+ wd:cola . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Angela Merkel wdt:educated at ?var0 . ?var0 wdt:instance of\/wdt:subclass of* wd:university . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Angela Merkel wdt:educated at ?var0 . wd:university wdt:instance of\/wdt:subclass of* ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Pillars of the Earth wdt:author ?var0. }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:The Pillars of the Earth. }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Yeti Airlines wdt:airline hub ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:airline hub wd:Yeti Airlines . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Johann Wolfgang von Goethe wdt:place of birth ?var0 . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:place of birth wd:Johann Wolfgang von Goethe . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Cuban Missile Crisis wdt:end time ?var0 . wd:Bay of Pigs invasion wdt:start time ?var1 . FILTER(?var0 < ?var1) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:end time wd:Cuban Missile Crisis . wd:Bay of Pigs invasion wdt:start time ?var1 . FILTER(?var0 < ?var1) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:carrot cake wdt:has part(s) ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:has part(s) wd:carrot cake . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Wikipedia wdt:founded by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:founded by wd:Wikipedia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:instance of wd:mountain . ?var0 wdt:located in the administrative territorial entity+ wd:Saxony . ?var0 wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:mountain wdt:instance of ?var0 . ?var0 wdt:located in the administrative territorial entity+ wd:Saxony . ?var0 wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/>  SELECT ?var0 WHERE { ?var0 p:P39 _:a . _:a ps:P39 wd:Federal Minister of Finance . :a pq:P580 ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/>  SELECT ?var0 WHERE { _:a p:P39 ?var0 . _:a ps:P39 wd:Federal Minister of Finance . :a pq:P580 ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Mecca wdt:located in the administrative territorial entity+ ?var0 . ?var0 wdt:instance of wd:country . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Mecca wdt:located in the administrative territorial entity+ ?var0 . wd:country wdt:instance of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Gus Fring ^<http:\/\/www.wikidata.org\/prop\/qualifier\/P453>\/<http:\/\/www.wikidata.org\/prop\/statement\/P161> ?var0 } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 ^<http:\/\/www.wikidata.org\/prop\/qualifier\/P453>\/<http:\/\/www.wikidata.org\/prop\/statement\/P161> wd:Gus Fring } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Nile wdt:origin of the watercourse\/wdt:country ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:origin of the watercourse\/wdt:country wd:Nile . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Pennsylvania State University wdt:located in the administrative territorial entity ?var0 . ?var0 wdt:instance of\/wdt:subclass of* wd:state . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:located in the administrative territorial entity wd:Pennsylvania State University . ?var0 wdt:instance of\/wdt:subclass of* wd:state . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { ?var0 wdt:instance of wd:stadium .  } UNION { ?var0 wdt:instance of ?var1 . ?var1 wdt:subclass of wd:stadium } ?var0 wdt:country wd:Spain .  ?var0 wdt:maximum capacity ?var2 .  } ORDER BY DESC(?var2) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { { ?var0 wdt:instance of wd:stadium .  } UNION { ?var1 wdt:instance of ?var0 . ?var1 wdt:subclass of wd:stadium } ?var0 wdt:country wd:Spain .  ?var0 wdt:maximum capacity ?var2 .  } ORDER BY DESC(?var2) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:United Kingdom wdt:area ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:area wd:United Kingdom . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Batman wdt:creator ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:creator wd:Batman . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Sigmund Freud wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:spouse wd:Sigmund Freud . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:DBpedia wdt:founded by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:founded by wd:DBpedia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:film ; wdt:director wd:Francis Ford Coppola . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Francis Ford Coppola wdt:instance of\/wdt:subclass of* wd:film ; wdt:director ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Hylidae wdt:parent taxon* wd:Amphibia . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Amphibia wdt:parent taxon* wd:Hylidae . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Palace of Westminster wdt:located in the administrative territorial entity ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:located in the administrative territorial entity wd:Palace of Westminster . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Düsseldorf Airport wdt:elevation above sea level ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:elevation above sea level wd:Düsseldorf Airport . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Mexico City wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Mexico City . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:French Fifth Republic wdt:inception ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:inception wd:French Fifth Republic . }"
+  },
+  {
+    "output":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:position held wd:monarch of England . ?var0 p:P39 ?var1 . ?var1 pq:P580 ?var2 . } ORDER BY ?var2 LIMIT 1",
+    "input":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:position held wd:monarch of England . ?var1 p:P39 ?var0 . ?var1 pq:P580 ?var2 . } ORDER BY ?var2 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Forbes wdt:editor ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:editor wd:Forbes . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Douglas Hofstadter wdt:award received ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:award received wd:Douglas Hofstadter . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:darts player ; wdt:date of birth ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:occupation wd:darts player ; wdt:date of birth ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:horse racing wdt:subclass of* wd:sport . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:sport wdt:subclass of* wd:horse racing . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Brooklyn Bridge wdt:crosses ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:crosses wd:Brooklyn Bridge . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Poland wdt:population ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:population wd:Poland }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Friends wdt:end time ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:end time wd:Friends . }"
+  },
+  {
+    "output":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:None wdt:spouse ?var0 . ?var0 rdfs:label ?var1 . FILTER regex(?var1, \"Michelle\") }",
+    "input":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:spouse wd:None . ?var0 rdfs:label ?var1 . FILTER regex(?var1, \"Michelle\") }"
+  },
+  {
+    "output":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { wd:United States p:P6 ?var1 . ?var1 pq:P580 ?var2 ; ps:P6 ?var0 . } ORDER BY ?var2 OFFSET 7 LIMIT 1",
+    "input":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var1 p:P6 wd:United States . ?var1 pq:P580 ?var2 ; ps:P6 ?var0 . } ORDER BY ?var2 OFFSET 7 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:European Union wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:European Union . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:spaceport ; wdt:operator wd:National Aeronautics and Space Administration . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:National Aeronautics and Space Administration wdt:instance of wd:spaceport ; wdt:operator ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:World of Warcraft wdt:developer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:developer wd:World of Warcraft . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Adele wdt:birth name ?var0. }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:birth name wd:Adele. }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Cairo wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Cairo . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Frank Herbert wdt:date of death ?var0 . FILTER(!BOUND(?var0)) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:date of death wd:Frank Herbert . FILTER(!BOUND(?var0)) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:Dan Brown ; wdt:publication date ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:author wd:Dan Brown ; wdt:publication date ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wdt:country wdt:location wdt:located in the administrative territorial entity } wd:Sungkyunkwan University ?var1 ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wdt:country wdt:location wdt:located in the administrative territorial entity } ?var0 ?var1 wd:Sungkyunkwan University . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Interpretation of Dreams wdt:author ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:The Interpretation of Dreams . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:William Shakespeare wdt:date of death ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:date of death wd:William Shakespeare . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:product or material produced wd:Slack}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Slack wdt:product or material produced ?var0}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Rachel Stevens wdt:date of birth ?var1 . BIND(YEAR(?var1) as ?var0) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:date of birth wd:Rachel Stevens . BIND(YEAR(?var1) as ?var0) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { wd:Jane Fonda wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { ?var0 wdt:spouse wd:Jane Fonda . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Abraham Lincoln wdt:spouse ?var0 .  ?var0 <http:\/\/www.w3.org\/2000\/01\/rdf-schema#label> ?var1 .  FILTER(regex(?var1,'Mary')) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Abraham Lincoln wdt:spouse ?var0 .  ?var1 <http:\/\/www.w3.org\/2000\/01\/rdf-schema#label> ?var0 .  FILTER(regex(?var1,'Mary')) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:GIMP wdt:programmed in ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:programmed in wd:GIMP . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wd:university wd:public university } wd:Angela Merkel wdt:educated at ?var0 . ?var0 wdt:instance of ?var1 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { VALUES ?var1 { wd:university wd:public university } ?var0 wdt:educated at wd:Angela Merkel . ?var0 wdt:instance of ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:dramatico-musical work ; wdt:composer wd:None . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:dramatico-musical work wdt:instance of\/wdt:subclass of* ?var0 ; wdt:composer wd:None . }"
+  },
+  {
+    "output":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:river . ?var0 p:P2043 ?var1. ?var1 psv:P2043 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . ?var2 wikibase:quantityLowerBound ?var5. ?var2 wikibase:quantityUpperBound ?var6. BIND((?var6-?var5)\/2 AS ?var8). BIND(IF(?var8=0, ?var3, (CONCAT(str(?var3), \"±\", str(?var8)))) AS ?var32). ?var4 p:P2370 ?var4stmnode . ?var4stmnode psv:P2370 ?var4valuenode . ?var4valuenode wikibase:quantityAmount ?var13 . ?var4valuenode wikibase:quantityUnit wd:metre . BIND(?var3 * ?var13 AS ?var3_in_m) . } ORDER BY DESC(?var3_in_m) LIMIT 1",
+    "input":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:river . ?var0 p:P2043 ?var1. ?var1 psv:P2043 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . ?var2 wikibase:quantityLowerBound ?var5. ?var6 wikibase:quantityUpperBound ?var2. BIND((?var6-?var5)\/2 AS ?var8). BIND(IF(?var8=0, ?var3, (CONCAT(str(?var3), \"±\", str(?var8)))) AS ?var32). ?var4 p:P2370 ?var4stmnode . ?var4stmnode psv:P2370 ?var4valuenode . ?var4valuenode wikibase:quantityAmount ?var13 . ?var4valuenode wikibase:quantityUnit wd:metre . BIND(?var3 * ?var13 AS ?var3_in_m) . } ORDER BY DESC(?var3_in_m) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:John Adams wdt:date of birth ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:date of birth wd:John Adams . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of\/wdt:subclass of* wd:hovercraft ; wdt:manufacturer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:hovercraft ; wdt:manufacturer ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Abraham Lincoln wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:spouse wd:Abraham Lincoln . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:elephant wdt:subclass of ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:subclass of wd:elephant . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Australia wdt:capital ?var1 . ?var1 wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:capital wd:Australia . ?var1 wdt:population ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:currency wd:cocoa bean . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:cocoa bean wdt:currency ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { wd:Albert Einstein wdt:notable work ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { ?var0 wdt:notable work wd:Albert Einstein . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Titanic wdt:composer ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:composer wd:Titanic }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Toy Story wdt:duration ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:duration wd:Toy Story . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Iran wdt:shares border with ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:shares border with wd:Iran . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:industry wd:consumer electronics ;  wdt:location of formation wd:Beijing . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Beijing  wdt:industry wd:consumer electronics ;  wdt:location of formation ?var0 . } "
+  },
+  {
+    "output":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { wd:John F. Kennedy p:P39 ?var1 . ?var1 ps:P39 wd:President of the United States ; pq:P1366 ?var0 . }",
+    "input":"PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var1 p:P39 wd:John F. Kennedy . ?var1 ps:P39 wd:President of the United States ; pq:P1366 ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Paris wdt:head of government ?var0  . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of government wd:Paris  . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Arnold Schwarzenegger wdt:educated at ?var0 . ?var0 wdt:instance of\/wdt:subclass of* wd:university . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:educated at wd:Arnold Schwarzenegger . ?var0 wdt:instance of\/wdt:subclass of* wd:university . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:James Bond wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:spouse wd:James Bond . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Isar wdt:mouth of the watercourse ?var0 . ?var0 wdt:instance of wd:lake  . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:mouth of the watercourse wd:Isar . ?var0 wdt:instance of wd:lake  . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:business  . ?var0 wdt:country wd:India . ?var0 wdt:employees ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:business wdt:instance of ?var0  . ?var0 wdt:country wd:India . ?var0 wdt:employees ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:John F. Kennedy p:P39 ?var1 . ?var1 ps:P39 wd:President of the United States ; pq:P580 ?var2 ; pq:P582 ?var3 . ?var0 p:P39 ?var4 . ?var4 ps:P39 wd:Vice President of the United States ; pq:P580 ?var5 ; pq:P582 ?var6 . FILTER(?var5 >= ?var2 && ?var5 <= ?var3) }",
+    "input":"PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:John F. Kennedy p:P39 ?var1 . ?var1 ps:P39 wd:President of the United States ; pq:P580 ?var2 ; pq:P582 ?var3 . ?var0 p:P39 ?var4 . ?var5 ps:P39 wd:Vice President of the United States ; pq:P580 ?var4 ; pq:P582 ?var6 . FILTER(?var5 >= ?var2 && ?var5 <= ?var3) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Miffy wdt:creator ?var1 . ?var1 wdt:country of citizenship ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Miffy wdt:creator ?var1 . ?var0 wdt:country of citizenship ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Heineken wdt:manufacturer\/wdt:headquarters location ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:manufacturer\/wdt:headquarters location wd:Heineken . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:None wdt:member of political party wd:Democratic Party . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Democratic Party wdt:member of political party wd:None . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Margaret Thatcher wdt:child ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:child wd:Margaret Thatcher . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:North Rhine-Westphalia wdt:area ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:area wd:North Rhine-Westphalia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:279* wd:city ; wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of\/wdt:279* wd:city ; wdt:population ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:chairperson wd:Donald Trump ; wdt:instance of\/wdt:subclass of* wd:business . MINUS { ?var0 wdt:dissolved, abolished or demolished date ?var1 } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:business wdt:chairperson wd:Donald Trump ; wdt:instance of\/wdt:subclass of* ?var0 . MINUS { ?var0 wdt:dissolved, abolished or demolished date ?var1 } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:2018 FIFA World Cup wdt:final event ?var1 . ?var1 wdt:start time ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:final event wd:2018 FIFA World Cup . ?var1 wdt:start time ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:director wd:Stanley Kubrick}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Stanley Kubrick wdt:director ?var0}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Iraq wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Iraq . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:country wd:Canada ; wdt:instance of\/wdt:subclass of* wd:city ; wdt:population ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Canada wdt:country ?var1 ; wdt:instance of\/wdt:subclass of* wd:city ; wdt:population ?var0 } ORDER BY DESC(?var0) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:French Polynesia wdt:capital ?var1 . ?var1 wdt:head of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:capital wd:French Polynesia . ?var1 wdt:head of government ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:film ; wdt:director wd:William Shatner  ; wdt:cast member ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:film wdt:instance of ?var1 ; wdt:director wd:William Shatner  ; wdt:cast member ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Claudia Schiffer wdt:height ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:height wd:Claudia Schiffer . }"
+  },
+  {
+    "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) { ?var0 wdt:instance of wd:country ; wdt:population ?var2 ; wdt:area ?var3 . wd:Germany wdt:population ?var4 . wd:Germany wdt:area ?var5 . BIND((?var2\/?var3) AS ?var7 ) BIND((?var4\/?var5) AS ?var9 ) FILTER(?var7 > ?var9)}",
+    "input":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) { ?var0 wdt:instance of wd:country ; wdt:population ?var2 ; wdt:area ?var3 . wd:Germany wdt:population ?var4 . ?var5 wdt:area wd:Germany . BIND((?var2\/?var3) AS ?var7 ) BIND((?var4\/?var5) AS ?var9 ) FILTER(?var7 > ?var9)}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain ; wdt:country wd:Italy ; wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Italy wdt:instance of wd:mountain ; wdt:country ?var0 ; wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:game ; wdt:publisher wd:GMT Games . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:game wdt:instance of\/wdt:subclass of* ?var0 ; wdt:publisher wd:GMT Games . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Suriname wdt:official language ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:official language wd:Suriname . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Nikos Kazantzakis wdt:place of death ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of death wd:Nikos Kazantzakis }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:chocolate chip cookie wdt:has part(s) ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:has part(s) wd:chocolate chip cookie}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Limerick Lake wdt:country ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:country wd:Limerick Lake . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:member of wd:The Prodigy . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Prodigy wdt:member of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Rome wdt:located in time zone ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:located in time zone wd:Rome }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Wall wdt:tracklist ?var1 . ?var1 wdt:producer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Wall wdt:tracklist ?var1 . ?var0 wdt:producer ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Rotterdam wdt:head of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of government wd:Rotterdam . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:city ; wdt:country wd:Australia ; wdt:population ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of\/wdt:subclass of* wd:city ; wdt:country wd:Australia ; wdt:population ?var0 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Jacques Chirac wdt:spouse ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:spouse wd:Jacques Chirac . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:South Africa wdt:basic form of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:basic form of government wd:South Africa . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Yokohama Marine Tower wdt:height ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:height wd:Yokohama Marine Tower . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:holiday . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:holiday wdt:instance of\/wdt:subclass of* ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:basketball player ; wdt:height ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:basketball player wdt:occupation ?var0 ; wdt:height ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { wd:Turkmenistan wdt:language used ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { ?var0 wdt:language used wd:Turkmenistan . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Che Guevara wdt:child ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:child wd:Che Guevara . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Aki Kaurismäki wdt:award received  wd:Cannes Film Festival Grand Prix . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Cannes Film Festival Grand Prix wdt:award received  wd:Aki Kaurismäki . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Paris wdt:head of government\/wdt:member of political party ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:head of government\/wdt:member of political party wd:Paris }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:Formula One driver ; wdt:number of matches played\/races\/starts ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Formula One driver wdt:occupation ?var0 ; wdt:number of matches played\/races\/starts ?var1 . } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Sitecore wdt:country ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:country wd:Sitecore }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Frank Sinatra wdt:place of birth ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of birth wd:Frank Sinatra }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Velvet Goldmine wdt:cast member wd:Christian Bale . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Christian Bale wdt:cast member wd:Velvet Goldmine . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:father wd:Sonny Bono . ?var0 wdt:mother wd:Cher . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:father wd:Sonny Bono . wd:Cher wdt:mother ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Cameroon wdt:capital ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:capital wd:Cameroon}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Natalie Portman wdt:place of birth ?var0 . ?var0 wdt:country wd:United States . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:place of birth wd:Natalie Portman . ?var0 wdt:country wd:United States . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Meryl Streep wdt:child ?var0 . ?var0 wdt:date of birth ?var1 . } ORDER BY ASC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:child wd:Meryl Streep . ?var0 wdt:date of birth ?var1 . } ORDER BY ASC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:series of creative works ; wdt:creator wd:Walt Disney . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Walt Disney wdt:instance of\/wdt:subclass of* wd:series of creative works ; wdt:creator ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Andrew Jackson wdt:participated in conflict ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:participated in conflict wd:Andrew Jackson . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Titanic wdt:service entry ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:service entry wd:Titanic . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Nikola Tesla wdt:award received wd:Nobel Prize in Physics . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Nobel Prize in Physics wdt:award received wd:Nikola Tesla . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(?var0) AS ?var1) WHERE { ?var0 wdt:instance of wd:state of Mexico . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(?var0) AS ?var1) WHERE { wd:state of Mexico wdt:instance of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:participant in wd:Manhattan Project . ?var1 wdt:subclass of* wd:scientist . ?var0 wdt:occupation ?var1 . ?var0 wdt:award received wd:Nobel Peace Prize . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:participant in wd:Manhattan Project . ?var1 wdt:subclass of* wd:scientist . ?var1 wdt:occupation ?var0 . ?var0 wdt:award received wd:Nobel Peace Prize . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:The LEGO Movie wdt:capital cost ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:capital cost wd:The LEGO Movie }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Harold and Maude wdt:composer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:composer wd:Harold and Maude . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:television series episode . ?var0 wdt:part of wd:The Sopranos, season 1 } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:television series episode wdt:instance of ?var0 . ?var0 wdt:part of wd:The Sopranos, season 1 } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:city ; wdt:population ?var1 . } ORDER BY ?var1 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { wd:city wdt:instance of ?var0 ; wdt:population ?var1 . } ORDER BY ?var1 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Syngman Rhee wdt:place of burial ?var0  . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of burial wd:Syngman Rhee  . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE {  wd:Neymar wdt:member of sports team wd:Real Madrid CF}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE {  wd:Real Madrid CF wdt:member of sports team wd:Neymar}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Pillars of the Earth wdt:author ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:author wd:The Pillars of the Earth . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Prince Harry, Duke of Sussex wdt:father ?var0 ; wdt:mother ?var1 . wd:William, Prince of Wales wdt:father ?var0 ; wdt:mother ?var1 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Prince Harry, Duke of Sussex wdt:father ?var0 ; wdt:mother ?var1 . ?var1 wdt:father ?var0 ; wdt:mother wd:William, Prince of Wales . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Albert Einstein wdt:doctoral advisor ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:doctoral advisor wd:Albert Einstein}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Breaking Bad wdt:number of episodes ?var0 . wd:Game of Thrones wdt:number of episodes ?var1 . FILTER(?var0 > ?var1) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:number of episodes wd:Breaking Bad . wd:Game of Thrones wdt:number of episodes ?var1 . FILTER(?var0 > ?var1) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Vincent van Gogh wdt:influenced by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:influenced by wd:Vincent van Gogh . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Burj Khalifa wdt:floors above ground ?var1 . ?var0 wdt:floors above ground ?var2 . FILTER (?var2 > ?var1) } ORDER BY ?var2 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Burj Khalifa wdt:floors above ground ?var1 . ?var2 wdt:floors above ground ?var0 . FILTER (?var2 > ?var1) } ORDER BY ?var2 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Pulp Fiction wdt:capital cost ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:capital cost wd:Pulp Fiction . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:proinsulin wdt:instance of\/wdt:subclass of* wd:protein . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:protein wdt:instance of\/wdt:subclass of* wd:proinsulin . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Urdu wdt:subclass of ?var0 . wd:Persian wdt:subclass of ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Urdu wdt:subclass of ?var0 . ?var0 wdt:subclass of wd:Persian . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:film ; wdt:producer wd:Benicio del Toro ; wdt:country of origin wd:Spain ; wdt:cast member ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Spain wdt:instance of wd:film ; wdt:producer wd:Benicio del Toro ; wdt:country of origin ?var1 ; wdt:cast member ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Lake Baikal wdt:area ?var0 . wd:Great Bear Lake wdt:area ?var1 . FILTER(?var0 > ?var1) }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:area wd:Lake Baikal . wd:Great Bear Lake wdt:area ?var1 . FILTER(?var0 > ?var1) }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Foundation series wdt:has part(s) ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:has part(s) wd:Foundation series }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Johann Sebastian Bach wdt:place of birth ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of birth wd:Johann Sebastian Bach . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var1 wdt:instance of wd:rapid transit ; wdt:inception ?var2 ; wdt:located in the administrative territorial entity ?var0 . } ORDER BY ?var2 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:rapid transit ; wdt:inception ?var2 ; wdt:located in the administrative territorial entity ?var1 . } ORDER BY ?var2 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Brooklyn Bridge wdt:designed by ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:designed by wd:Brooklyn Bridge . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Eurasia wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Eurasia . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Melbourne wdt:population ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:population wd:Melbourne . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Mount Everest wdt:country ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:country wd:Mount Everest . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Three Dancers wdt:creator ?var1 . ?var1 wdt:movement ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/>  PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Three Dancers wdt:creator ?var1 . ?var0 wdt:movement ?var1 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Operation Overlord wdt:start time ?var0  . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:start time wd:Operation Overlord  . }"
+  },
+  {
+    "output":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:bridge ; p:P2787 ?var1 . ?var1 psv:P2787 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var2 wikibase:quantityUnit ?var4 . BIND(IF(?var4 = wd:metre, ?var3, IF(?var4 = wd:foot,?var3*0.3048, IF(?var4 = wd:mile,?var3*1609.34,IF(?var4 = wd:kilometre,?var3*1000, ?var3)))) AS ?var3Unified) } ORDER BY DESC(?var3Unified) LIMIT 1",
+    "input":"PREFIX psv: <http:\/\/www.wikidata.org\/prop\/statement\/value\/> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:bridge ; p:P2787 ?var1 . ?var1 psv:P2787 ?var2 . ?var2 wikibase:quantityAmount ?var3 . ?var4 wikibase:quantityUnit ?var2 . BIND(IF(?var4 = wd:metre, ?var3, IF(?var4 = wd:foot,?var3*0.3048, IF(?var4 = wd:mile,?var3*1609.34,IF(?var4 = wd:kilometre,?var3*1000, ?var3)))) AS ?var3Unified) } ORDER BY DESC(?var3Unified) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> prefix rdfs:   <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>  ASK WHERE { ?var0 wdt:instance of wd:video game . ?var0 rdfs:label \"Battle Chess\"@en }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> prefix rdfs:   <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>  ASK WHERE { wd:video game wdt:instance of ?var0 . ?var0 rdfs:label \"Battle Chess\"@en }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:place of burial wd:Pyramid G1-a . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Pyramid G1-a wdt:place of burial ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Aristotle wdt:influenced by wd:Socrates . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Socrates wdt:influenced by wd:Aristotle . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { wd:Benjamin Franklin wdt:child ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var0) as ?var1) WHERE { ?var0 wdt:child wd:Benjamin Franklin . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Michael Jordan wdt:height ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:height wd:Michael Jordan . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Secret Intelligence Service wdt:headquarters location ?var0 . ?var0  wdt:instance of  wd:city . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Secret Intelligence Service wdt:headquarters location ?var0 . wd:city  wdt:instance of  ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Family Guy wdt:creator ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:creator wd:Family Guy}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { wd:Elvis Presley  wdt:child  ?var1 . ?var1  wdt:child ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var1  wdt:child  wd:Elvis Presley . ?var1  wdt:child ?var0 }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Ming dynasty wdt:dissolved, abolished or demolished date ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:dissolved, abolished or demolished date wd:Ming dynasty . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { wd:T. E. Lawrence  wdt:participated in conflict  ?var0 .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0  wdt:participated in conflict  wd:T. E. Lawrence .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { wd:San Pedro de Atacama  wdt:located in time zone  ?var0 .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0  wdt:located in time zone  wd:San Pedro de Atacama .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Bruce Carver  wdt:cause of death  ?var0 .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:cause of death  wd:Bruce Carver .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Abraham Lincoln  wdt:place of death  ?var0 . ?var0  wdt:official website  ?var1 .  }  ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0  wdt:place of death  wd:Abraham Lincoln . ?var0  wdt:official website  ?var1 .  }  "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Elvis Presley wdt:child ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { ?var0 wdt:child wd:Elvis Presley }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:None  wdt:spouse  wd:Michelle Obama . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Michelle Obama  wdt:spouse  wd:None . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Sylvester Stallone wdt:residence ?var0 . ?var0 wdt:instance of wd:city . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:residence wd:Sylvester Stallone . ?var0 wdt:instance of wd:city . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0  wdt:publisher  wd:Viking Press . ?var0  wdt:instance of  wd:written work . ?var0  wdt:author  wd:Jack Kerouac . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0  wdt:publisher  wd:Viking Press . wd:written work  wdt:instance of  ?var0 . ?var0  wdt:author  wd:Jack Kerouac . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Hotel California wdt:composer ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:composer wd:Hotel California}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Canada  wdt:capital  ?var0 .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:capital  wd:Canada .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Tel Aviv wdt:head of government ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of government wd:Tel Aviv . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Russia <http:\/\/www.wikidata.org\/prop\/P122> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P122> ?var0 . FILTER NOT EXISTS { ?var1 <http:\/\/www.wikidata.org\/prop\/qualifier\/P582> ?var2 }} ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Russia <http:\/\/www.wikidata.org\/prop\/P122> ?var1 . ?var1 <http:\/\/www.wikidata.org\/prop\/statement\/P122> ?var0 . FILTER NOT EXISTS { ?var2 <http:\/\/www.wikidata.org\/prop\/qualifier\/P582> ?var1 }} "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:book . ?var0 wdt:author wd:Muhammad Ali . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:book wdt:instance of ?var0 . ?var0 wdt:author wd:Muhammad Ali . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var1 ps:P793   wd:first ascent . ?var1 pq:P642 wd:Mount Everest . ?var0 p:P793 ?var1   . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:first ascent ps:P793   ?var1 . ?var1 pq:P642 wd:Mount Everest . ?var0 p:P793 ?var1   . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT (COUNT(?var0) as ?var1) WHERE { ?var0  ?var2  wd:Colombia . ?var0  wdt:instance of  wd:language .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT (COUNT(?var0) as ?var1) WHERE { ?var0  ?var2  wd:Colombia . wd:language  wdt:instance of  ?var0 .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Czech Republic wdt:currency ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:currency wd:Czech Republic . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Boris Becker <http:\/\/www.wikidata.org\/prop\/P106>\/<http:\/\/www.wikidata.org\/prop\/qualifier\/P582> ?var0 }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 <http:\/\/www.wikidata.org\/prop\/P106>\/<http:\/\/www.wikidata.org\/prop\/qualifier\/P582> wd:Boris Becker }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0  wdt:cast member  wd:Mickey Rourke .  ?var0  wdt:director  wd:Guy Ritchie . ?var0  wdt:instance of  wd:film . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0  wdt:cast member  wd:Mickey Rourke .  wd:Guy Ritchie  wdt:director  ?var0 . ?var0  wdt:instance of  wd:film . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:film . ?var0 wdt:cast member wd:Richard Gere . ?var0 wdt:cast member wd:Julia Roberts . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:film . wd:Richard Gere wdt:cast member ?var0 . ?var0 wdt:cast member wd:Julia Roberts . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:author wd:Ernest Hemingway . ?var0 wdt:genre wd:autobiography . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:author wd:Ernest Hemingway . wd:autobiography wdt:genre ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 { wd:Amazon Eve wdt:height  ?var0 .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 { ?var0 wdt:height  wd:Amazon Eve .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:instance of wd:borough of New York City . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:borough of New York City wdt:instance of ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:genre  wd:grunge . ?var0  wdt:instance of  wd:record label . ?var0  wdt:country wd:Canada . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:genre  wd:grunge . ?var0  wdt:instance of  wd:record label . wd:Canada  wdt:country ?var0 . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:Ganges  wdt:origin of the watercourse  ?var1 . ?var1  wdt:country  ?var0 .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var1  wdt:origin of the watercourse  wd:Ganges . ?var1  wdt:country  ?var0 .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Penguin Books  wdt:founded by  ?var0 .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0  wdt:founded by  wd:Penguin Books .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Game of Thrones wdt:composer ?var0 . }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:composer wd:Game of Thrones . }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Eritrea wdt:head of state ?var0}",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:head of state wd:Eritrea}"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:John F. Kennedy wdt:place of death\/wdt:located in the administrative territorial entity ?var0 . ?var0 wdt:instance of wd:city  .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:John F. Kennedy wdt:place of death\/wdt:located in the administrative territorial entity ?var0 . wd:city wdt:instance of ?var0  .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain . ?var0 wdt:continent wd:Australian continent . ?var0 wdt:elevation above sea level ?var1. } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:mountain . ?var0 wdt:continent wd:Australian continent . ?var1 wdt:elevation above sea level ?var0. } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   wd:People's Republic of China  wdt:currency  ?var0 .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   ?var0  wdt:currency  wd:People's Republic of China .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   ?var0  wdt:country of citizenship  wd:Sweden .   ?var0  wdt:occupation  wd:oceanographer .  }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   wd:Sweden  wdt:country of citizenship  ?var0 .   ?var0  wdt:occupation  wd:oceanographer .  }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Headquarters of the United Nations wdt:located in the administrative territorial entity ?var0 . { ?var0 wdt:instance of wd:city . } UNION {?var0 wdt:instance of\/wdt:subclass of wd:city . } }",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Headquarters of the United Nations wdt:located in the administrative territorial entity ?var0 . { ?var0 wdt:instance of wd:city . } UNION {wd:city wdt:instance of\/wdt:subclass of ?var0 . } }"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Tom Hanks  wdt:spouse  wd:Rita Wilson . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:Rita Wilson  wdt:spouse  wd:Tom Hanks . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:country . ?var0 wdt:official language wd:Japanese . } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:country wdt:instance of ?var0 . ?var0 wdt:official language wd:Japanese . } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE {    ?var0  ?var1  wd:Tim Burton . ?var0  wdt:instance of  wd:film .  ?var0  wdt:budget ?var2 } order by ?var2 limit 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE {    wd:Tim Burton  ?var1  ?var0 . ?var0  wdt:instance of  wd:film .  ?var0  wdt:budget ?var2 } order by ?var2 limit 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:headquarters location  wd:New York City . ?var0  wdt:instance of  wd:museum . ?var0  wdt:visitors per year ?var1 } order by ?var1 limit 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:headquarters location  wd:New York City . wd:museum  wdt:instance of  ?var0 . ?var0  wdt:visitors per year ?var1 } order by ?var1 limit 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:album . ?var0 wdt:performer wd:Queen . ?var0 wdt:publication date ?var1 } ORDER BY ?var1 LIMIT 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:album wdt:instance of ?var0 . ?var0 wdt:performer wd:Queen . ?var0 wdt:publication date ?var1 } ORDER BY ?var1 LIMIT 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:instance of  wd:film . ?var0  wdt:cast member  wd:Alec Guinness . ?var0 wdt:publication date ?var1 . }  order by DESC(?var1)  limit 1",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0  wdt:instance of  wd:film . ?var0  wdt:cast member  wd:Alec Guinness . ?var1 wdt:publication date ?var0 . }  order by DESC(?var1)  limit 1"
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   wd:Last Action Hero  wdt:cast member  ?var0 .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   ?var0  wdt:cast member  wd:Last Action Hero .  } "
+  },
+  {
+    "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   wd:Pluto  wdt:discoverer or inventor  ?var0 .   ?var0  wdt:instance of  wd:human .  } ",
+    "input":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE {   wd:Pluto  wdt:discoverer or inventor  ?var0 .   wd:human  wdt:instance of  ?var0 .  } "
+  }
+]

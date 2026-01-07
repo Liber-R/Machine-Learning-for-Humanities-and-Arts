@@ -1,0 +1,2042 @@
+[
+    {
+        "input":"List all boardgames by GMT. [SEP] dbo:publisher dbr:GMT_Games",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT ?var0 WHERE { ?var0 dbo:publisher dbr:GMT_Games }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who developed Skype? [SEP] dbo:developer dbr:Skype",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Skype dbo:developer ?var0. }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which people were born in Heraklion? [SEP] dbo:birthPlace dbr:Heraklion dbo:Person",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Person ; dbo:birthPlace dbr:Heraklion. }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which U.S. state is Area 51 located? [SEP] dbo:country dbr:United_States dbo:location dbr:Area_51",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Area_51 dbo:location ?var0 . ?var0 dbo:country dbr:United_States. }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of New York City? [SEP] dbr:New_York_City dbo:leaderName",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:New_York_City dbo:leaderName ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which countries have places with more than two caves? [SEP] dbo:Cave dbo:location dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var0 rdf:type dbo:Cave ; dbo:location ?var1 . ?var1 rdf:type dbo:Country } GROUP BY ?var1 HAVING ( COUNT(?var0) > 2 )",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where did Abraham Lincoln die? [SEP] dbr:Abraham_Lincoln dbo:deathPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Abraham_Lincoln dbo:deathPlace ?var0. }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which airports does Air China serve? [SEP] dbr:Air_China dbo:targetAirport",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Air_China dbo:targetAirport ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors starring in movies directed by and starring William Shatner. [SEP] dbo:director dbo:starring dbp:starring dbr:William_Shatner",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:director dbr:William_Shatner ; dbo:starring dbr:William_Shatner { ?var1 dbo:starring ?var0 } UNION { ?var1 dbp:starring ?var0 } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What are the official languages of the Philippines? [SEP] dbr:Philippines dbo:officialLanguage",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Philippines dbo:officialLanguage ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Danish films. [SEP] dbo:Film dbr:Denmark dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:country dbr:Denmark }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which movies starring Brad Pitt were directed by Guy Ritchie? [SEP] dbo:director dbo:Film dbo:starring dbr:Brad_Pitt dbr:Guy_Ritchie",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Brad_Pitt ; dbo:director dbr:Guy_Ritchie }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the grandchildren of Bruce Lee. [SEP] dbo:child dbr:Bruce_Lee dbp:children",
+        "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var1 WHERE { dbr:Bruce_Lee dbo:child ?var0 . ?var0 dbp:children ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which other weapons did the designer of the Uzi develop? [SEP] dbo:Weapon dbp:designer dbr:Uzi",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Weapon ; dbp:designer ?var1 . dbr:Uzi dbp:designer ?var1 FILTER ( ?var0 != dbr:Uzi ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the owner of Universal Studios? [SEP] dbr:Universal_Studios dbo:owner",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Universal_Studios dbo:owner ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which state of the USA has the highest population density? [SEP] yago:WikicatStatesOfTheUnitedStates dbp:densityrank",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:densityrank ?var0 } ORDER BY ASC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which monarchs were married to a German? [SEP] dbo:spouse dbo:Monarch dbo:birthPlace dbr:Germany dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:Monarch ; dbo:spouse ?var0 { ?var0 dbo:birthPlace dbr:Germany } UNION { ?var0 dbo:birthPlace ?var2 . ?var2 dbo:country dbr:Germany } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which organizations were founded in 1950? [SEP] dbo:foundingYear dbo:formationYear dbo:Organisation dbp:foundation dbp:formation",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:Organisation { ?var1 dbo:formationYear ?var0 } UNION { ?var1 dbo:foundingYear ?var0 } UNION { ?var1 dbp:foundation ?var0 } UNION { ?var1 dbp:formation ?var0 } FILTER regex(?var0, \"^1950\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who created the comic Captain America? [SEP] dbr:Captain_America dbo:creator",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Captain_America dbo:creator ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the Apollo 14 astronauts. [SEP] dbo:mission dbr:Apollo_14",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:mission dbr:Apollo_14 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote the book The pillars of the Earth? [SEP] dbo:author dbr:The_Pillars_of_the_Earth",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which state of the United States of America has the highest density? [SEP] dbp:densityrank",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var1 WHERE { ?var1 dbp:densityrank ?var0 } ORDER BY ASC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which spaceflights were launched from Baikonur? [SEP] dbr:Baikonur_Cosmodrome dbp:launchPad",
+        "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:launchPad dbr:Baikonur_Cosmodrome }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me a list of all trumpet players that were bandleaders. [SEP] dbo:occupation dbr:Trumpet dbr:Bandleader dbo:instrument",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Bandleader ; dbo:instrument dbr:Trumpet }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which U.S. states are in the same timezone as Utah? [SEP] dbr:Utah yago:WikicatStatesOfTheUnitedStates dbp:timezone",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Utah dbp:timezone ?var1 . ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which U.S. states possess gold minerals? [SEP] dbp:mineral yago:WikicatStatesOfTheUnitedStates",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:mineral ?var0 FILTER regex(?var0, \"gold\", \"i\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the daughter of Ingrid Bergman married to? [SEP] dbr:Ingrid_Bergman dbo:child dbp:spouse",
+        "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var1 WHERE { dbr:Ingrid_Bergman dbo:child ?var0 . ?var0 dbp:spouse ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How deep is Lake Placid? [SEP] dbo:maximumDepth dbr:Lake_Placid_(Texas",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Lake_Placid_(Texas) dbo:maximumDepth ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all museums in London. [SEP] dbr:London dbo:Museum",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Museum ; dbo:Museum dbr:London }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which caves have more than 3 entrances? [SEP] dbo:Cave dbp:entranceCount",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Cave ; dbp:entranceCount ?var0 FILTER ( ?var0 > 3 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the tallest player of the Atlanta Falcons? [SEP] dbo:team dbr:Atlanta_Falcons",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:team dbr:Atlanta_Falcons ; dbo:team ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What are the top-10 action role-playing video games according to IGN? [SEP] dbr:Category dbp:ign",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 <http:\/\/purl.org\/dc\/terms\/subject> dbr:Category:Action_role-playing_video_games ; dbp:ign ?var0 } ORDER BY DESC(?var0) LIMIT 10",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all writers that won the Nobel Prize in literature. [SEP] dbo:Writer dbr:Nobel_Prize_in_Literature",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Writer ; dbo:Writer dbr:Nobel_Prize_in_Literature }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all basketball players that are higher than 2 meters. [SEP] dbo:BasketballPlayer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var1 FILTER ( ?var1 > 2.0 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was the Statue of Liberty built? [SEP] dbp:beginningDate dbr:Statue_of_Liberty",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Statue_of_Liberty dbp:beginningDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which states border Illinois? [SEP] dbp:borderingstates dbr:Illinois",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Illinois dbp:borderingstates ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who developed Minecraft? [SEP] dbo:developer dbr:Minecraft",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Minecraft dbo:developer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where did Hillel Slovak die? [SEP] dbr:Hillel_Slovak dbo:deathPlace",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Hillel_Slovak dbo:deathPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What movies does Jesse Eisenberg play in? [SEP] dbo:Film dbr:Jesse_Eisenberg",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Jesse_Eisenberg }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give all swimmers that were born in Moscow. [SEP] dbo:Swimmer dbr:Moscow",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Swimmer ; dbo:Swimmer dbr:Moscow }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all cosmonauts. [SEP] dbo:Astronaut dbr:Russia",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Astronaut { ?var0 dbo:Astronaut dbr:Russia } UNION { ?var0 dbo:Astronaut dbr:Russia } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Swiss non-profit organizations. [SEP] dbo:type dbr:Nonprofit_organization",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var0 dbo:type ?var1 . ?var1 dbo:type dbr:Nonprofit_organization } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which presidents were born in 1945? [SEP] dbo:President",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:President ; dbo:President ?var0 FILTER regex(?var0, \"^1945\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What kind of music did Lou Reed play? [SEP] dbr:Lou_Reed dbo:genre",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Lou_Reed dbo:genre ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where do the Red Sox play? [SEP] dbr:Boston_Red_Sox dbp:ballpark",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Boston_Red_Sox dbp:ballpark ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show a list of soccer clubs that play in the Bundesliga. [SEP] dbo:SoccerClub dbr:Bundesliga",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerClub ; dbo:SoccerClub dbr:Bundesliga }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which volcanos in Japan erupted since 2000? [SEP] dbr:Japan dbo:Volcano",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Volcano ; dbo:Volcano dbr:Japan ; dbo:Volcano ?var0 FILTER ( year(?var0) >= 2000 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which bridges cross the Seine? [SEP] dbr:Seine dbo:Bridge",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Bridge ; dbo:Bridge dbr:Seine }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the official color of the University of Oxford? [SEP] dbo:officialSchoolColour dbr:University_of_Oxford",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:University_of_Oxford dbo:officialSchoolColour ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many films did Hal Roach produce? [SEP] dbo:producer dbr:Hal_Roach",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:producer dbr:Hal_Roach }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Danish movies. [SEP] dbo:Film dbr:Denmark",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Denmark }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the most frequent cause of death? [SEP] dbo:deathCause",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var0 dbo:deathCause ?var1 . } ORDER BY DESC(COUNT(DISTINCT ?var0)) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who are the four youngest MVP basketball players? [SEP] dbp:highlights dbo:BasketballPlayer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var0 ; dbp:highlights ?var2 FILTER regex(?var2, \"MVP\") } ORDER BY DESC(?var0) OFFSET 0 LIMIT 4",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all companies in Munich. [SEP] dbr:Munich dbo:Company",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Company { ?var0 dbo:Company dbr:Munich } UNION { ?var0 dbo:Company dbr:Munich } UNION { ?var0 dbo:Company dbr:Munich } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the capitals of all countries that the Himalayas run through. [SEP] dbr:Himalayas dbo:country",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { dbr:Himalayas dbo:country ?var0 . ?var0 dbo:country ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many movies did Park Chan-wook direct? [SEP] dbo:director dbr:Park_Chan-wook",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT COUNT(DISTINCT ?var0 AS ?var0) WHERE { ?var0 dbo:director dbr:Park_Chan-wook . }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which rivers flow into a German lake? [SEP] dbo:River dbr:Germany",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:River . ?var1 dbo:River ?var0 ; a dbo:River ; dbo:River dbr:Germany }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many airlines are there? [SEP] dbo:Airline",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Airline }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all islands that belong to Japan. [SEP] dbr:Japan dbo:Island",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Island ; dbo:Island dbr:Japan }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many inhabitants does Maribor have? [SEP] dbr:Maribor dbo:populationTotal",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Maribor dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Apollo 14 astronauts. [SEP] dbo:mission dbr:Apollo_14",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:mission dbr:Apollo_14 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which companies have more than 1 million employees? [SEP] dbo:Company dbp:numEmployees",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Company { ?var0 dbo:Company ?var1 } UNION { ?var0 dbp:numEmployees ?var1 } FILTER ( ?var1 > 1000000 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which films directed by Garry Marshall was Julia Roberts starring? [SEP] dbo:Film dbr:Julia_Roberts",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Julia_Roberts ; dbo:Film dbr:Julia_Roberts }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all soccer clubs in the Premier League. [SEP] dbr:Premier_League dbo:SoccerClub",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerClub ; dbo:SoccerClub dbr:Premier_League }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the highest place of the Urals? [SEP] dbr:Ural_Mountains dbp:highest",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Ural_Mountains dbp:highest ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the governor of Wyoming? [SEP] dbr:Wyoming dbp:governor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Wyoming dbp:governor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where did the architect of the Eiffel Tower study? [SEP] dbr:Eiffel_Tower dbp:almaMater dbo:architect",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Eiffel_Tower dbo:architect ?var1 . ?var1 dbp:almaMater ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all world heritage sites designated within the past two years. [SEP] dbo:WorldHeritageSite dbp:year",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:WorldHeritageSite . { ?var0 dbp:year '2013'^^xsd:integer . } UNION { ?var0 dbp:year '2014'^^xsd:integer . } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors who were born in Paris after 1950. [SEP] dbr:Paris dbo:Actor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 dbo:Actor dbr:Paris . ?var1 dbo:Actor ?var0 . FILTER ( ?var0 >= xsd:dateTime('1950-12-31T00:00:00Z')) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which movies star both Liz Taylor and Richard Burton? [SEP] dbo:starring dbr:Elizabeth_Taylor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:starring dbr:Elizabeth_Taylor ; dbo:starring dbr:Elizabeth_Taylor }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Australian nonprofit organizations. [SEP] dbo:type dbr:Nonprofit_organization",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var0 dbo:type ?var1 . ?var1 dbo:type dbr:Nonprofit_organization } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which pope succeeded John Paul II? [SEP] dbr:Pope_John_Paul_II dbp:successor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Pope_John_Paul_II dbp:successor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all ESA astronauts. [SEP] dbo:Astronaut dbp:type dbr:European_Space_Agency",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Astronaut ; dbp:type dbr:European_Space_Agency }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was president of Pakistan in 1978? [SEP] dbr:President_of_Pakistan dbp:title",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:title dbr:President_of_Pakistan ; dbp:title 1978 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the owner of Rolls-Royce? [SEP] dbo:owner dbr:Rolls-Royce_Motors",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Rolls-Royce_Motors dbo:owner ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many museums does Paris have? [SEP] dbr:Paris dbo:Museum",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Museum ; dbo:Museum dbr:Paris }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where was JFK assassinated? [SEP] dbr:John_F dbo:deathPlace",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:deathPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all federal chancellors of Germany. [SEP] dbp:office dbr:Chancellor_of_Germany dbo:Person",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person { ?var0 dbo:Person \"Chancellor of Germany\" } UNION { ?var0 dbp:office dbr:Chancellor_of_Germany } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me everyone who was born on Halloween. [SEP] dbp:birthDate dbr:Halloween dbo:Person",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Person { ?var1 dbo:Person ?var0 } UNION { ?var1 dbp:birthDate ?var0 } dbr:Halloween dbp:birthDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which beer originated in Ireland? [SEP] dbo:origin dbr:Beer dbp:type",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:type dbr:Beer ; dbo:origin dbr:Beer }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"To which countries does the Himalayan mountain system extend? [SEP] dbr:Himalayas dbo:country",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Himalayas dbo:country ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which actors were born in Germany? [SEP] dbr:Germany dbo:Actor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Actor { ?var1 dbo:Actor dbr:Germany } UNION { ?var1 dbo:Actor ?var0 . ?var0 dbo:Actor dbr:Germany } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How much carbs does peanut butter have? [SEP] dbr:Peanut_butter dbp:carbs",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Peanut_butter dbp:carbs ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who produced the most films? [SEP] dbo:Film",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Film . ?var0 dbo:Film ?var1 . } ORDER BY DESC(COUNT(?var0)) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many employees does Google have? [SEP] dbr:Google dbo:numberOfEmployees",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Google dbo:numberOfEmployees ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors who were born in Berlin. [SEP] dbr:Berlin dbo:Actor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Actor ; dbo:Actor dbr:Berlin }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who created Goofy? [SEP] dbo:creator dbr:Goofy",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Goofy dbo:creator ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which music albums contain the song Last Christmas? [SEP] dbo:album",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var0 dbo:album ?var1 ; <http:\/\/www.w3.org\/2000\/01\/rdf-schema#label> \"Last Christmas\"@en }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was Alberta admitted as province? [SEP] dbr:Alberta dbp:admittancedate",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Alberta dbp:admittancedate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many missions does the Soyuz programme have? [SEP] dbr:Soyuz_programme dbp:programme",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbp:programme dbr:Soyuz_programme }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all the TV shows with Neil Patrick Harris. [SEP] dbo:TelevisionShow dbr:Neil_Patrick_Harris",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:TelevisionShow ; dbo:TelevisionShow dbr:Neil_Patrick_Harris }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When were the Hells Angels founded? [SEP] dbr:Hells_Angels dbp:founded",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Hells_Angels dbp:founded ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the net income of Apple? [SEP] dbo:netIncome dbr:Apple_Inc",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Apple_Inc. dbo:netIncome ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Swedish holidays. [SEP] dbr:Sweden dbo:Holiday",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Holiday ; dbo:Holiday dbr:Sweden }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city was the former Dutch queen Juliana buried? [SEP] dbr:Juliana_of_the_Netherlands dbo:Settlement dbp:burialPlace",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Juliana_of_the_Netherlands dbp:burialPlace ?var0 . ?var0 a dbo:Settlement }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List all the musicals with music by Leonard Bernstein. [SEP] dbo:Musical dbr:Leonard_Bernstein",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Musical ; dbo:Musical dbr:Leonard_Bernstein }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all companies in the advertising industry. [SEP] dbo:Company dbr:Advertising",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var1) AS ?var2) WHERE { ?var1 a dbo:Company { ?var1 dbo:Company dbr:Advertising } UNION { ?var1 dbo:Company ?var0 FILTER regex(?var0, \"advertising\", \"i\") } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the largest metropolitan area in Washington state? [SEP] dbr:Washington_(state dbp:largestmetro",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Washington_(state) dbp:largestmetro ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who killed John Lennon? [SEP] dbr:Death_of_John_Lennon dbp:conviction dbo:Person",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person ; dbp:conviction dbr:Death_of_John_Lennon }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which writers studied in Istanbul? [SEP] dbr:Istanbul dbp:city dbo:Writer",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Writer { ?var0 dbo:Writer ?var1 } UNION { ?var0 dbo:Writer ?var1 } { ?var1 dbo:Writer dbr:Istanbul } UNION { ?var1 dbp:city dbr:Istanbul } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Australian metalcore bands. [SEP] dbo:Band dbr:Metalcore",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Band ; dbo:Band dbr:Metalcore { ?var0 dbo:Band dbr:Metalcore } UNION { ?var0 dbo:Band ?var1 . ?var1 dbo:Band dbr:Metalcore } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which countries adopted the Euro? [SEP] dbr:Euro dbo:Country dbp:currencyCode",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Country { ?var0 dbo:Country dbr:Euro } UNION { ?var0 dbp:currencyCode \"EUR\"@en } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all types of eating disorders. [SEP] yago:WikicatEatingDisorders",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> SELECT DISTINCT ?var0 WHERE { ?var0 a yago:WikicatEatingDisorders }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was Marc Chagall a jew? [SEP] dbp:ethnicity dbr:Marc_Chagall",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> ASK WHERE { dbr:Marc_Chagall dbp:ethnicity \"Jewish\"@en }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What was Brazil's lowest rank in the FIFA World Ranking? [SEP] dbp:fifaMin dbr:Brazil_national_football_team",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Brazil_national_football_team dbp:fifaMin ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many films did Leonardo DiCaprio star in? [SEP] dbo:Film dbr:Leonardo_DiCaprio",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Leonardo_DiCaprio }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was Margaret Thatcher a chemist? [SEP] dbr:Margaret_Thatcher dbo:profession",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Margaret_Thatcher dbo:profession dbr:Margaret_Thatcher }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which U.S. states are in the same time zone as Utah? [SEP] dbr:Utah yago:WikicatStatesOfTheUnitedStates dbp:timezone",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Utah dbp:timezone ?var1 . ?var0 a yago:WikicatStatesOfTheUnitedStates ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all books written by Danielle Steel. [SEP] dbr:Danielle_Steel dbo:Book",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Book ; dbo:Book dbr:Danielle_Steel }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which country has the most official languages? [SEP] dbp:officialLanguages dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Country . ?var1 dbp:officialLanguages ?var0 . } ORDER BY DESC(COUNT(?var0)) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the total amount of men and women serving in the FDNY? [SEP] dbp:employees dbr:New_York_City_Fire_Department",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:New_York_City_Fire_Department dbp:employees ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which actor played Chewbacca? [SEP] dbo:portrayer dbr:Chewbacca",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Chewbacca dbo:portrayer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all libraries established earlier than 1400. [SEP] dbp:established dbo:Library",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Library ; dbp:established ?var0 FILTER ( ?var0 < 1400 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which programming languages were influenced by Perl? [SEP] dbo:ProgrammingLanguage dbr:Perl",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ProgrammingLanguage { ?var0 dbo:ProgrammingLanguage dbr:Perl } UNION { dbr:Perl dbo:ProgrammingLanguage ?var0 } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which U.S. state is Mount McKinley located? [SEP] dbo:wikiPageRedirects dbo:locatedInArea dbr:Mount_McKinley yago:WikicatStatesOfTheUnitedStates",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Mount_McKinley dbo:wikiPageRedirects ?var1 . ?var1 dbo:locatedInArea ?var0. ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What airlines are part of the SkyTeam alliance? [SEP] dbo:Airline dbr:SkyTeam",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Airline { ?var0 dbo:Airline dbr:SkyTeam } UNION { ?var0 dbo:Airline dbr:SkyTeam } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which ships were called after Benjamin Franklin? [SEP] dbr:Benjamin_Franklin dbp:shipNamesake",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:shipNamesake dbr:Benjamin_Franklin }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Methodist politicians. [SEP] dbo:Politician dbr:Methodism",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Politician ; dbo:Politician dbr:Methodism }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What other books have been written by the author of The Fault in Our Stars? [SEP] dbr:John_Green_(author dbo:author",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 dbo:author dbr:John_Green_(author) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the highest mountain? [SEP] dbo:Mountain",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Mountain ; dbo:Mountain ?var0 } ORDER BY DESC(?var0) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which poet wrote the most books? [SEP] dbo:occupation dbr:Poet",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Poet . ?var1 dbo:occupation ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which programming languages influenced Javascript? [SEP] dbo:ProgrammingLanguage dbr:JavaScript",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ProgrammingLanguage ; dbo:ProgrammingLanguage dbr:JavaScript }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which musician wrote the most books? [SEP] dbo:occupation dbr:Musician",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Musician . ?var1 dbo:occupation ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which films starring Clint Eastwood did he direct himself? [SEP] dbo:director dbr:Clint_Eastwood",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Clint_Eastwood ; dbo:director dbr:Clint_Eastwood }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which software has been developed by organizations founded in California? [SEP] dbr:California dbo:Software",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Software . ?var0 a dbo:Software . ?var1 dbo:Software ?var0 . ?var0 dbo:Software dbr:California }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which instruments does Cat Stevens play? [SEP] dbr:Cat_Stevens dbo:instrument",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Cat_Stevens dbo:instrument ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many airlines are members of the Star Alliance? [SEP] dbr:Star_Alliance dbo:Airline",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Airline ; dbo:Airline dbr:Star_Alliance }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors called Baldwin. [SEP] dbo:occupation dbr:Actor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX foaf:<http:\/\/xmlns.com\/foaf\/0.1\/> SELECT DISTINCT ?var0 WHERE { ?var0 foaf:surname 'Baldwin'@en . { ?var0 dbo:occupation dbr:Actor . } UNION { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote The Hunger Games? [SEP] dbp:author dbr:The_Hunger_Games",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Hunger_Games dbp:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"For which label did Elvis record his first album? [SEP] dbo:recordLabel dbo:releaseDate dbo:Album dbr:Elvis_Presley dbo:artist",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Album ; dbo:artist dbr:Elvis_Presley ; dbo:releaseDate ?var2 ; dbo:recordLabel ?var0 } ORDER BY ASC(?var2) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Christian Bale starring in Batman Begins? [SEP] dbr:Batman_Begins dbo:starring dbr:Christian_Bale",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Batman_Begins dbo:starring dbr:Christian_Bale }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where is the residence of the prime minister of Spain? [SEP] dbr:Prime_Minister_of_Spain dbp:residence",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Prime_Minister_of_Spain dbp:residence ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which actor was casted in the most movies? [SEP] dbo:Actor",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 dbo:Actor ?var0 . } ORDER BY DESC(COUNT(DISTINCT(?var1))) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which countries have more than two official languages? [SEP] dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Country ; dbo:Country ?var0 } GROUP BY ?var1 HAVING ( COUNT(?var0) > 2 )",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which countries have more than ten caves? [SEP] dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Country . ?var0 a dbo:Country { ?var0 dbo:Country ?var1 } UNION { ?var0 dbo:Country ?var2 . ?var2 dbo:Country ?var1 } } GROUP BY ?var1 HAVING ( COUNT(?var0) > 10 )",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all songs from Bruce Springsteen released between 1980 and 1990. [SEP] dbr:Bruce_Springsteen dbo:Song",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Song . ?var1 dbo:Song dbr:Bruce_Springsteen . ?var1 dbo:Song ?var0 . FILTER (?var0 >= '1980-01-01'^^xsd:date && ?var0 <= '1990-12-31'^^xsd:date) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which television shows were created by John Cleese? [SEP] dbo:TelevisionShow dbr:John_Cleese",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:TelevisionShow ; dbo:TelevisionShow dbr:John_Cleese }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When did Latvia join the EU? [SEP] dbp:accessioneudate dbr:Latvia",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Latvia dbp:accessioneudate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which soccer players were born on Malta? [SEP] dbo:SoccerPlayer dbr:Malta",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerPlayer ; dbo:SoccerPlayer dbr:Malta }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many politicians graduated from Columbia University? [SEP] dbr:Politician dbo:profession",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:profession dbr:Politician ; dbo:profession dbr:Politician }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the birthdays of all actors of the television show Charmed. [SEP] dbo:starring dbr:Charmed",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { dbr:Charmed dbo:starring ?var0 . ?var0 dbo:starring ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which telecommunications organizations are located in Belgium? [SEP] dbo:Organisation dbp:industry dbr:Telecommunication",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var1) AS ?var2) WHERE { ?var1 a dbo:Organisation { ?var1 dbo:Organisation dbr:Telecommunication } UNION { ?var1 dbp:industry ?var0 FILTER regex(?var0, \"Telecommunications\") } { ?var1 dbo:Organisation dbr:Telecommunication } UNION { ?var1 dbp:industry \"Belgium\"@en } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me a list of all lakes in Denmark. [SEP] dbo:Lake dbr:Denmark yago:LakesOfDenmark",
+        "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { { ?var0 a dbo:Lake ; dbo:Lake dbr:Denmark } UNION { ?var0 a yago:LakesOfDenmark } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many children does Eddie Murphy have? [SEP] dbr:Eddie_Murphy dbp:children",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Eddie_Murphy dbp:children ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all English Gothic buildings in Kent. [SEP] dbr:English_Gothic_architecture dbo:Building",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 a dbo:Building ; dbo:Building dbr:English_Gothic_architecture ; dbo:Building dbr:English_Gothic_architecture }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the manager of Real Madrid? [SEP] dbo:manager dbr:Real_Madrid_C",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Real_Madrid_C.F. dbo:manager ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which countries can you pay using the West African CFA franc? [SEP] dbr:West_African_CFA_franc dbo:currency",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:West_African_CFA_franc }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which holidays are celebrated around the world? [SEP] dbo:Holiday",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Holiday }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the longest river? [SEP] dbo:River dbp:length",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:River { ?var0 dbo:River ?var1 } UNION { ?var0 dbp:length ?var1 } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which organizations were founded in 1930? [SEP] dbo:Organisation",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Organisation { ?var1 dbo:Organisation ?var0 } UNION { ?var1 dbo:Organisation ?var0 } FILTER regex(?var0, \"^1930\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the birth name of Angela Merkel? [SEP] dbp:birthName dbr:Angela_Merkel",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Angela_Merkel dbp:birthName ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who has Tom Cruise been married to? [SEP] dbo:spouse dbr:Tom_Cruise",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spouse dbr:Tom_Cruise }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which weapons did Heckler & Koch develop? [SEP] dbo:Weapon dbp:designer dbr:Heckler_&_Koch",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Weapon ; dbp:designer dbr:Heckler_&_Koch }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the smallest city by area in Germany? [SEP] dbr:Category dbo:areaTotal",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX skos: <http:\/\/www.w3.org\/2004\/02\/skos\/core#> PREFIX dbc: dbr:Category: PREFIX dct: <http:\/\/purl.org\/dc\/terms\/> SELECT ?var1 WHERE { ?var2 skos:broader dbc:Cities_in_Germany . ?var1 dct:subject ?var2 ; dbo:areaTotal ?var0 } ORDER BY ?var0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the ruling party in Lisbon? [SEP] dbr:Lisbon dbp:leaderParty",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Lisbon dbp:leaderParty ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How heavy is Jupiter's lightest moon? [SEP] dbr:Jupiter dbp:satelliteOf dbo:mass",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var0 dbp:satelliteOf dbr:Jupiter ; dbo:mass ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many employees does IBM have? [SEP] dbo:numberOfEmployees dbr:IBM",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:IBM dbo:numberOfEmployees ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List all episodes of the first season of the HBO television series The Sopranos! [SEP] dbr:The_Sopranos dbo:seasonNumber dbo:series",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:The_Sopranos ; dbo:seasonNumber 1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What does ICRO stand for? [SEP] dbo:abbreviation",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:abbreviation \"ICRO\" }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does the new Battlestar Galactica series have more episodes than the old one? [SEP] dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes ?var0 . dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all films produced by Hal Roach. [SEP] dbo:Film dbr:Hal_Roach",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Hal_Roach }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who played Agent Smith in Matrix? [SEP] dbo:portrayer dbr:Agent_Smith",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Agent_Smith dbo:portrayer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which Greek parties are pro-European? [SEP] dbo:PoliticalParty dbr:Greece",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:PoliticalParty ; dbo:PoliticalParty dbr:Greece ; dbo:PoliticalParty dbr:Greece }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me a list of all bandleaders that play trumpet. [SEP] dbo:occupation dbr:Bandleader",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Bandleader ; dbo:occupation dbr:Bandleader }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the second highest mountain on Earth? [SEP] dbo:Mountain",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:Mountain ; dbo:Mountain ?var0 } ORDER BY DESC(?var0) OFFSET 1 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Egypts largest city also its capital? [SEP] dbo:largestCity dbr:Egypt",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Egypt dbo:largestCity ?var1 ; dbo:largestCity ?var0 FILTER ( ?var1 = ?var0 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which rockets were launched from Baikonur? [SEP] dbr:Baikonur_Cosmodrome dbo:Rocket",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Rocket ; dbo:Rocket dbr:Baikonur_Cosmodrome }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many programming languages are there? [SEP] dbo:ProgrammingLanguage",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:ProgrammingLanguage }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which Chess players died in the same place they were born in? [SEP] dbo:ChessPlayer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ChessPlayer ; dbo:ChessPlayer ?var1 ; dbo:ChessPlayer ?var2 FILTER ( ?var1 = ?var2 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the owner of Facebook? [SEP] dbo:foundedBy dbr:Facebook",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Facebook dbo:foundedBy ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all movies with Tom Cruise. [SEP] dbo:Film dbr:Tom_Cruise",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Tom_Cruise }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which U.S. state is Fort Knox located? [SEP] dbr:Fort_Knox dbr:United_States dbo:location dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Fort_Knox dbo:location ?var0 . ?var0 dbo:country dbr:United_States }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all cities in New Jersey with more than 100000 inhabitants. [SEP] dbo:populationTotal dbo:City dbo:isPartOf dbr:New_Jersey",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:City ; dbo:isPartOf dbr:New_Jersey ; dbo:populationTotal ?var0 FILTER ( ?var0 > 100000 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which mountains are higher than the Nanga Parbat? [SEP] dbo:elevation dbr:Nanga_Parbat dbp:elevationM",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var2 WHERE { dbr:Nanga_Parbat dbo:elevation ?var1 . ?var2 a dbo:elevation { ?var2 dbo:elevation ?var0 } UNION { ?var2 dbp:elevationM ?var0 } FILTER ( ?var0 > ?var1 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all B-sides of the Ramones. [SEP] dbo:musicalArtist dbr:Ramones",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:musicalArtist dbr:Ramones ; dbo:musicalArtist ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What are the specialities of the UNC Health Care? [SEP] dbp:speciality dbr:UNC_Health_Care",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:UNC_Health_Care dbp:speciality ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was Olof Palme shot? [SEP] dbo:deathDate dbr:Olof_Palme",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Olof_Palme dbo:deathDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List the seven kings of Rome. [SEP] dbr:King_of_Rome dbp:title",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:title dbr:King_of_Rome }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all people that were born in Vienna and died in Berlin. [SEP] dbo:birthPlace dbr:Vienna",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthPlace dbr:Vienna ; dbo:birthPlace dbr:Vienna }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Darth Vader Luke’s father? [SEP] dbr:Darth_Vader dbo:child",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Darth_Vader dbo:child dbr:Darth_Vader }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all the breweries in Australia. [SEP] dbr:Australia dbo:Brewery",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Brewery { ?var0 dbo:Brewery dbr:Australia } UNION { ?var0 dbo:Brewery ?var1 . ?var1 dbo:Brewery dbr:Australia } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all films produced by Steven Spielberg with a budget of at least $80 million. [SEP] dbo:Film dbr:Steven_Spielberg",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Film . ?var0 dbo:Film dbr:Steven_Spielberg . ?var0 dbo:Film ?var1 . FILTER( xsd:double(?var1) >= 8.0E7 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all soccer clubs in Spain. [SEP] dbr:Spain dbo:SoccerClub dbp:ground",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var1 WHERE { ?var1 a dbo:SoccerClub { ?var1 dbo:SoccerClub dbr:Spain } UNION { ?var1 dbp:ground ?var0 FILTER regex(?var0, \"Spain\") } }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who produced films starring Natalie Portman? [SEP] dbo:Film dbr:Natalie_Portman",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var1 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Natalie_Portman ; dbo:Film ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all breeds of the German Shepherd dog. [SEP] dbr:German_Shepherd dbp:breed",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:breed dbr:German_Shepherd }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the heaviest player of the Chicago Bulls? [SEP] dbp:team dbr:Chicago_Bulls dbo:Person",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person ; dbo:Person ?var1 { ?var0 dbp:team dbr:Chicago_Bulls } UNION { ?var0 dbp:team dbr:Chicago_Bulls } UNION { ?var0 dbo:Person dbr:Chicago_Bulls } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which languages are spoken in Estonia? [SEP] dbr:Estonia dbo:spokenIn",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spokenIn dbr:Estonia }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the largest country in the world? [SEP] dbo:areaTotal dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Country ; dbo:areaTotal ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the largest city in america? [SEP] dbo:largestCity dbr:United_States",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:United_States dbo:largestCity ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the pope that founded the Vatican Television? [SEP] dbo:foundedBy dbr:Vatican_Television_Center dbo:Pope",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var0 rdf:type dbo:Pope . dbr:Vatican_Television_Center dbo:foundedBy ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who discovered Ceres? [SEP] dbo:discoverer dbr:Ceres_(dwarf_planet",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Ceres_(dwarf_planet) dbo:discoverer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the king of the Netherlands? [SEP] dbo:leader dbo:Royalty dbr:Netherlands",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Netherlands dbo:leader ?var0 . ?var0 rdf:type dbo:Royalty }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Cola a beverage? [SEP] dbr:Cola dbo:Beverage",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Cola rdf:type dbo:Beverage }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the alma mater of the chancellor of Germany Angela Merkel? [SEP] dbo:almaMater dbr:Angela_Merkel",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Angela_Merkel dbo:almaMater ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote the book Les Piliers de la terre? [SEP] dbo:author dbr:The_Pillars_of_the_Earth",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which airports does Yeti Airlines serve? [SEP] dbo:targetAirport dbr:Yeti_Airlines",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Yeti_Airlines dbo:targetAirport ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where is the birthplace of Goethe? [SEP] dbr:Johann_Wolfgang_von_Goethe dbo:birthPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Johann_Wolfgang_von_Goethe dbo:birthPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was the Cuban Missile Crisis earlier than the Bay of Pigs Invasion? [SEP] dbo:date dbr:Bay_of_Pigs_Invasion dbr:Cuban_Missile_Crisis",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Cuban_Missile_Crisis dbo:date ?var0 . dbr:Bay_of_Pigs_Invasion dbo:date ?var1 FILTER ( ?var0 < ?var1 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which ingredients do I need for carrot cake? [SEP] dbr:Carrot_cake dbo:ingredient",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Carrot_cake dbo:ingredient ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who created Wikipedia? [SEP] dbo:author dbr:Wikipedia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Wikipedia dbo:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the highest mountain in Saxony Germany? [SEP] dbo:elevation dbr:Ore_Mountains dbo:mountainRange",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var1 WHERE { ?var1 dbo:mountainRange dbr:Ore_Mountains ; dbo:elevation ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the current federal minister of finance in Germany? [SEP] dbo:leader dbr:Federal_Ministry_of_Finance_(Germany",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:Federal_Ministry_of_Finance_(Germany) dbo:leader ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which country is Mecca located? [SEP] dbr:Mecca dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Mecca dbo:country ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who played Gus Fring in Breaking Bad? [SEP] dbo:portrayer dbr:Gus_Fring",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Gus_Fring dbo:portrayer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which country does the Nile start? [SEP] dbr:Nile dbo:sourceCountry",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Nile dbo:sourceCountry ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which state Penn State University is located? [SEP] dbr:Pennsylvania_State_University dbo:state",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Pennsylvania_State_University dbo:state ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the biggest stadium in Spain? [SEP] dbo:seatingCapacity dbr:Spain dbo:Stadium dbo:location",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Stadium ; dbo:location dbr:Spain ; dbo:seatingCapacity ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the coach of Ankara's ice hockey team? [SEP] dbr:Turkish_Ice_Hockey_First_League dbr:Ankara dbo:city dbo:coach dbo:league",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:city dbr:Ankara ; dbo:league dbr:Turkish_Ice_Hockey_First_League ; dbo:coach ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How large is the area of UK? [SEP] dbo:areaTotal dbr:United_Kingdom",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:United_Kingdom dbo:areaTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who created Batman? [SEP] dbr:Batman dbo:creator",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Batman dbo:creator ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was Sigmund Freud married? [SEP] dbo:spouse dbr:Sigmund_Freud",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Sigmund_Freud dbo:spouse ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who are the developers of DBpedia? [SEP] dbr:DBpedia dbo:developer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:DBpedia dbo:developer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all movies directed by Francis Ford Coppola. [SEP] dbo:director dbo:Film dbr:Francis_Ford_Coppola",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:director dbr:Francis_Ford_Coppola }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Are tree frogs a type of amphibian? [SEP] dbo:class dbr:Amphibian dbr:Hylidae",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Hylidae dbo:class dbr:Amphibian }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the location of the Houses of Parliament? [SEP] dbr:Palace_of_Westminster dbo:location",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Palace_of_Westminster dbo:location ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"how much is the elevation of Düsseldorf Airport ? [SEP] dbo:elevation dbr:Düsseldorf_Airport",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Düsseldorf_Airport dbo:elevation ?var0 } LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How much is the population of mexico city ? [SEP] dbr:Mexico_City dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Mexico_City dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"when was the founding date of french fifth republic? [SEP] dbo:foundingDate dbr:French_Fifth_Republic",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:French_Fifth_Republic dbo:foundingDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the first King of England? [SEP] yago:WikicatEnglishMonarchs dbo:Royalty dbo:activeYearsStartYear",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:Royalty ; rdf:type yago:WikicatEnglishMonarchs ; dbo:activeYearsStartYear ?var0 } ORDER BY ASC(?var0) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the editor of Forbes? [SEP] dbr:Forbes dbo:editor",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Forbes dbo:editor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which awards did Douglas Hofstadter win? [SEP] dbo:award dbr:Douglas_Hofstadter",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Douglas_Hofstadter dbo:award ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the youngest Darts player? [SEP] dbo:DartsPlayer dbo:birthDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:DartsPlayer ; dbo:birthDate ?var0 } ORDER BY DESC(?var0) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is horse racing a sport? [SEP] dbr:Horse_racing dbo:Sport",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Horse_racing rdf:type dbo:Sport }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which river does the Brooklyn Bridge cross? [SEP] dbr:Brooklyn_Bridge dbo:crosses",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Brooklyn_Bridge dbo:crosses ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many people live in Poland? [SEP] dbr:Poland dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Poland dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was the last episode of the TV series Friends aired? [SEP] dbr:Friends dbo:completionDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Friends dbo:completionDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is the wife of president Obama called Michelle? [SEP] dbo:spouse dbr:Barack_Obama",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { dbr:Barack_Obama dbo:spouse ?var0 . ?var0 rdfs:label ?var1 FILTER regex(?var1, \"Michelle\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is 8th president of US? [SEP] dbo:wikiPageRedirects dbr:8th_President_of_the_United_States dbp:name",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:8th_President_of_the_United_States dbo:wikiPageRedirects ?var1 . ?var1 dbp:name ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"how much is the total population of european union? [SEP] dbr:European_Union dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:European_Union dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all launch pads operated by NASA. [SEP] dbo:operator dbo:LaunchPad dbr:NASA",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:LaunchPad ; dbo:operator dbr:NASA }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who developed the video game World of Warcraft? [SEP] dbo:developer dbr:World_of_Warcraft",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:World_of_Warcraft dbo:developer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the birth name of Adele? [SEP] dbr:Adele dbo:birthName",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Adele dbo:birthName ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the population of Cairo? [SEP] dbr:Cairo dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Cairo dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Frank Herbert still alive? [SEP] dbr:Frank_Herbert dbo:deathDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { OPTIONAL { dbr:Frank_Herbert dbo:deathDate ?var0 } FILTER ( ! bound(?var0) ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the last work of Dan Brown? [SEP] dbo:author dbp:releaseDate dbr:Dan_Brown dbo:publicationDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var1 WHERE { { ?var1 dbo:author dbr:Dan_Brown . ?var1 dbp:releaseDate ?var0 } UNION { ?var1 dbo:author dbr:Dan_Brown . ?var1 dbo:publicationDate ?var0} } ORDER BY DESC(xsd:date(?var0)) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where is Sungkyunkwan University? [SEP] dbo:city dbr:Sungkyunkwan_University dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sungkyunkwan_University dbo:city ?var1 ; dbo:country ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the author of the interpretation of dreams? [SEP] dbo:author dbr:The_Interpretation_of_Dreams",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:The_Interpretation_of_Dreams dbo:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was the death of Shakespeare? [SEP] dbo:deathDate dbr:William_Shakespeare",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:William_Shakespeare dbo:deathDate ?var0 } LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who developed Slack? [SEP] dbo:product dbr:Slack_(software",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:product dbr:Slack_(software) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where is the origin of Carolina reaper? [SEP] dbr:Carolina_Reaper dbo:origin",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Carolina_Reaper dbo:origin ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which year was Rachel Stevens born? [SEP] dbo:birthYear dbr:Rachel_Stevens",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rachel_Stevens dbo:birthYear ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How often did Jane Fonda marry? [SEP] dbo:spouse dbr:Jane_Fonda",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Jane_Fonda dbo:spouse ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was the wife of president Lincoln called Mary? [SEP] dbo:spouse dbr:Abraham_Lincoln",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { dbr:Abraham_Lincoln dbo:spouse ?var0 . ?var0 rdfs:label ?var1 FILTER regex(?var1, \"Mary\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which cities does the Weser flow through? [SEP] dbr:Weser dbo:city",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Weser dbo:city ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which programming language is GIMP written? [SEP] dbr:GIMP dbo:programmingLanguage",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:GIMP dbo:programmingLanguage ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which university did Angela Merkel attend? [SEP] dbo:almaMater dbr:Angela_Merkel",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Angela_Merkel dbo:almaMater ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List all the musicals with music by Elton John. [SEP] dbo:musicBy dbo:Musical dbr:Elton_John",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Musical ; dbo:musicBy dbr:Elton_John }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many Aldi stores are there? [SEP] dbo:numberOfLocations dbr:Aldi",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Aldi dbo:numberOfLocations ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the longest river in the world? [SEP] dbo:BodyOfWater dbo:length",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var1 WHERE { ?var1 rdf:type dbo:BodyOfWater ; dbo:length ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was John Adams born? [SEP] dbo:birthDate dbr:John_Adams",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_Adams dbo:birthDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which companies produce hovercrafts? [SEP] dbo:product dbo:Company dbr:Hovercraft",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:product dbr:Hovercraft }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the wife of U.S. president Lincoln? [SEP] dbo:spouse dbr:Abraham_Lincoln",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Abraham_Lincoln dbo:spouse ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which species does an elephant belong? [SEP] dbp:species dbr:Elephant",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Elephant dbp:species ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many people live in the capital of Australia? [SEP] dbr:Australia dbo:populationTotal dbo:capital",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Australia dbo:capital ?var1 . ?var1 dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which ancient empire could you pay with cocoa beans? [SEP] dbo:currency dbr:Cocoa_bean",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:Cocoa_bean }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many theories did Albert Einstein come up with? [SEP] dbo:knownFor dbr:Albert_Einstein",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var1) AS ?var0) WHERE { dbr:Albert_Einstein dbo:knownFor ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who composed the soundtrack for Cameron's Titanic? [SEP] dbo:musicComposer dbr:Titanic_(1997_film",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Titanic_(1997_film) dbo:musicComposer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the runtime of Toy Story. [SEP] dbo:runtime dbr:Toy_Story",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Toy_Story dbo:runtime ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"With how many countries Iran has borders? [SEP] dbp:borders dbr:Geography_of_Iran",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Geography_of_Iran dbp:borders ?var0 } LIMIT 8",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which electronics companies were founded in Beijing? [SEP] dbo:foundationPlace dbr:Beijing dbo:Company dbo:industry dbr:Electronics",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:industry dbr:Electronics ; dbo:foundationPlace dbr:Beijing }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the successor of John F. Kennedy? [SEP] dbr:John_F dbo:successor",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:successor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of Paris? [SEP] dbr:Paris dbo:mayor",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Paris dbo:mayor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Arnold Schwarzenegger attend a university? [SEP] dbr:Arnold_Schwarzenegger dbo:almaMater dbo:University",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Arnold_Schwarzenegger dbo:almaMater ?var0 . ?var0 rdf:type dbo:University }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is James Bond married? [SEP] dbo:spouse dbr:James_Bond",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:James_Bond dbo:spouse ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does the Isar flow into a lake? [SEP] dbr:Isar dbo:inflow dbo:Lake",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { ?var0 dbo:inflow dbr:Isar ; rdf:type dbo:Lake }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which Indian company has the most employees? [SEP] dbr:India dbo:Company dbo:location dbo:numberOfEmployees",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:location dbr:India ; dbo:numberOfEmployees ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was John F. Kennedy's vice president? [SEP] dbr:John_F dbo:vicePresident",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:vicePresident ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which country does the creator of Miffy come from? [SEP] dbr:Miffy dbo:creator dbo:nationality",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Miffy dbo:creator ?var1 . ?var1 dbo:nationality ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In what city is the Heineken brewery? [SEP] dbo:locationCity dbo:manufacturer dbr:Heineken",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Heineken dbo:manufacturer ?var1 . ?var1 dbo:locationCity ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Barack Obama a democrat? [SEP] dbr:Democratic_Party_(United_States dbo:party dbr:Barack_Obama",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Barack_Obama dbo:party dbr:Democratic_Party_(United_States) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List the children of Margaret Thatcher. [SEP] dbo:child dbr:Margaret_Thatcher",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Margaret_Thatcher dbo:child ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"From which region is the Melon de Bourgogne? [SEP] dbr:Melon_de_Bourgogne dbo:wineRegion",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Melon_de_Bourgogne dbo:wineRegion ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"how big is the total area of North Rhine- Westphalia? [SEP] dbo:areaTotal dbr:North_Rhine-Westphalia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:North_Rhine-Westphalia dbo:areaTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which city has the most inhabitants? [SEP] dbo:City dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:City ; dbo:populationTotal ?var0 } ORDER BY DESC(?var0) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is Donald Trump's main business? [SEP] dbo:owner dbr:Donald_Trump",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:owner dbr:Donald_Trump }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When will start the final match of the football world cup 2018? [SEP] dbr:2018_FIFA_World_Cup dbp:date",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:2018_FIFA_World_Cup dbp:date ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which films did Stanley Kubrick direct? [SEP] dbo:director dbr:Stanley_Kubrick",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Stanley_Kubrick }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"how much is the population Iraq? [SEP] dbo:populationTotal dbr:Iraq",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Iraq dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many inhabitants does the largest city in Canada have? [SEP] dbo:largestCity dbr:Canada dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var1 WHERE { dbr:Canada dbo:largestCity ?var0 . ?var0 dbo:populationTotal ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of the capital of French Polynesia? [SEP] dbo:capital dbo:mayor dbr:French_Polynesia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:French_Polynesia dbo:capital ?var1 . ?var1 dbo:mayor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors starring in movies directed by William Shatner. [SEP] dbo:director dbo:starring dbr:William_Shatner",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:director dbr:William_Shatner ; dbo:starring ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How tall is Claudia Schiffer? [SEP] dbo:height dbr:Claudia_Schiffer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Claudia_Schiffer dbo:height ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"how much is the population densty rank of germany? [SEP] dbp:populationDensityRank dbr:Germany",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Germany dbp:populationDensityRank ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the highest mountain in Italy? [SEP] dbo:elevation dbo:locatedInArea dbo:Mountain dbr:Italy",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Mountain ; dbo:locatedInArea dbr:Italy ; dbo:elevation ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List all games by GMT. [SEP] dbo:publisher dbr:GMT_Games",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:publisher dbr:GMT_Games }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the official language of Suriname? [SEP] dbo:officialLanguage dbr:Suriname",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Suriname dbo:officialLanguage ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city did Nikos Kazantzakis die? [SEP] dbo:Town dbr:Nikos_Kazantzakis dbo:deathPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Nikos_Kazantzakis dbo:deathPlace ?var0 . ?var0 rdf:type dbo:Town }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is in a chocolate chip cookie? [SEP] dbo:ingredient dbr:Chocolate_chip_cookie",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Chocolate_chip_cookie dbo:ingredient ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which country is the Limerick Lake? [SEP] dbr:Limerick_Lake dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Limerick_Lake dbo:country ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all video games published by Mean Hamster Software. [SEP] dbr:Mean_Hamster_Software dbo:publisher dbo:VideoGame",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:VideoGame ; dbo:publisher dbr:Mean_Hamster_Software }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all members of Prodigy. [SEP] dbo:bandMember dbr:The_Prodigy",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Prodigy dbo:bandMember ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which time zone is Rome? [SEP] dbo:timeZone dbr:Rome",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rome dbo:timeZone ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How high is the lighthouse in Colombo? [SEP] dbo:height dbr:Colombo_Lighthouse",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Colombo_Lighthouse dbo:height ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who are the writers of the Wall album of Pink Floyd? [SEP] dbr:The_Wall dbp:writer",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:The_Wall dbp:writer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of Rotterdam? [SEP] dbr:Rotterdam dbo:leaderName",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rotterdam dbo:leaderName ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the largest city in Australia? [SEP] dbr:Australia dbo:largestCity",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Australia dbo:largestCity ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was married to president Chirac? [SEP] dbo:spouse dbr:Jacques_Chirac",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Jacques_Chirac dbo:spouse ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What form of government is found in South Africa? [SEP] dbo:governmentType dbr:South_Africa",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:South_Africa dbo:governmentType ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How high is the Yokohama Marine Tower? [SEP] dbo:height dbr:Yokohama_Marine_Tower",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Yokohama_Marine_Tower dbo:height ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which holidays are celebrated around the world? [SEP] dbo:Holiday",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Holiday }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the tallest basketball player? [SEP] dbo:height dbo:BasketballPlayer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:BasketballPlayer ; dbo:height ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many languages are spoken in Turkmenistan? [SEP] dbo:language dbr:Turkmenistan",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Turkmenistan dbo:language ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Che Guevara have children? [SEP] dbo:child dbr:Che_Guevara",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Che_Guevara dbo:child ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Kaurismäki ever win the Grand Prix at Cannes? [SEP] dbo:award dbr:Grand_Prix_(Cannes_Film_Festival dbr:Aki_Kaurismäki",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Aki_Kaurismäki dbo:award dbr:Grand_Prix_(Cannes_Film_Festival) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"To which party does the mayor of Paris belong? [SEP] dbr:Paris dbo:party dbo:mayor",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Paris dbo:mayor ?var1 . ?var1 dbo:party ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the Formula 1 race driver with the most races? [SEP] dbo:FormulaOneRacer dbo:races",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:FormulaOneRacer ; dbo:races ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What country is Sitecore from? [SEP] dbo:foundationPlace dbr:Sitecore",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sitecore dbo:foundationPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the birth place of Frank Sinatra. [SEP] dbo:birthPlace dbr:Frank_Sinatra",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Frank_Sinatra dbo:birthPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Christian Bale starring in Velvet Goldmine? [SEP] dbr:Velvet_Goldmine dbo:starring dbr:Christian_Bale",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Velvet_Goldmine dbo:starring dbr:Christian_Bale }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the son of Sonny and Cher? [SEP] dbo:parent dbr:Sonny_Bono dbr:Cher",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:parent dbr:Cher ; dbo:parent dbr:Sonny_Bono }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many ethnic groups live in Slovenia? [SEP] dbo:ethnicGroup dbr:Slovenia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Slovenia dbo:ethnicGroup ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the capital of Cameroon? [SEP] dbr:Cameroon dbo:capital",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Cameroon dbo:capital ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was Natalie Portman born in the United States? [SEP] dbo:birthPlace dbo:country dbr:Natalie_Portman dbr:United_States",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Natalie_Portman dbo:birthPlace ?var0 . ?var0 dbo:country dbr:United_States }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many pages does War and Peace have? [SEP] dbr:War_and_Peace dbo:numberOfPages",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:War_and_Peace dbo:numberOfPages ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the oldest child of Meryl Streep? [SEP] dbr:Meryl_Streep dbo:child dbo:birthDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Meryl_Streep dbo:child ?var0 . ?var0 dbo:birthDate ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which television shows were created by Walt Disney? [SEP] dbo:TelevisionShow dbr:Walt_Disney dbo:creator",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:TelevisionShow ; dbo:creator dbr:Walt_Disney }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What does IYCM stand for? [SEP] dbo:abbreviation",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:abbreviation \"IYCM\" }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which types of grapes grow in Oregon? [SEP] dbo:growingGrape dbr:Oregon_wine",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Oregon_wine dbo:growingGrape ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Was U.S. president Jackson involved in a war? [SEP] dbo:battle dbr:Andrew_Jackson",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Andrew_Jackson dbo:battle ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When was the Titanic completed? [SEP] dbr:RMS_Titanic dbo:completionDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:RMS_Titanic dbo:completionDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Tesla win a nobel prize in physics? [SEP] dbo:award dbr:Nikola_Tesla dbr:Nobel_Prize_in_Physics",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Nikola_Tesla dbo:award dbr:Nobel_Prize_in_Physics }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many states are in Mexico? [SEP] dbo:type dbr:States_of_Mexico",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var1) AS ?var0) WHERE { ?var1 dbo:type dbr:States_of_Mexico }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which scientist is known for the Manhattan Project and the Nobel Peace Prize? [SEP] dbo:knownFor dbo:Scientist dbr:Manhattan_Project dbr:Nobel_Peace_Prize",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:knownFor dbr:Manhattan_Project ; rdf:type dbo:Scientist ; dbo:knownFor dbr:Nobel_Peace_Prize }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How much did the Lego Movie cost? [SEP] dbr:The_Lego_Movie dbo:budget",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Lego_Movie dbo:budget ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who composed the music for Harold and Maude? [SEP] dbo:musicComposer dbr:Harold_and_Maude",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Harold_and_Maude dbo:musicComposer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"List all episodes of the first season of the HBO television series The Sopranos. [SEP] dbr:The_Sopranos dbo:seasonNumber dbo:series",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:The_Sopranos ; dbo:seasonNumber 1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which city has the least inhabitants? [SEP] dbo:City dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:City ; dbo:populationTotal ?var0 } ORDER BY ASC(?var0) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where is Syngman Rhee buried? [SEP] dbr:Syngman_Rhee dbo:restingPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Syngman_Rhee dbo:restingPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does Neymar play for Real Madrid? [SEP] dbo:team dbr:Real_Madrid_C dbr:Neymar",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Neymar dbo:team dbr:Real_Madrid_C.F. }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote the book The Pillars of the Earth? [SEP] dbo:author dbr:The_Pillars_of_the_Earth",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Do Prince Harry and Prince William have the same parents? [SEP] dbo:parent dbr:Prince_Harry dbr:Prince_William",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Prince_William,_Duke_of_Cambridge dbo:parent ?var0 . dbr:Prince_Harry dbo:parent ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the doctoral supervisor of Albert Einstein? [SEP] dbo:doctoralAdvisor dbr:Albert_Einstein",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Albert_Einstein dbo:doctoralAdvisor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does Breaking Bad have more episodes than Game of Thrones? [SEP] dbr:Game_of_Thrones dbr:Breaking_Bad dbo:numberOfEpisodes",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Breaking_Bad dbo:numberOfEpisodes ?var0 . dbr:Game_of_Thrones dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was Vincent van Gogh inspired by? [SEP] dbo:influenced dbr:Vincent_van_Gogh",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:influenced dbr:Vincent_van_Gogh }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which building after the Burj Khalifa has the most floors? [SEP] dbo:floorCount dbo:Building dbr:Burj_Khalifa",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var2 WHERE { dbr:Burj_Khalifa dbo:floorCount ?var0 . ?var2 rdf:type dbo:Building ; dbo:floorCount ?var1 FILTER ( ?var1 < ?var0 ) } ORDER BY DESC(?var1) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What was the final result of the War of the Roses? [SEP] dbo:result dbo:isPartOfMilitaryConflict dbr:Wars_of_the_Roses dbo:date",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var2 dbo:isPartOfMilitaryConflict dbr:Wars_of_the_Roses ; dbo:result ?var0 ; dbo:date ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How much did Pulp Fiction cost? [SEP] dbr:Pulp_Fiction dbo:budget",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Pulp_Fiction dbo:budget ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is proinsulin a protein? [SEP] dbr:Proinsulin dbo:Protein",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Proinsulin rdf:type dbo:Protein }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Do Urdu and Persian have a common root? [SEP] dbo:languageFamily dbr:Urdu dbr:Persian_language",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Urdu dbo:languageFamily ?var0 . dbr:Persian_language dbo:languageFamily ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is starring in Spanish movies produced by Benicio del Toro? [SEP] dbr:Spain dbo:producer dbo:Film dbr:Benicio_del_Toro dbo:starring dbo:country dbo:Person",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var0 rdf:type dbo:Film ; dbo:country dbr:Spain ; dbo:producer dbr:Benicio_del_Toro ; dbo:starring ?var1 . ?var1 rdf:type dbo:Person }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Lake Baikal bigger than the Great Bear Lake? [SEP] dbo:areaTotal dbr:Lake_Baikal dbr:Great_Bear_Lake",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Lake_Baikal dbo:areaTotal ?var0 . dbr:Great_Bear_Lake dbo:areaTotal ?var1 FILTER ( ?var0 > ?var1 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me all books in Asimov's Foundation series. [SEP] dbo:series dbr:Foundation_series",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:Foundation_series }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where was Bach born? [SEP] dbo:birthPlace dbr:Johann_Sebastian_Bach",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Johann_Sebastian_Bach dbo:birthPlace ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which city has the oldest running metro? [SEP] dbo:type dbo:openingYear dbr:Rapid_transit dbo:location dbo:City",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var2 WHERE { ?var1 dbo:type dbr:Rapid_transit ; dbo:openingYear ?var0 ; dbo:location ?var2 . ?var2 rdf:type dbo:City } ORDER BY ASC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who designed the Brooklyn Bridge? [SEP] dbr:Brooklyn_Bridge dbo:architect",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Brooklyn_Bridge dbo:architect ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many people live in Eurasia? [SEP] dbr:Eurasia dbo:populationTotal",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Eurasia dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the host of the BBC Wildlife Specials? [SEP] dbr:BBC_Wildlife_Specials dbo:presenter",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:BBC_Wildlife_Specials dbo:presenter ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the total population of Melbourne, Florida? [SEP] dbr:Melbourne dbo:populationTotal",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:Melbourne,_Florida dbo:populationTotal ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What country is Mount Everest in? [SEP] dbo:locatedInArea dbr:Mount_Everest dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Mount_Everest dbo:locatedInArea ?var0 . ?var0 rdf:type dbo:Country }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"To which artistic movement did the painter of The Three Dancers belong? [SEP] dbo:author dbo:movement dbr:The_Three_Dancers",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var1 WHERE { dbr:The_Three_Dancers dbo:author ?var0 . ?var0 dbo:movement ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When did Operation Overlord commence? [SEP] dbr:Operation_Overlord dbo:date",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Operation_Overlord dbo:date ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the bridge with the longest span? [SEP] dbo:mainspan dbo:Bridge",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Bridge ; dbo:mainspan ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is there a video game called Battle Chess? [SEP] dbo:VideoGame",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { ?var0 rdf:type dbo:VideoGame ; rdfs:label \"Battle Chess\"@en }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was buried in the Great Pyramid of Giza? [SEP] dbo:restingPlace dbr:Great_Pyramid_of_Giza",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:restingPlace dbr:Great_Pyramid_of_Giza }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does the Ford Motor Company have a manufacturing plant in Malaysia? [SEP] dbo:assembly dbr:Ford_Motor_Company dbo:manufacturer dbr:Malaysia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:assembly dbr:Malaysia ; dbo:manufacturer dbr:Ford_Motor_Company }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Socrates influence Aristotle? [SEP] dbr:Aristotle dbo:influencedBy dbr:Socrates",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Aristotle dbo:influencedBy dbr:Socrates }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many children did Benjamin Franklin have? [SEP] dbr:Benjamin_Franklin dbo:child",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Benjamin_Franklin dbo:child ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How tall is Michael Jordan? [SEP] dbo:height dbr:Michael_Jordan",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Michael_Jordan dbo:height ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which UK city are the headquarters of the MI6? [SEP] dbr:Secret_Intelligence_Service dbo:country dbo:headquarter dbr:United_Kingdom",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Secret_Intelligence_Service dbo:headquarter ?var0 . ?var0 dbo:country dbr:United_Kingdom }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who created Family Guy? [SEP] dbo:creator dbr:Family_Guy",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Family_Guy dbo:creator ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city does the Chile Route 68 end? [SEP] dbr:Chile_Route_68 dbo:routeEnd",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Chile_Route_68 dbo:routeEnd ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the grandchildren of Elvis Presley. [SEP] dbo:child dbr:Elvis_Presley",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var1 WHERE { dbr:Elvis_Presley dbo:child ?var0 . ?var0 dbo:child ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When did the Ming dynasty dissolve? [SEP] dbr:Ming_dynasty dbo:dissolutionDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ming_dynasty dbo:dissolutionDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which military conflicts did Lawrence of Arabia participate? [SEP] dbr:T dbo:battle",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:T._E._Lawrence dbo:battle ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the timezone in San Pedro de Atacama? [SEP] dbr:San_Pedro_de_Atacama dbo:timeZone",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:San_Pedro_de_Atacama dbo:timeZone ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all books by William Goldman with more than 300 pages. [SEP] dbo:Book dbr:William_Goldman dbo:author dbo:numberOfPages",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:author dbr:William_Goldman ; dbo:numberOfPages ?var1 FILTER ( ?var1 > 300 ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What did Bruce Carver die from? [SEP] dbr:Bruce_Carver dbo:deathCause",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Bruce_Carver dbo:deathCause ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which subsidiary of Lufthansa serves both Dortmund and Berlin Tegel? [SEP] dbo:targetAirport dbr:Berlin_Tegel_Airport dbr:Lufthansa dbr:Dortmund_Airport dbo:subsidiary",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Lufthansa dbo:subsidiary ?var0 . ?var0 dbo:targetAirport dbr:Dortmund_Airport ; dbo:targetAirport dbr:Berlin_Tegel_Airport }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Does Abraham Lincoln's death place have a website? [SEP] dbr:Abraham_Lincoln dbo:website dbo:deathPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Abraham_Lincoln dbo:deathPlace ?var1 . ?var1 dbo:website ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Did Elvis Presley have children? [SEP] dbo:child dbr:Elvis_Presley",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Elvis_Presley dbo:child ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Michelle Obama the wife of Barack Obama? [SEP] dbo:spouse dbr:Barack_Obama dbr:Michelle_Obama",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Barack_Obama dbo:spouse dbr:Michelle_Obama }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city does Sylvester Stallone live? [SEP] dbr:Sylvester_Stallone dbo:City dbo:residence",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City . dbr:Sylvester_Stallone dbo:residence ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which books by Kerouac were published by Viking Press? [SEP] dbo:publisher dbr:Viking_Press dbo:author dbr:Jack_Kerouac dbo:Book",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:publisher dbr:Viking_Press ; dbo:author dbr:Jack_Kerouac }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote the song Hotel California? [SEP] dbr:Hotel_California dbo:writer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Hotel_California dbo:writer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the capital of Canada? [SEP] dbo:capital dbr:Canada",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Canada dbo:capital ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of Tel Aviv? [SEP] dbo:leaderName dbr:Tel_Aviv",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Tel_Aviv dbo:leaderName ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What form of government does Russia have? [SEP] dbo:governmentType dbr:Russia",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Russia dbo:governmentType ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me the book that Muhammad Ali wrote. [SEP] dbo:Book dbo:author dbr:Muhammad_Ali",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:author dbr:Muhammad_Ali }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who was the first to climb Mount Everest? [SEP] dbo:firstAscentPerson dbr:Mount_Everest",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Mount_Everest dbo:firstAscentPerson ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How many languages are spoken in Colombia? [SEP] dbo:language dbr:Colombia dbo:Language",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 rdf:type dbo:Language . dbr:Colombia dbo:language ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the currency of the Czech Republic? [SEP] dbo:currency dbr:Czech_Republic",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Czech_Republic dbo:currency ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Where in France is sparkling wine produced? [SEP] dbr:Sparkling_wine dbo:wineProduced dbo:location dbr:France",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:wineProduced dbr:Sparkling_wine ; dbo:location dbr:France }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"When did Boris Becker end his active career? [SEP] dbr:Boris_Becker dbo:activeYearsEndDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Boris_Becker dbo:activeYearsEndDate ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which movies starring Mickey Rourke were directed by Guy Ritchie? [SEP] dbo:director dbo:Film dbo:starring dbr:Guy_Ritchie dbr:Mickey_Rourke",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Mickey_Rourke ; dbo:director dbr:Guy_Ritchie }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which films did Julia Roberts as well as Richard Gere play? [SEP] dbo:Film dbo:starring dbr:Julia_Roberts dbr:Richard_Gere",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Julia_Roberts ; dbo:starring dbr:Richard_Gere }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Show me Hemingway's autobiography. [SEP] dbo:literaryGenre dbr:Autobiography dbo:author dbr:Ernest_Hemingway",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:Ernest_Hemingway ; dbo:literaryGenre dbr:Autobiography }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"How tall is Amazon Eve? [SEP] dbo:height dbr:Amazon_Eve",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Amazon_Eve dbo:height ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What are the five boroughs of New York? [SEP] dbo:governmentType dbr:Borough_(New_York_City",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:governmentType dbr:Borough_(New_York_City) }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Canadian Grunge record labels. [SEP] dbo:RecordLabel dbr:Grunge dbr:Canada dbo:genre dbo:country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:RecordLabel ; dbo:genre dbr:Grunge ; dbo:country dbr:Canada }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which country does the Ganges start? [SEP] dbr:Ganges dbo:sourceCountry",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ganges dbo:sourceCountry ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the founder of Penguin Books? [SEP] dbr:Penguin_Books dbo:founder",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Penguin_Books dbo:founder ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who wrote the Game of Thrones theme? [SEP] dbr:Game_of_Thrones dbo:composer",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Game_of_Thrones dbo:composer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who is the president of Eritrea? [SEP] dbr:Eritrea dbo:leader dbo:leaderTitle",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Eritrea dbo:leader ?var0 ; dbo:leaderTitle \"President\"@en }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city did John F. Kennedy die? [SEP] dbr:John_F dbo:City dbo:deathPlace",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:deathPlace ?var0 . ?var0 rdf:type dbo:City }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What is the highest mountain in Australia? [SEP] dbr:Australia dbo:locatedInArea dbo:Mountain dbo:elevation",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:Mountain ; dbo:locatedInArea dbr:Australia ; dbo:elevation ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who writes the Farmers' Almanac? [SEP] dbr:Farmers'_Almanac dbp:editor",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Farmers'_Almanac dbp:editor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me the currency of China. [SEP] dbr:China dbo:currency",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:China dbo:currency ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all Swedish oceanographers. [SEP] dbr:Sweden dbo:field dbo:birthPlace dbr:Oceanography",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:field dbr:Oceanography ; dbo:birthPlace dbr:Sweden }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which city are the headquarters of the United Nations? [SEP] dbo:City dbr:Headquarters_of_the_United_Nations dbo:location",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Headquarters_of_the_United_Nations dbo:location ?var0 . ?var0 rdf:type dbo:City }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Is Rita Wilson the wife of Tom Hanks? [SEP] dbo:spouse dbr:Rita_Wilson dbr:Tom_Hanks",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Tom_Hanks dbo:spouse dbr:Rita_Wilson }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"In which countries do people speak Japanese? [SEP] dbr:Japanese_language dbo:language dbo:Country",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Country ; dbo:language dbr:Japanese_language }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which of Tim Burton's films had the highest budget? [SEP] dbo:director dbr:Tim_Burton dbo:budget",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Tim_Burton ; dbo:budget ?var1 } ORDER BY ?var1 OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Which museum in New York has the most visitors? [SEP] dbo:numberOfVisitors dbr:New_York_City dbo:Museum dbo:location",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Museum ; dbo:location dbr:New_York_City ; dbo:numberOfVisitors ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What was the first Queen album? [SEP] dbo:releaseDate dbr:Queen_(band dbo:artist dbo:Album",
+        "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Album ; dbo:artist dbr:Queen_(band) ; dbo:releaseDate ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What was the first name of the band Queens of the Stone Age? [SEP] dbr:Queens_of_the_Stone_Age dbo:alias",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Queens_of_the_Stone_Age dbo:alias ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"What was the last movie with Alec Guinness? [SEP] dbo:Film dbo:starring dbr:Alec_Guinness dbo:releaseDate",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var1 WHERE { ?var1 rdf:type dbo:Film ; dbo:starring dbr:Alec_Guinness ; dbo:releaseDate ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Give me all actors starring in Last Action Hero. [SEP] dbr:Last_Action_Hero dbo:starring",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Last_Action_Hero dbo:starring ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    },
+    {
+        "input":"Who discovered Pluto? [SEP] dbo:discoverer dbr:Pluto",
+        "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Pluto dbo:discoverer ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the DBpedia knowledge base:"
+    }
+]

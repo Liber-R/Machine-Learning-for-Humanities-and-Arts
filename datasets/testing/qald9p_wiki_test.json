@@ -1,0 +1,682 @@
+[
+    {
+        "input":"What is the time zone of Salt Lake City? [SEP] wd:Salt Lake City [SEP] wdt:located in time zone",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Salt Lake City  wdt:located in time zone  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who killed Caesar? [SEP] wd:Julius Caesar [SEP] wdt:killed by",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Julius Caesar  wdt:killed by  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the highest mountain in Germany? [SEP] wd:mountain wd:Germany [SEP] wdt:instance of wdt:elevation above sea level wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var1 WHERE { ?var1 wdt:instance of wd:mountain ; wdt:elevation above sea level ?var0 ; wdt:country wd:Germany . } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which American presidents were in office during the Vietnam War? [SEP] wd:United States wd:Vietnam War [SEP] wdt:start time wdt:end time",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var5 WHERE { wd:Vietnam War  wdt:start time  ?var0 . wd:Vietnam War  wdt:end time  ?var1 . wd:United States  <http:\/\/www.wikidata.org\/prop\/P6> ?var2 . ?var2 <http:\/\/www.wikidata.org\/prop\/statement\/P6> ?var5 . ?var2 <http:\/\/www.wikidata.org\/prop\/qualifier\/P580> ?var3 . ?var2 <http:\/\/www.wikidata.org\/prop\/qualifier\/P582> ?var4 . FILTER (?var0 < ?var3 && ?var1 > ?var4)} ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Butch Otter is the governor of which U.S. state? [SEP] wd:Butch Otter [SEP] wdt:head of government",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { ?var0 wdt:head of government wd:Butch Otter . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which artists were born on the same date as Rachel Stevens? [SEP] wd:Rachel Stevens wd:artist [SEP] wdt:subclass of wdt:date of birth wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var1 WHERE { wd:Rachel Stevens  wdt:date of birth  ?var0 . ?var1 wdt:occupation \/ wdt:subclass of*   wd:artist . ?var1  wdt:date of birth  ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the profession of Frank Herbert? [SEP] wd:Frank Herbert [SEP] wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Frank Herbert  wdt:occupation  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many seats does the home stadium of FC Porto have? [SEP] wd:FC Porto [SEP] wdt:maximum capacity wdt:home venue",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:FC Porto wdt:home venue\/wdt:maximum capacity ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which frequent flyer program has the most airlines? [SEP] wd:airline [SEP] wdt:instance of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> SELECT ?var0 WHERE { ?var1 wdt:instance of wd:airline . ?var1 p:P4446\/ps:P4446 ?var0 . }  GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which European countries have a constitutional monarchy? [SEP] wd:European Union wd:constitutional monarchy [SEP] wdt:basic form of government wdt:contains the administrative territorial entity",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:European Union  wdt:contains the administrative territorial entity  ?var0 . ?var0 wdt:basic form of government   wd:constitutional monarchy }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which countries have places with more than two caves? [SEP] wd:cave [SEP] wdt:instance of wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var0 wdt:instance of wd:cave ; wdt:country ?var1 . } GROUP BY ?var1 HAVING (COUNT(?var0) > 2)",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which airports are located in California, USA? [SEP] wd:airport wd:California [SEP] wdt:location",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1  ?var0  wd:airport . ?var1  wdt:location  wd:California .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is Angela Merkel’s birth name? [SEP] wd:Angela Merkel [SEP] wdt:birth name",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Angela Merkel wdt:birth name  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the mayor of Berlin? [SEP] wd:Berlin [SEP] wdt:head of government",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Berlin  wdt:head of government  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which countries in the European Union adopted the Euro? [SEP] wd:European Union wd:euro [SEP] wdt:contains the administrative territorial entity wdt:currency",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { wd:European Union  wdt:contains the administrative territorial entity  ?var0 .  ?var0  wdt:currency  wd:euro . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which country was Bill Gates born in? [SEP] wd:Bill Gates [SEP] wdt:country wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Bill Gates wdt:place of birth\/wdt:country ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many grand-children did Jacques Cousteau have? [SEP] wd:Jacques Cousteau [SEP] wdt:child",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var1) as ?var0) WHERE { wd:Jacques Cousteau wdt:child\/wdt:child ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all professional skateboarders from Sweden. [SEP] wd:Sweden wd:skateboarding [SEP] wdt:located in the administrative territorial entity wdt:sport wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:sport wd:skateboarding . ?var0  wdt:place of birth ?var1 . ?var1 wdt:located in the administrative territorial entity* wd:Sweden . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which monarchs of the United Kingdom were married to a German? [SEP] wd:Germany wd:monarch of the United Kingdom wd:United Kingdom of Great Britain and Ireland wd:king wd:monarch wd:Kingdom of Great Britain [SEP] wdt:spouse wdt:place of birth wdt:noble title wdt:country wdt:position held",
+        "output":"PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX ps: <https:\/\/w3id.org\/payswarm#> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX bd: <http:\/\/www.bigdata.com\/rdf#> PREFIX wikibase: <http:\/\/wikiba.se\/ontology#> SELECT DISTINCT ?var4 WHERE { { ?var4 ?var1 wd:monarch of the United Kingdom . VALUES ?var1 { wdt:position held wdt:noble title } } UNION { ?var4 wdt:position held ?var0 . VALUES ?var0 { wd:monarch wd:king  } ?var4 p:P39\/pq:P642 ?var2 . } VALUES ?var2 { wd:Kingdom of Great Britain wd:United Kingdom of Great Britain and Ireland } . ?var4 wdt:spouse ?var3 . ?var3 wdt:place of birth\/wdt:country wd:Germany . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all Argentine films. [SEP] wd:Argentina wd:film [SEP] wdt:instance of wdt:country of origin",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 { ?var0 wdt:instance of wd:film . ?var0 wdt:country of origin wd:Argentina }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How did Michael Jackson die? [SEP] wd:None [SEP] wdt:cause of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:None wdt:cause of death ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which U.S. state has been admitted latest? [SEP] wd:U.S. state [SEP] wdt:instance of wdt:inception",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var1 WHERE { ?var1 wdt:instance of wd:U.S. state . ?var1 wdt:inception ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which classes does the Millepede belong to? [SEP] wd:millipede [SEP] wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:millipede wdt:subclass of ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me the homepage of Forbes. [SEP] wd:Forbes [SEP] wdt:official website",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Forbes wdt:official website ?var0 } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the husband of Amanda Palmer? [SEP] wd:Amanda Palmer [SEP] wdt:spouse",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:spouse wd:Amanda Palmer } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who painted The Storm on the Sea of Galilee? [SEP] wd:The Storm on the Sea of Galilee [SEP] wdt:creator",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:The Storm on the Sea of Galilee wdt:creator ?var0 } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the highest place of Karakoram? [SEP] wd:Karakoram [SEP] wdt:highest point",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Karakoram wdt:highest point ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did Finland join the EU? [SEP] wd:European Union wd:Finland [SEP] ",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> SELECT ?var1 WHERE { wd:Finland p:P463 ?var0 . ?var0 pq:P580 ?var1 . ?var0 ps:P463 wd:European Union . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which actors play in Big Bang Theory? [SEP] wd:The Big Bang Theory [SEP] wdt:cast member",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Big Bang Theory wdt:cast member ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which computer scientist won an oscar? [SEP] wd:Academy Awards wd:computer scientist [SEP] wdt:instance of wdt:award received wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:occupation wd:computer scientist . ?var1 wdt:award received ?var0 . ?var0 wdt:instance of wd:Academy Awards . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who wrote Harry Potter? [SEP] wd:None [SEP] wdt:author",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:None wdt:author ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all writers that won the Nobel Prize in literature. [SEP] wd:writer wd:Nobel Prize in Literature [SEP] wdt:award received wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:writer ; wdt:award received wd:Nobel Prize in Literature . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me English actors starring in Lovesick. [SEP] wd:Lovesick wd:United Kingdom [SEP] wdt:cast member wdt:country wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { wd:Lovesick wdt:cast member ?var1. ?var1 wdt:place of birth ?var0 . ?var0 wdt:country wd:United Kingdom . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"In which city was the president of Montenegro born? [SEP] wd:Montenegro wd:city [SEP] wdt:instance of wdt:head of state wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Montenegro wdt:head of state\/wdt:place of birth ?var0 . ?var0 wdt:instance of wd:city . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which U.S. state has the highest population density? [SEP] wd:U.S. state [SEP] wdt:instance of wdt:population wdt:area",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var4 { ?var4 wdt:instance of wd:U.S. state . ?var4 wdt:population ?var1 . ?var4 wdt:area ?var3 . BIND((?var0) AS ?var2 ) } ORDER BY DESC(?var2) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the longest river in China? [SEP] wd:river wd:People's Republic of China [SEP] wdt:instance of wdt:length wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:instance of wd:river . ?var1 wdt:country wd:People's Republic of China . ?var1 wdt:length ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the area code of Berlin? [SEP] wd:Berlin [SEP] wdt:local dialing code",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Berlin wdt:local dialing code ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many scientists graduated from an Ivy League university? [SEP] wd:scientist wd:Ivy League [SEP] wdt:has part(s) wdt:educated at wdt:occupation",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(DISTINCT ?var1) AS ?var2) WHERE { ?var1 wdt:occupation wd:scientist . ?var1 wdt:educated at ?var0. wd:Ivy League  wdt:has part(s) ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which professional surfers were born in Australia? [SEP] wd:Australia wd:surfer [SEP] wdt:country wdt:place of birth wdt:occupation",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT (COUNT(DISTINCT ?var1) AS ?var2) WHERE { ?var1 wdt:place of birth ?var0 . ?var0 wdt:country wd:Australia . ?var1 wdt:occupation wd:surfer . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all Dutch parties. [SEP] wd:political party wd:Netherlands [SEP] wdt:instance of wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:country wd:Netherlands . ?var0  wdt:instance of  wd:political party .  } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many moons does Mars have? [SEP] wd:Mars [SEP] wdt:child astronomical body",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Mars wdt:child astronomical body ?var0  . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is Batman's real name? [SEP] wd:Batman [SEP] wdt:said to be the same as",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Batman wdt:said to be the same as ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is Elon Musk famous for? [SEP] wd:Elon Musk [SEP] wdt:discoverer or inventor",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Elon Musk wdt:discoverer or inventor ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the author of WikiLeaks? [SEP] wd:None [SEP] wdt:author",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:None  wdt:author  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When was Carlo Giuliani shot? [SEP] wd:Carlo Giuliani [SEP] wdt:date of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:Carlo Giuliani  wdt:date of death  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was the wife of President Lincoln? [SEP] wd:Abraham Lincoln [SEP] wdt:spouse",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:Abraham Lincoln  wdt:spouse  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many awards has Bertrand Russell? [SEP] wd:Bertrand Russell [SEP] wdt:award received",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT  (COUNT(DISTINCT ?var1) as ?var0)  WHERE { wd:Bertrand Russell  wdt:award received  ?var1 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Is Pamela Anderson a vegan? [SEP] wd:Pamela Anderson wd:vegetarianism [SEP] wdt:lifestyle",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK where { wd:Pamela Anderson wdt:lifestyle wd:vegetarianism}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which space probes were sent into orbit around the sun? [SEP] wd:heliocentric orbit [SEP] wdt:type of orbit",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:type of orbit wd:heliocentric orbit . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which German cities have more than 250000 inhabitants? [SEP] wd:city wd:Germany [SEP] wdt:instance of wdt:population wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { ?var0  wdt:country  wd:Germany .  ?var0 wdt:instance of  wd:city .  ?var0  wdt:population  ?var1 . FILTER ( ?var1 > \"250000\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer>)}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the daughter of Robert Kennedy married to? [SEP] wd:female wd:Robert F. Kennedy [SEP] wdt:child wdt:spouse wdt:sex or gender",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { wd:Robert F. Kennedy wdt:child ?var0 . ?var0  wdt:sex or gender wd:female . ?var0  wdt:spouse ?var1 .}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many students does the Free University of Amsterdam have? [SEP] wd:University of Amsterdam [SEP] wdt:count of students",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:University of Amsterdam  wdt:count of students  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the revenue of IBM? [SEP] wd:None [SEP] wdt:total revenue",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:None  wdt:total revenue  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many James Bond movies do exist? [SEP] wd:James Bond wd:film [SEP] wdt:characters wdt:instance of wdt:based on",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT (COUNT(?var0) as ?var1) WHERE { ?var0  wdt:instance of  wd:film . ?var0  ?var2  wd:James Bond .  FILTER (?var2 = wdt:based on || ?var2 = wdt:characters) }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who does the voice of Bart Simpson? [SEP] wd:Bart Simpson [SEP] wdt:voice actor",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  wd:Bart Simpson wdt:voice actor ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was Tom Hanks married to? [SEP] wd:Tom Hanks [SEP] wdt:spouse",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Tom Hanks  wdt:spouse  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Through which countries does the Yenisei river flow? [SEP] wd:Yenisey [SEP] wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Yenisey wdt:country ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all cars that are produced in Germany. [SEP] wd:automobile model series wd:Germany wd:automobile manufacturer [SEP] wdt:instance of wdt:country wdt:manufacturer",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT * WHERE { ?var0 wdt:instance of wd:automobile model series .  ?var0 wdt:manufacturer ?var1 . ?var1  wdt:country  wd:Germany . ?var1  wdt:instance of  wd:automobile manufacturer . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did Michael Jackson die? [SEP] wd:None [SEP] wdt:date of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT ?var0 WHERE { wd:None  wdt:date of death  ?var0 .  } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the highest volcano in Africa? [SEP] wd:volcano wd:Africa [SEP] wdt:instance of wdt:subclass of wdt:continent wdt:elevation above sea level",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/>  SELECT DISTINCT ?var0 WHERE { ?var0  wdt:continent  wd:Africa . ?var0  wdt:instance of\/wdt:subclass of*  wd:volcano . ?var0 wdt:elevation above sea level ?var1 . } ORDER BY DESC(?var1) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which poet wrote the most books? [SEP] wd:book wd:poet [SEP] wdt:instance of wdt:author wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:poet . ?var1 wdt:author ?var0 ; wdt:instance of wd:book . } GROUP BY ?var0 ORDER BY DESC(COUNT(?var1)) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all spacecrafts that flew to Mars. [SEP] wd:Mars rover [SEP] wdt:instance of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 where  { ?var0 wdt:instance of wd:Mars rover } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Show me all Czech movies. [SEP] wd:Czech Republic wd:Czechoslovakia wd:film [SEP] wdt:country of origin wdt:instance of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:instance of wd:film . { ?var0 wdt:country of origin wd:Czech Republic . } UNION { ?var0 wdt:country of origin wd:Czechoslovakia . } }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all taikonauts. [SEP] wd:astronaut wd:People's Republic of China [SEP] wdt:country of citizenship wdt:occupation",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:occupation wd:astronaut . ?var0 wdt:country of citizenship wd:People's Republic of China . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which countries have more than ten volcanoes? [SEP] wd:volcano [SEP] wdt:instance of wdt:country wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var2 WHERE {  { ?var0 wdt:instance of wd:volcano . } UNION { ?var0 wdt:instance of ?var1 . ?var1 wdt:subclass of* wd:volcano . } ?var0 wdt:country ?var2 . } GROUP BY ?var2 HAVING(COUNT(?var0)>10)",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all movies with Tom Cruise. [SEP] wd:Tom Cruise [SEP] wdt:cast member",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:cast member wd:Tom Cruise. }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did Dracula's creator die? [SEP] wd:Count Dracula [SEP] wdt:date of death wdt:creator",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var1 WHERE { wd:Count Dracula wdt:creator ?var0 . ?var0 wdt:date of death ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who created English Wikipedia? [SEP] wd:Wikipedia wd:human [SEP] wdt:instance of wdt:creator",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Wikipedia wdt:creator ?var0 . ?var0 wdt:instance of wd:human . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all female German chancellors. [SEP] wd:Federal Chancellor of Germany wd:female [SEP] wdt:position held wdt:sex or gender",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { ?var0 wdt:sex or gender wd:female . ?var0 wdt:position held wd:Federal Chancellor of Germany . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who owns Aldi? [SEP] wd:Aldi [SEP] wdt:child organization\/unit",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Aldi wdt:child organization\/unit ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which books were written by Danielle Steel? [SEP] wd:book wd:Danielle Steel [SEP] wdt:subclass of wdt:author wdt:genre",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:author wd:Danielle Steel . ?var1 wdt:genre ?var0 . ?var0 wdt:subclass of* wd:book . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was influenced by Socrates? [SEP] wd:Socrates wd:human [SEP] wdt:instance of wdt:influenced by",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT * WHERE { ?var0 wdt:instance of wd:human . ?var0 wdt:influenced by wd:Socrates . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How deep is Lake Chiemsee? [SEP] wd:Chiemsee [SEP] wdt:vertical depth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Chiemsee  wdt:vertical depth ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which companies work in the aerospace industry as well as in medicine? [SEP] wd:aerospace industry wd:health care industry wd:pharmaceutical industry wd:business [SEP] wdt:subclass of wdt:industry",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var4 WHERE {  ?var3 wdt:subclass of* wd:business . ?var1 wdt:subclass of* wd:aerospace industry . ?var0 wdt:subclass of* wd:health care industry . ?var2 wdt:subclass of* wd:pharmaceutical industry . ?var4 wdt:industry ?var1 ; wdt:industry ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which professional surfers were born on the Philippines? [SEP] wd:surfer wd:Philippines [SEP] wdt:country wdt:place of birth wdt:occupation",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var1 wdt:place of birth ?var0 . ?var0 wdt:country wd:Philippines . ?var1 wdt:occupation  wd:surfer . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who were the parents of Queen Victoria? [SEP] wd:Victoria [SEP] wdt:mother wdt:father",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var1 WHERE { wd:Victoria ?var0 ?var1 . VALUES ?var0 { wdt:father wdt:mother }}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Are there any castles in the United States? [SEP] wd:castle wd:United States [SEP] wdt:instance of wdt:subclass of wdt:country",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> ASK WHERE { { ?var1 wdt:instance of wd:castle. } UNION { ?var1 wdt:instance of ?var0 . ?var0 wdt:subclass of* wd:castle } ?var1 wdt:country wd:United States }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which languages are spoken in Estonia? [SEP] wd:Estonia [SEP] wdt:language used",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT * WHERE { wd:Estonia wdt:language used ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me a list of all critically endangered birds. [SEP] wd:bird wd:Critically Endangered [SEP] wdt:parent taxon wdt:IUCN conservation status",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:parent taxon* wd:bird . ?var0 wdt:IUCN conservation status wd:Critically Endangered . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which countries are connected by the Rhine? [SEP] wd:Rhine wd:country [SEP] wdt:instance of wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 ?var1 ?var2  WHERE { wd:Rhine  wdt:country ?var0 . ?var0 wdt:instance of wd:country . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was the father of Queen Elizabeth II? [SEP] wd:Elizabeth II [SEP] wdt:father",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { wd:Elizabeth II wdt:father  ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all chemical elements. [SEP] wd:chemical element [SEP] wdt:instance of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:chemical element . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all American presidents of the last 20 years. [SEP] wd:President of the United States [SEP] ",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT DISTINCT ?var2 WHERE { ?var2 p:P39 ?var0 . ?var0 ps:P39 wd:President of the United States . ?var0 pq:P582 ?var1. FILTER((YEAR(NOW()) - YEAR(?var1)) <= 20) }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When is the movie Worst Case Scenario going to be in cinemas in the Netherlands? [SEP] wd:Worst Case Scenario [SEP] wdt:publication date",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Worst Case Scenario wdt:publication date ?var0 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Whom did Lance Bass marry? [SEP] wd:Lance Bass [SEP] wdt:spouse",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Lance Bass wdt:spouse ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What languages are spoken in Pakistan? [SEP] wd:Pakistan [SEP] wdt:language used",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT * { wd:Pakistan wdt:language used ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the daughter of Bill Clinton married to? [SEP] wd:Bill Clinton [SEP] wdt:spouse wdt:child",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT * { wd:Bill Clinton wdt:child ?var0 . ?var0 wdt:spouse ?var1 }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was on the Apollo 11 mission? [SEP] wd:Apollo 11 [SEP] wdt:crew member",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Apollo 11 wdt:crew member ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all B-sides of the Ramones. [SEP] wd:Ramones wd:B-side [SEP] wdt:performer",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX pq: <http:\/\/www.wikidata.org\/prop\/qualifier\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX p: <http:\/\/www.wikidata.org\/prop\/> SELECT ?var0 WHERE { ?var0 wdt:performer wd:Ramones . ?var0 p:P1433 _:a ._:a pq:P2868 wd:B-side . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was called Scarface? [SEP]  [SEP] wdt:nickname",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var1 { ?var1 wdt:nickname ?var0 . FILTER REGEX(STR(?var0), \"^Scarface$\") }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which rivers flow into the North Sea? [SEP] wd:river wd:North Sea [SEP] wdt:instance of wdt:mouth of the watercourse",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:instance of wd:river . ?var0 wdt:mouth of the watercourse wd:North Sea . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Where is Fort Knox located? [SEP] wd:Fort Knox [SEP] wdt:located in the administrative territorial entity",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 { wd:Fort Knox wdt:located in the administrative territorial entity+ ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which daughters of British earls died at the same place they were born at? [SEP] wd:female wd:British Isles wd:earl [SEP] wdt:place of death wdt:replaced by wdt:noble title wdt:located in\/on physical feature wdt:sex or gender wdt:said to be the same as wdt:country of citizenship wdt:father wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var3 { ?var3 wdt:place of birth ?var0 . ?var3 wdt:place of death ?var1 . FILTER(?var0 = ?var1) ?var3 wdt:sex or gender wd:female . ?var3 wdt:father ?var2 . ?var2 wdt:noble title\/wdt:said to be the same as wd:earl. ?var2 wdt:country of citizenship*\/wdt:replaced by*\/wdt:located in\/on physical feature* wd:British Isles . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many emperors did China have? [SEP] wd:Emperor of China [SEP] wdt:position held",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(DISTINCT ?var1) as ?var0) WHERE {  ?var1 wdt:position held wd:Emperor of China}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What are the names of the Teenage Mutant Ninja Turtles? [SEP] wd:Teenage Mutant Ninja Turtles [SEP] wdt:part of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE {  ?var0 wdt:part of wd:Teenage Mutant Ninja Turtles . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Where does Piccadilly start? [SEP] wd:Piccadilly [SEP] wdt:terminus",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Piccadilly wdt:terminus ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the name of the university where Obama's wife studied? [SEP] wd:None wd:university [SEP] wdt:part of wdt:instance of wdt:spouse wdt:subclass of wdt:educated at",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 ?var0 WHERE { wd:None wdt:spouse\/wdt:educated at\/wdt:part of* ?var1 . ?var1 wdt:instance of*\/wdt:subclass of* wd:university . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did Paraguay proclaim its independence? [SEP] wd:Paraguay [SEP] wdt:inception",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Paraguay  wdt:inception  ?var0 .  }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How short is the shortest active NBA player? [SEP] wd:National Basketball Association wd:basketball player [SEP] wdt:league or competition wdt:member of sports team wdt:occupation wdt:height",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var2 WHERE { ?var3 wdt:occupation  wd:basketball player . ?var3 wdt:member of sports team\/wdt:league or competition wd:National Basketball Association .  ?var3 <http:\/\/www.wikidata.org\/prop\/P54> ?var0 . FILTER NOT EXISTS { ?var0 <http:\/\/www.wikidata.org\/prop\/qualifier\/P582> ?var1 } ?var3  wdt:height ?var2 } ORDER BY ?var2 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Where did Abraham Lincoln die? [SEP] wd:Abraham Lincoln [SEP] wdt:place of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Abraham Lincoln wdt:place of death ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When was Jack Wolfskin founded? [SEP] wd:Jack Wolfskin [SEP] wdt:inception",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { wd:Jack Wolfskin wdt:inception ?var0 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"In which city is the headquarter of Air China? [SEP] wd:Air China [SEP] wdt:headquarters location",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Air China wdt:headquarters location ?var0 } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the founding year of the brewery that produces Pilsner Urquell? [SEP] wd:Plzeňský Prazdroj [SEP] wdt:inception",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { wd:Plzeňský Prazdroj wdt:inception ?var0 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did the Boston Tea Party take place? [SEP] wd:Boston Tea Party [SEP] wdt:point in time",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Boston Tea Party wdt:point in time ?var0}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which animals are critically endangered? [SEP] wd:Critically Endangered [SEP] wdt:IUCN conservation status",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:IUCN conservation status wd:Critically Endangered }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which politicians were married to a German? [SEP] wd:politician wd:Germany [SEP] wdt:spouse wdt:country wdt:country of citizenship wdt:occupation wdt:place of birth",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:occupation wd:politician . ?var1 wdt:spouse ?var0 . { ?var0 wdt:country of citizenship wd:Germany . } UNION { ?var0 wdt:place of birth\/wdt:country wd:Germany } } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How big is the earth's diameter? [SEP] wd:Earth [SEP] wdt:diameter",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Earth wdt:diameter ?var0. }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Is the wife of President Obama called Michelle? [SEP] wd:None [SEP] wdt:spouse",
+        "output":"PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> ASK WHERE { wd:None wdt:spouse ?var1 . ?var1 rdfs:label ?var0 FILTER( REGEX( ?var0, \"Michelle\" ) ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which U.S. state has the abbreviation MN? [SEP] wd:U.S. state [SEP] wdt:instance of wdt:short name",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:instance of wd:U.S. state . ?var1 wdt:short name ?var0 . FILTER( REGEX( ?var0, \"^MN$\")) } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did Muhammad die? [SEP] wd:Muhammad [SEP] wdt:date of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var0 WHERE { wd:Muhammad wdt:date of death ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the governor of Texas? [SEP] wd:Texas wd:Governor of Texas [SEP] wdt:position holder wdt:office held by head of government",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Texas wdt:office held by head of government wd:Governor of Texas . wd:Governor of Texas wdt:position holder ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which movies did Kurosawa direct? [SEP] wd:Akira Kurosawa [SEP] wdt:director",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT * WHERE { ?var0 wdt:director wd:Akira Kurosawa . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What was the name of the famous battle in 1836 in San Antonio? [SEP] wd:San Antonio wd:battle [SEP] wdt:instance of wdt:point in time wdt:location",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var1 WHERE { ?var1 wdt:location wd:San Antonio . ?var1 wdt:instance of wd:battle . ?var1 wdt:point in time ?var0 . FILTER( YEAR(?var0) = 1836 ) } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me the official websites of actors of the television show Charmed. [SEP] wd:Charmed [SEP] wdt:official website",
+        "output":"PREFIX p: <http:\/\/www.wikidata.org\/prop\/> PREFIX ps: <http:\/\/www.wikidata.org\/prop\/statement\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Charmed p:P161\/ps:P161\/wdt:official website ?var0 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all libraries established before 1400. [SEP] wd:library [SEP] wdt:instance of wdt:inception wdt:subclass of",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT * WHERE { ?var1 wdt:instance of\/wdt:subclass of* wd:library . ?var1 wdt:inception ?var0 . FILTER( YEAR(?var0) < 1400 ) } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me all Frisian islands that belong to the Netherlands. [SEP] wd:Netherlands wd:island wd:Frisian Islands [SEP] wdt:part of wdt:instance of wdt:has part(s) wdt:country",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ?var1 WHERE { { wd:Frisian Islands wdt:has part(s)+ ?var1 . } UNION { wd:Frisian Islands wdt:has part(s)* ?var0 . ?var1 wdt:part of+ ?var0 . } ?var1 wdt:country wd:Netherlands . ?var1 wdt:instance of wd:island . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which museum exhibits The Scream by Munch? [SEP] wd:The Scream wd:art museum [SEP] wdt:instance of wdt:has part(s) wdt:location",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:The Scream wdt:has part(s)\/wdt:location ?var0 . ?var0 wdt:instance of wd:art museum}",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When was the De Beers company founded? [SEP] wd:De Beers [SEP] wdt:inception",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT ?var0 WHERE { wd:De Beers wdt:inception ?var0 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who became president after JFK died? [SEP] wd:John F. Kennedy wd:President of the United States [SEP] ",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { wd:John F. Kennedy <http:\/\/www.wikidata.org\/prop\/P39> ?var0 . ?var0  <http:\/\/www.wikidata.org\/prop\/statement\/P39> wd:President of the United States . ?var0 <http:\/\/www.wikidata.org\/prop\/qualifier\/P1366> ?var1 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who are the parents of the wife of Juan Carlos I? [SEP] wd:Juan Carlos I of Spain [SEP] wdt:spouse wdt:child",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { wd:Juan Carlos I of Spain wdt:spouse ?var0 . ?var1 wdt:child ?var0 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the novelist of the work a song of ice and fire? [SEP] wd:A Song of Ice and Fire wd:novelist [SEP] wdt:occupation",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:A Song of Ice and Fire ?var1 ?var0 . ?var0 wdt:occupation wd:novelist . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"In which studio did the Beatles record their first album? [SEP] wd:album wd:The Beatles [SEP] wdt:instance of wdt:publication date wdt:recorded at studio or venue wdt:performer",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var2 WHERE { ?var0 wdt:instance of wd:album ; wdt:performer wd:The Beatles ; wdt:publication date ?var1 ; wdt:recorded at studio or venue ?var2 . } ORDER BY ?var1 LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which beer brewing companies are located in North-Rhine Westphalia? [SEP] wd:North Rhine-Westphalia wd:brewery [SEP] wdt:instance of wdt:located in the administrative territorial entity wdt:headquarters location",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of wd:brewery . ?var0 wdt:headquarters location*\/wdt:instance of*\/wdt:located in the administrative territorial entity wd:North Rhine-Westphalia . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"When did princess Diana die? [SEP] wd:Diana, Princess of Wales [SEP] wdt:date of death",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Diana, Princess of Wales wdt:date of death ?var0  . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who founded Intel? [SEP] wd:Intel Corporation [SEP] wdt:founded by",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Intel Corporation wdt:founded by ?var0 . }  ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who is the youngest player in the Premier League? [SEP] wd:Premier League [SEP] wdt:league or competition wdt:date of birth wdt:member of sports team",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var2 WHERE { ?var1 wdt:league or competition wd:Premier League . ?var2 wdt:member of sports team ?var1 ; wdt:date of birth ?var0 . } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which instruments does Cat Stevens play? [SEP] wd:Cat Stevens [SEP] wdt:instrument",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { wd:Cat Stevens wdt:instrument ?var0 . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many rivers and lakes are in South Carolina? [SEP] wd:lake wd:South Carolina [SEP] wdt:instance of wdt:located in the administrative territorial entity wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT (COUNT(?var0) AS ?var1) WHERE { ?var0 wdt:located in the administrative territorial entity wd:South Carolina . ?var0 wdt:instance of\/wdt:subclass of* wd:lake . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Who was called Rodzilla? [SEP]  [SEP] ",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX skos: <http:\/\/www.w3.org\/2004\/02\/skos\/core#> SELECT * WHERE { ?var0 skos:altLabel \"Rodzilla\"@en . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me the capitals of all countries in Africa. [SEP] wd:country wd:Africa [SEP] wdt:instance of wdt:capital wdt:continent",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var0 wdt:instance of wd:country . ?var0  wdt:continent wd:Africa . ?var0 wdt:capital ?var1 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which bridges are of the same type as the Manhattan Bridge? [SEP] wd:bridge wd:Manhattan Bridge [SEP] wdt:instance of wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 { wd:Manhattan Bridge wdt:instance of ?var0 . ?var1 wdt:instance of ?var0 . ?var1 wdt:instance of\/wdt:subclass of* wd:bridge . FILTER( ?var0 != wd:bridge ) }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"How many companies were founded by the founder of Facebook? [SEP] wd:company wd:Mark Zuckerberg [SEP] wdt:instance of wdt:founded by wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT ( COUNT( DISTINCT ?var0 ) AS ?var1 ) WHERE { ?var0 wdt:founded by wd:Mark Zuckerberg . ?var0 wdt:instance of\/wdt:subclass of* wd:company . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Which book has the most pages? [SEP] wd:book [SEP] wdt:instance of wdt:number of pages wdt:subclass of",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:instance of\/wdt:subclass of* wd:book . ?var1 wdt:number of pages ?var0 . } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What is the largest state in the United States? [SEP] wd:U.S. state [SEP] wdt:instance of wdt:area",
+        "output":"PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> SELECT DISTINCT ?var1 WHERE { ?var1 wdt:instance of wd:U.S. state . ?var1 wdt:area ?var0 . } ORDER BY DESC(?var0) LIMIT 1",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"Give me the websites of companies with more than 500000 employees. [SEP] wd:business [SEP] wdt:employees wdt:official website wdt:instance of wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var1 WHERE { ?var2 wdt:instance of\/(wdt:subclass of*) wd:business . ?var2 wdt:employees ?var0 . FILTER(?var0 > 500000) . ?var2 wdt:official website ?var1 . }",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    },
+    {
+        "input":"What were the names of the three ships by Columbus? [SEP] wd:ship wd:Christopher Columbus [SEP] wdt:participant wdt:participant in wdt:instance of wdt:subclass of",
+        "output":"PREFIX wdt: <http:\/\/www.wikidata.org\/prop\/direct\/> PREFIX wd: <http:\/\/www.wikidata.org\/entity\/> SELECT DISTINCT ?var0 WHERE { ?var0 wdt:instance of\/wdt:subclass of* wd:ship . ?var0 wdt:participant in\/wdt:participant wd:Christopher Columbus . } ",
+        "instruction":"Write a SPARQL query to answer the following question using the Wikidata knowledge base:"
+    }
+]

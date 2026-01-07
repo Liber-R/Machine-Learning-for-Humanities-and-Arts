@@ -1,0 +1,1634 @@
+[
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT ?var0 WHERE { ?var0 dbo:publisher dbr:GMT_Games }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT ?var0 WHERE { dbr:GMT_Games dbo:publisher ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Skype dbo:developer ?var0. }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:developer dbr:Skype. }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Person ; dbo:birthPlace dbr:Heraklion. }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Person rdf:type ?var0 ; dbo:birthPlace dbr:Heraklion. }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Area_51 dbo:location ?var0 . ?var0 dbo:country dbr:United_States. }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:location dbr:Area_51 . ?var0 dbo:country dbr:United_States. }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:New_York_City dbo:leaderName ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:leaderName dbr:New_York_City }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Cave ; dbo:location ?var0 . ?var0 rdf:type dbo:Country } GROUP BY ?var0 HAVING ( COUNT(?var1) > 2 )",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Cave ; dbo:location ?var0 . dbo:Country rdf:type ?var0 } GROUP BY ?var0 HAVING ( COUNT(?var1) > 2 )"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:Abraham_Lincoln dbo:deathPlace ?var0. }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathPlace dbr:Abraham_Lincoln. }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Air_China dbo:targetAirport ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:targetAirport dbr:Air_China }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:director dbr:William_Shatner ; dbo:starring dbr:William_Shatner { ?var1 dbo:starring ?var0 } UNION { ?var1 dbp:starring ?var0 } }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:director dbr:William_Shatner ; dbo:starring dbr:William_Shatner { ?var1 dbo:starring ?var0 } UNION { ?var0 dbp:starring ?var1 } }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Philippines dbo:officialLanguage ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:officialLanguage dbr:Philippines }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:country dbr:Denmark }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Film rdf:type ?var0 ; dbo:country dbr:Denmark }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Brad_Pitt ; dbo:director dbr:Guy_Ritchie }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Film rdf:type ?var0 ; dbo:starring dbr:Brad_Pitt ; dbo:director dbr:Guy_Ritchie }"
+  },
+  {
+    "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Bruce_Lee dbo:child ?var1 . ?var1 dbp:children ?var0 }",
+    "input":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:child dbr:Bruce_Lee . ?var1 dbp:children ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Weapon ; dbp:designer ?var1 . dbr:Uzi dbp:designer ?var1 FILTER ( ?var0 != dbr:Uzi ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Weapon ; dbp:designer ?var0 . dbr:Uzi dbp:designer ?var1 FILTER ( ?var0 != dbr:Uzi ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Universal_Studios dbo:owner ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:owner dbr:Universal_Studios }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:densityrank ?var1 } ORDER BY ASC(?var1) LIMIT 1",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { yago:WikicatStatesOfTheUnitedStates rdf:type ?var0 ; dbp:densityrank ?var1 } ORDER BY ASC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Monarch ; dbo:spouse ?var1 { ?var1 dbo:birthPlace dbr:Germany } UNION { ?var1 dbo:birthPlace ?var2 . ?var2 dbo:country dbr:Germany } }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Monarch ; dbo:spouse ?var1 { ?var1 dbo:birthPlace dbr:Germany } UNION { ?var1 dbo:birthPlace ?var2 . dbr:Germany dbo:country ?var2 } }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Organisation { ?var0 dbo:formationYear ?var1 } UNION { ?var0 dbo:foundingYear ?var1 } UNION { ?var0 dbp:foundation ?var1 } UNION { ?var0 dbp:formation ?var1 } FILTER regex(?var1, \"^1950\") }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Organisation { ?var0 dbo:formationYear ?var1 } UNION { ?var0 dbo:foundingYear ?var1 } UNION { ?var0 dbp:foundation ?var1 } UNION { ?var1 dbp:formation ?var0 } FILTER regex(?var1, \"^1950\") }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Captain_America dbo:creator ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:creator dbr:Captain_America }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:mission dbr:Apollo_14 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Apollo_14 dbo:mission ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:The_Pillars_of_the_Earth }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var0 dbp:densityrank ?var1 } ORDER BY ASC(?var1) LIMIT 1",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var1 dbp:densityrank ?var0 } ORDER BY ASC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:launchPad dbr:Baikonur_Cosmodrome }",
+    "input":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Baikonur_Cosmodrome dbp:launchPad ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Bandleader ; dbo:instrument dbr:Trumpet }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Trumpet dbo:occupation dbr:Bandleader ; dbo:instrument ?var0 }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Utah dbp:timezone ?var1 . ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 dbp:timezone dbr:Utah . ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:mineral ?var1 FILTER regex(?var1, \"gold\", \"i\") }",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type yago:WikicatStatesOfTheUnitedStates ; dbp:mineral ?var0 FILTER regex(?var1, \"gold\", \"i\") }"
+  },
+  {
+    "output":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ingrid_Bergman dbo:child ?var1 . ?var1 dbp:spouse ?var0 }",
+    "input":"PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:child dbr:Ingrid_Bergman . ?var1 dbp:spouse ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Lake_Placid_(Texas) dbo:maximumDepth ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:maximumDepth dbr:Lake_Placid_(Texas) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Museum ; dbo:Museum dbr:London }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Museum a ?var0 ; dbo:Museum dbr:London }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Cave ; dbp:entranceCount ?var1 FILTER ( ?var1 > 3 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Cave ; dbp:entranceCount ?var0 FILTER ( ?var1 > 3 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:team dbr:Atlanta_Falcons ; dbo:team ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Atlanta_Falcons dbo:team ?var0 ; dbo:team ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/purl.org\/dc\/terms\/subject> dbr:Category:Action_role-playing_video_games ; dbp:ign ?var1 } ORDER BY DESC(?var1) LIMIT 10",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 <http:\/\/purl.org\/dc\/terms\/subject> dbr:Category:Action_role-playing_video_games ; dbp:ign ?var0 } ORDER BY DESC(?var1) LIMIT 10"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Writer ; dbo:Writer dbr:Nobel_Prize_in_Literature }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Nobel_Prize_in_Literature a dbo:Writer ; dbo:Writer ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var1 FILTER ( ?var1 > 2.0 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var0 FILTER ( ?var1 > 2.0 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Statue_of_Liberty dbp:beginningDate ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:beginningDate dbr:Statue_of_Liberty }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Illinois dbp:borderingstates ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:borderingstates dbr:Illinois }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Minecraft dbo:developer ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:developer dbr:Minecraft }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Hillel_Slovak dbo:deathPlace ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathPlace dbr:Hillel_Slovak }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Jesse_Eisenberg }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Jesse_Eisenberg a dbo:Film ; dbo:Film ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Swimmer ; dbo:Swimmer dbr:Moscow }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Swimmer a ?var0 ; dbo:Swimmer dbr:Moscow }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Astronaut { ?var0 dbo:Astronaut dbr:Russia } UNION { ?var0 dbo:Astronaut dbr:Russia } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Astronaut { ?var0 dbo:Astronaut dbr:Russia } UNION { dbr:Russia dbo:Astronaut ?var0 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var0 dbo:type ?var1 . ?var1 dbo:type dbr:Nonprofit_organization } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var0 dbo:type ?var1 . dbr:Nonprofit_organization dbo:type ?var1 } }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:President ; dbo:President ?var1 FILTER regex(?var1, \"^1945\") }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:President a ?var0 ; dbo:President ?var1 FILTER regex(?var1, \"^1945\") }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Lou_Reed dbo:genre ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:genre dbr:Lou_Reed }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Boston_Red_Sox dbp:ballpark ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:ballpark dbr:Boston_Red_Sox }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerClub ; dbo:SoccerClub dbr:Bundesliga }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Bundesliga a dbo:SoccerClub ; dbo:SoccerClub ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Volcano ; dbo:Volcano dbr:Japan ; dbo:Volcano ?var1 FILTER ( year(?var1) >= 2000 ) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Volcano a ?var0 ; dbo:Volcano dbr:Japan ; dbo:Volcano ?var1 FILTER ( year(?var1) >= 2000 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Bridge ; dbo:Bridge dbr:Seine }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Seine a dbo:Bridge ; dbo:Bridge ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:University_of_Oxford dbo:officialSchoolColour ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:officialSchoolColour dbr:University_of_Oxford }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:producer dbr:Hal_Roach }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Hal_Roach dbo:producer ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Denmark }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Film a ?var0 ; dbo:Film dbr:Denmark }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:deathCause ?var0 . } ORDER BY DESC(COUNT(DISTINCT ?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathCause ?var1 . } ORDER BY DESC(COUNT(DISTINCT ?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var1 ; dbp:highlights ?var2 FILTER regex(?var2, \"MVP\") } ORDER BY DESC(?var1) OFFSET 0 LIMIT 4",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var2 a dbo:BasketballPlayer ; dbo:BasketballPlayer ?var1 ; dbp:highlights ?var0 FILTER regex(?var2, \"MVP\") } ORDER BY DESC(?var1) OFFSET 0 LIMIT 4"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Company { ?var0 dbo:Company dbr:Munich } UNION { ?var0 dbo:Company dbr:Munich } UNION { ?var0 dbo:Company dbr:Munich } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Company { ?var0 dbo:Company dbr:Munich } UNION { dbr:Munich dbo:Company ?var0 } UNION { ?var0 dbo:Company dbr:Munich } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Himalayas dbo:country ?var1 . ?var1 dbo:country ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Himalayas dbo:country ?var1 . ?var0 dbo:country ?var1 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT COUNT(DISTINCT ?var0 AS ?var0) WHERE { ?var0 dbo:director dbr:Park_Chan-wook . }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT COUNT(DISTINCT ?var0 AS ?var0) WHERE { dbr:Park_Chan-wook dbo:director ?var0 . }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:River . ?var1 dbo:River ?var0 ; a dbo:River ; dbo:River dbr:Germany }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:River a ?var0 . ?var1 dbo:River ?var0 ; a dbo:River ; dbo:River dbr:Germany }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Airline }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbo:Airline a ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Island ; dbo:Island dbr:Japan }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Japan a dbo:Island ; dbo:Island ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Maribor dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Maribor }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:mission dbr:Apollo_14 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Apollo_14 dbo:mission ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Company { ?var0 dbo:Company ?var1 } UNION { ?var0 dbp:numEmployees ?var1 } FILTER ( ?var1 > 1000000 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbo:Company a ?var0 { ?var0 dbo:Company ?var1 } UNION { ?var0 dbp:numEmployees ?var1 } FILTER ( ?var1 > 1000000 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Julia_Roberts ; dbo:Film dbr:Julia_Roberts }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Film a ?var0 ; dbo:Film dbr:Julia_Roberts ; dbo:Film dbr:Julia_Roberts }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerClub ; dbo:SoccerClub dbr:Premier_League }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:SoccerClub a ?var0 ; dbo:SoccerClub dbr:Premier_League }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Ural_Mountains dbp:highest ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:highest dbr:Ural_Mountains }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Wyoming dbp:governor ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:governor dbr:Wyoming }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Eiffel_Tower dbo:architect ?var1 . ?var1 dbp:almaMater ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Eiffel_Tower dbo:architect ?var1 . ?var0 dbp:almaMater ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:WorldHeritageSite . { ?var0 dbp:year '2013'^^xsd:integer . } UNION { ?var0 dbp:year '2014'^^xsd:integer . } }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbo:WorldHeritageSite <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> ?var0 . { ?var0 dbp:year '2013'^^xsd:integer . } UNION { ?var0 dbp:year '2014'^^xsd:integer . } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var0 dbo:Actor dbr:Paris . ?var0 dbo:Actor ?var1 . FILTER ( ?var1 >= xsd:dateTime('1950-12-31T00:00:00Z')) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Actor <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> ?var0 . ?var0 dbo:Actor dbr:Paris . ?var0 dbo:Actor ?var1 . FILTER ( ?var1 >= xsd:dateTime('1950-12-31T00:00:00Z')) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:starring dbr:Elizabeth_Taylor ; dbo:starring dbr:Elizabeth_Taylor }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Elizabeth_Taylor dbo:starring ?var0 ; dbo:starring dbr:Elizabeth_Taylor }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var0 dbo:type ?var1 . ?var1 dbo:type dbr:Nonprofit_organization } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:type dbr:Nonprofit_organization { ?var0 dbo:type dbr:Nonprofit_organization } UNION { ?var1 dbo:type ?var0 . ?var1 dbo:type dbr:Nonprofit_organization } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Pope_John_Paul_II dbp:successor ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:successor dbr:Pope_John_Paul_II }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Astronaut ; dbp:type dbr:European_Space_Agency }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbo:Astronaut a ?var0 ; dbp:type dbr:European_Space_Agency }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:title dbr:President_of_Pakistan ; dbp:title 1978 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:President_of_Pakistan dbp:title ?var0 ; dbp:title 1978 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Rolls-Royce_Motors dbo:owner ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:owner dbr:Rolls-Royce_Motors }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Museum ; dbo:Museum dbr:Paris }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Museum a ?var0 ; dbo:Museum dbr:Paris }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:deathPlace ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathPlace dbr:John_F._Kennedy }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person { ?var0 dbo:Person \"Chancellor of Germany\" } UNION { ?var0 dbp:office dbr:Chancellor_of_Germany } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person { dbr:Chancellor_of_Germany dbo:Person \"Chancellor of Germany\" } UNION { ?var0 dbp:office ?var0 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person { ?var0 dbo:Person ?var1 } UNION { ?var0 dbp:birthDate ?var1 } dbr:Halloween dbp:birthDate ?var1 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person { ?var0 dbo:Person ?var1 } UNION { ?var1 dbp:birthDate ?var0 } dbr:Halloween dbp:birthDate ?var1 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:type dbr:Beer ; dbo:origin dbr:Beer }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Beer dbp:type ?var0 ; dbo:origin dbr:Beer }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Himalayas dbo:country ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:country dbr:Himalayas }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Actor { ?var0 dbo:Actor dbr:Germany } UNION { ?var0 dbo:Actor ?var1 . ?var1 dbo:Actor dbr:Germany } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Actor { ?var0 dbo:Actor dbr:Germany } UNION { ?var1 dbo:Actor ?var0 . ?var1 dbo:Actor dbr:Germany } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Peanut_butter dbp:carbs ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:carbs dbr:Peanut_butter }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Film . ?var1 dbo:Film ?var0 . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Film <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> ?var1 . ?var1 dbo:Film ?var0 . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Google dbo:numberOfEmployees ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:numberOfEmployees dbr:Google }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Actor ; dbo:Actor dbr:Berlin }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Berlin a dbo:Actor ; dbo:Actor ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Goofy dbo:creator ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:creator dbr:Goofy }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:album ?var0 ; <http:\/\/www.w3.org\/2000\/01\/rdf-schema#label> \"Last Christmas\"@en }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:album ?var1 ; <http:\/\/www.w3.org\/2000\/01\/rdf-schema#label> \"Last Christmas\"@en }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Alberta dbp:admittancedate ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:admittancedate dbr:Alberta }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbp:programme dbr:Soyuz_programme }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Soyuz_programme dbp:programme ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:TelevisionShow ; dbo:TelevisionShow dbr:Neil_Patrick_Harris }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:TelevisionShow a ?var0 ; dbo:TelevisionShow dbr:Neil_Patrick_Harris }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Hells_Angels dbp:founded ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:founded dbr:Hells_Angels }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Apple_Inc. dbo:netIncome ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:netIncome dbr:Apple_Inc. }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Holiday ; dbo:Holiday dbr:Sweden }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Sweden a dbo:Holiday ; dbo:Holiday ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Juliana_of_the_Netherlands dbp:burialPlace ?var0 . ?var0 a dbo:Settlement }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:burialPlace dbr:Juliana_of_the_Netherlands . ?var0 a dbo:Settlement }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Musical ; dbo:Musical dbr:Leonard_Bernstein }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Leonard_Bernstein a dbo:Musical ; dbo:Musical ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Company { ?var0 dbo:Company dbr:Advertising } UNION { ?var0 dbo:Company ?var2 FILTER regex(?var2, \"advertising\", \"i\") } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Company { dbr:Advertising dbo:Company ?var0 } UNION { ?var0 dbo:Company ?var2 FILTER regex(?var2, \"advertising\", \"i\") } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Washington_(state) dbp:largestmetro ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:largestmetro dbr:Washington_(state) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person ; dbp:conviction dbr:Death_of_John_Lennon }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Death_of_John_Lennon a dbo:Person ; dbp:conviction ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Writer { ?var0 dbo:Writer ?var1 } UNION { ?var0 dbo:Writer ?var1 } { ?var1 dbo:Writer dbr:Istanbul } UNION { ?var1 dbp:city dbr:Istanbul } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Writer { ?var0 dbo:Writer ?var1 } UNION { ?var0 dbo:Writer ?var1 } { dbr:Istanbul dbo:Writer ?var1 } UNION { ?var1 dbp:city dbr:Istanbul } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Band ; dbo:Band dbr:Metalcore { ?var0 dbo:Band dbr:Metalcore } UNION { ?var0 dbo:Band ?var1 . ?var1 dbo:Band dbr:Metalcore } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Band ; dbo:Band dbr:Metalcore { ?var0 dbo:Band dbr:Metalcore } UNION { ?var0 dbo:Band ?var1 . dbr:Metalcore dbo:Band ?var1 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Country { ?var0 dbo:Country dbr:Euro } UNION { ?var0 dbp:currencyCode \"EUR\"@en } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbo:Country a ?var0 { ?var0 dbo:Country dbr:Euro } UNION { ?var0 dbp:currencyCode \"EUR\"@en } }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> SELECT DISTINCT ?var0 WHERE { ?var0 a yago:WikicatEatingDisorders }",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> SELECT DISTINCT ?var0 WHERE { yago:WikicatEatingDisorders a ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> ASK WHERE { dbr:Marc_Chagall dbp:ethnicity \"Jewish\"@en }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> ASK WHERE { \"Jewish\"@en dbp:ethnicity dbr:Marc_Chagall }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Brazil_national_football_team dbp:fifaMin ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:fifaMin dbr:Brazil_national_football_team }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Leonardo_DiCaprio }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbo:Film a ?var0 ; dbo:Film dbr:Leonardo_DiCaprio }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Margaret_Thatcher dbo:profession dbr:Margaret_Thatcher }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Margaret_Thatcher dbo:profession dbr:Margaret_Thatcher }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Utah dbp:timezone ?var1 . ?var0 a yago:WikicatStatesOfTheUnitedStates ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Utah dbp:timezone ?var1 . yago:WikicatStatesOfTheUnitedStates a ?var0 ; dbp:timezone ?var1 FILTER ( ?var0 != dbr:Utah ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Book ; dbo:Book dbr:Danielle_Steel }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Danielle_Steel a dbo:Book ; dbo:Book ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Country . ?var0 dbp:officialLanguages ?var1 . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Country . ?var1 dbp:officialLanguages ?var0 . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:New_York_City_Fire_Department dbp:employees ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:employees dbr:New_York_City_Fire_Department }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Chewbacca dbo:portrayer ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:portrayer dbr:Chewbacca }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Library ; dbp:established ?var1 FILTER ( ?var1 < 1400 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Library ; dbp:established ?var0 FILTER ( ?var1 < 1400 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ProgrammingLanguage { ?var0 dbo:ProgrammingLanguage dbr:Perl } UNION { dbr:Perl dbo:ProgrammingLanguage ?var0 } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:ProgrammingLanguage a ?var0 { ?var0 dbo:ProgrammingLanguage dbr:Perl } UNION { dbr:Perl dbo:ProgrammingLanguage ?var0 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Mount_McKinley dbo:wikiPageRedirects ?var1 . ?var1 dbo:locatedInArea ?var0. ?var0 rdf:type yago:WikicatStatesOfTheUnitedStates }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Mount_McKinley dbo:wikiPageRedirects ?var1 . ?var1 dbo:locatedInArea ?var0. yago:WikicatStatesOfTheUnitedStates rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Airline { ?var0 dbo:Airline dbr:SkyTeam } UNION { ?var0 dbo:Airline dbr:SkyTeam } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Airline { ?var0 dbo:Airline dbr:SkyTeam } UNION { dbr:SkyTeam dbo:Airline ?var0 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:shipNamesake dbr:Benjamin_Franklin }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Benjamin_Franklin dbp:shipNamesake ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Politician ; dbo:Politician dbr:Methodism }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Methodism a dbo:Politician ; dbo:Politician ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 dbo:author dbr:John_Green_(author) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:John_Green_(author dbo:author ?var0) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Mountain ; dbo:Mountain ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Mountain ; dbo:Mountain ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Poet . ?var1 dbo:occupation ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Poet . ?var1 dbo:occupation ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ProgrammingLanguage ; dbo:ProgrammingLanguage dbr:JavaScript }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:JavaScript a dbo:ProgrammingLanguage ; dbo:ProgrammingLanguage ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Musician . ?var1 dbo:occupation ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Musician . ?var0 dbo:occupation ?var1 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } ORDER BY DESC(COUNT(?var1)) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Clint_Eastwood ; dbo:director dbr:Clint_Eastwood }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Clint_Eastwood dbo:director ?var0 ; dbo:director dbr:Clint_Eastwood }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Software . ?var1 a dbo:Software . ?var0 dbo:Software ?var1 . ?var1 dbo:Software dbr:California }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Software . ?var1 a dbo:Software . ?var1 dbo:Software ?var0 . ?var1 dbo:Software dbr:California }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Cat_Stevens dbo:instrument ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:instrument dbr:Cat_Stevens }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Airline ; dbo:Airline dbr:Star_Alliance }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Star_Alliance a dbo:Airline ; dbo:Airline ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX foaf:<http:\/\/xmlns.com\/foaf\/0.1\/> SELECT DISTINCT ?var0 WHERE { ?var0 foaf:surname 'Baldwin'@en . { ?var0 dbo:occupation dbr:Actor . } UNION { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX foaf:<http:\/\/xmlns.com\/foaf\/0.1\/> SELECT DISTINCT ?var0 WHERE { dbr:Actor foaf:surname 'Baldwin'@en . { ?var0 dbo:occupation ?var0 . } UNION { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:occupation . } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Hunger_Games dbp:author ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:author dbr:The_Hunger_Games }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Album ; dbo:artist dbr:Elvis_Presley ; dbo:releaseDate ?var2 ; dbo:recordLabel ?var0 } ORDER BY ASC(?var2) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Album rdf:type ?var1 ; dbo:artist dbr:Elvis_Presley ; dbo:releaseDate ?var2 ; dbo:recordLabel ?var0 } ORDER BY ASC(?var2) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Batman_Begins dbo:starring dbr:Christian_Bale }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Christian_Bale dbo:starring dbr:Batman_Begins }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Prime_Minister_of_Spain dbp:residence ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:residence dbr:Prime_Minister_of_Spain }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 dbo:Actor ?var0 . } ORDER BY DESC(COUNT(DISTINCT(?var1))) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Actor <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> ?var0 . ?var1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Actor . ?var1 dbo:Actor ?var0 . } ORDER BY DESC(COUNT(DISTINCT(?var1))) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Country ; dbo:Country ?var1 } GROUP BY ?var0 HAVING ( COUNT(?var1) > 2 )",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Country ; dbo:Country ?var0 } GROUP BY ?var0 HAVING ( COUNT(?var1) > 2 )"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Country . ?var1 a dbo:Country { ?var1 dbo:Country ?var0 } UNION { ?var1 dbo:Country ?var2 . ?var2 dbo:Country ?var0 } } GROUP BY ?var0 HAVING ( COUNT(?var1) > 10 )",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Country . ?var1 a dbo:Country { ?var1 dbo:Country ?var0 } UNION { ?var1 dbo:Country ?var2 . ?var0 dbo:Country ?var2 } } GROUP BY ?var0 HAVING ( COUNT(?var1) > 10 )"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Song . ?var0 dbo:Song dbr:Bruce_Springsteen . ?var0 dbo:Song ?var1 . FILTER (?var1 >= '1980-01-01'^^xsd:date && ?var1 <= '1990-12-31'^^xsd:date) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Song . ?var0 dbo:Song dbr:Bruce_Springsteen . ?var1 dbo:Song ?var0 . FILTER (?var1 >= '1980-01-01'^^xsd:date && ?var1 <= '1990-12-31'^^xsd:date) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:TelevisionShow ; dbo:TelevisionShow dbr:John_Cleese }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:TelevisionShow a ?var0 ; dbo:TelevisionShow dbr:John_Cleese }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Latvia dbp:accessioneudate ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:accessioneudate dbr:Latvia }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerPlayer ; dbo:SoccerPlayer dbr:Malta }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:SoccerPlayer a ?var0 ; dbo:SoccerPlayer dbr:Malta }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:profession dbr:Politician ; dbo:profession dbr:Politician }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Politician dbo:profession dbr:Politician ; dbo:profession ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Charmed dbo:starring ?var1 . ?var1 dbo:starring ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:starring dbr:Charmed . ?var1 dbo:starring ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:Organisation { ?var0 dbo:Organisation dbr:Telecommunication } UNION { ?var0 dbp:industry ?var2 FILTER regex(?var2, \"Telecommunications\") } { ?var0 dbo:Organisation dbr:Telecommunication } UNION { ?var0 dbp:industry \"Belgium\"@en } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbo:Organisation a ?var0 { ?var0 dbo:Organisation dbr:Telecommunication } UNION { ?var0 dbp:industry ?var2 FILTER regex(?var2, \"Telecommunications\") } { ?var0 dbo:Organisation dbr:Telecommunication } UNION { ?var0 dbp:industry \"Belgium\"@en } }"
+  },
+  {
+    "output":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { { ?var0 a dbo:Lake ; dbo:Lake dbr:Denmark } UNION { ?var0 a yago:LakesOfDenmark } }",
+    "input":"PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { { ?var0 a dbo:Lake ; dbo:Lake dbr:Denmark } UNION { yago:LakesOfDenmark a ?var0 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Eddie_Murphy dbp:children ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:children dbr:Eddie_Murphy }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 a dbo:Building ; dbo:Building dbr:English_Gothic_architecture ; dbo:Building dbr:English_Gothic_architecture }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:English_Gothic_architecture a dbo:Building ; dbo:Building ?var0 ; dbo:Building dbr:English_Gothic_architecture }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Real_Madrid_C.F. dbo:manager ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:manager dbr:Real_Madrid_C.F. }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:West_African_CFA_franc }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:West_African_CFA_franc dbo:currency ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Holiday }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Holiday rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:River { ?var0 dbo:River ?var1 } UNION { ?var0 dbp:length ?var1 } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:River { ?var0 dbo:River ?var1 } UNION { ?var1 dbp:length ?var0 } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Organisation { ?var0 dbo:Organisation ?var1 } UNION { ?var0 dbo:Organisation ?var1 } FILTER regex(?var1, \"^1930\") }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Organisation { ?var1 dbo:Organisation ?var0 } UNION { ?var0 dbo:Organisation ?var1 } FILTER regex(?var1, \"^1930\") }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Angela_Merkel dbp:birthName ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:birthName dbr:Angela_Merkel }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spouse dbr:Tom_Cruise }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Tom_Cruise dbo:spouse ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Weapon ; dbp:designer dbr:Heckler_&_Koch }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Heckler_&_Koch a dbo:Weapon ; dbp:designer ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX skos: <http:\/\/www.w3.org\/2004\/02\/skos\/core#> PREFIX dbc: dbr:Category: PREFIX dct: <http:\/\/purl.org\/dc\/terms\/> SELECT ?var0 WHERE { ?var1 skos:broader dbc:Cities_in_Germany . ?var0 dct:subject ?var1 ; dbo:areaTotal ?var2 } ORDER BY ?var2 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX skos: <http:\/\/www.w3.org\/2004\/02\/skos\/core#> PREFIX dbc: dbr:Category: PREFIX dct: <http:\/\/purl.org\/dc\/terms\/> SELECT ?var0 WHERE { ?var1 skos:broader dbc:Cities_in_Germany . ?var1 dct:subject ?var0 ; dbo:areaTotal ?var2 } ORDER BY ?var2 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Lisbon dbp:leaderParty ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:leaderParty dbr:Lisbon }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbp:satelliteOf dbr:Jupiter ; dbo:mass ?var0 } ORDER BY ASC(?var0) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:satelliteOf dbr:Jupiter ; dbo:mass ?var1 } ORDER BY ASC(?var0) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:IBM dbo:numberOfEmployees ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:numberOfEmployees dbr:IBM }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:The_Sopranos ; dbo:seasonNumber 1 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Sopranos dbo:series ?var0 ; dbo:seasonNumber 1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:abbreviation \"ICRO\" }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { \"ICRO\" dbo:abbreviation ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes ?var0 . dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:numberOfEpisodes dbr:Battlestar_Galactica_%281978_TV_series%29 . dbr:Battlestar_Galactica_%281978_TV_series%29 dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Hal_Roach }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Film a ?var0 ; dbo:Film dbr:Hal_Roach }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Agent_Smith dbo:portrayer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:portrayer dbr:Agent_Smith }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:PoliticalParty ; dbo:PoliticalParty dbr:Greece ; dbo:PoliticalParty dbr:Greece }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:PoliticalParty a ?var0 ; dbo:PoliticalParty dbr:Greece ; dbo:PoliticalParty dbr:Greece }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:occupation dbr:Bandleader ; dbo:occupation dbr:Bandleader }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Bandleader dbo:occupation ?var0 ; dbo:occupation dbr:Bandleader }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Mountain ; dbo:Mountain ?var1 } ORDER BY DESC(?var1) OFFSET 1 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Mountain ; dbo:Mountain ?var0 } ORDER BY DESC(?var1) OFFSET 1 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Egypt dbo:largestCity ?var0 ; dbo:largestCity ?var1 FILTER ( ?var0 = ?var1 ) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { ?var0 dbo:largestCity dbr:Egypt ; dbo:largestCity ?var1 FILTER ( ?var0 = ?var1 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Rocket ; dbo:Rocket dbr:Baikonur_Cosmodrome }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Baikonur_Cosmodrome a dbo:Rocket ; dbo:Rocket ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 a dbo:ProgrammingLanguage }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbo:ProgrammingLanguage a ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:ChessPlayer ; dbo:ChessPlayer ?var1 ; dbo:ChessPlayer ?var2 FILTER ( ?var1 = ?var2 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:ChessPlayer ; dbo:ChessPlayer ?var0 ; dbo:ChessPlayer ?var2 FILTER ( ?var1 = ?var2 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Facebook dbo:foundedBy ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:foundedBy dbr:Facebook }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Film ; dbo:Film dbr:Tom_Cruise }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbo:Film a ?var0 ; dbo:Film dbr:Tom_Cruise }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Fort_Knox dbo:location ?var0 . ?var0 dbo:country dbr:United_States }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:location dbr:Fort_Knox . ?var0 dbo:country dbr:United_States }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City ; dbo:isPartOf dbr:New_Jersey ; dbo:populationTotal ?var1 FILTER ( ?var1 > 100000 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:New_Jersey rdf:type dbo:City ; dbo:isPartOf ?var0 ; dbo:populationTotal ?var1 FILTER ( ?var1 > 100000 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Nanga_Parbat dbo:elevation ?var1 . ?var0 a dbo:elevation { ?var0 dbo:elevation ?var2 } UNION { ?var0 dbp:elevationM ?var2 } FILTER ( ?var2 > ?var1 ) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:Nanga_Parbat dbo:elevation ?var1 . ?var0 a dbo:elevation { ?var0 dbo:elevation ?var2 } UNION { ?var2 dbp:elevationM ?var0 } FILTER ( ?var2 > ?var1 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:musicalArtist dbr:Ramones ; dbo:musicalArtist ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:musicalArtist dbr:Ramones ; dbo:musicalArtist ?var1 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:UNC_Health_Care dbp:speciality ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:speciality dbr:UNC_Health_Care }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Olof_Palme dbo:deathDate ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathDate dbr:Olof_Palme }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:title dbr:King_of_Rome }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:King_of_Rome dbp:title ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthPlace dbr:Vienna ; dbo:birthPlace dbr:Vienna }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Vienna dbo:birthPlace dbr:Vienna ; dbo:birthPlace ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Darth_Vader dbo:child dbr:Darth_Vader }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> ASK WHERE { dbr:Darth_Vader dbo:child dbr:Darth_Vader }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Brewery { ?var0 dbo:Brewery dbr:Australia } UNION { ?var0 dbo:Brewery ?var1 . ?var1 dbo:Brewery dbr:Australia } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Brewery { ?var0 dbo:Brewery dbr:Australia } UNION { ?var0 dbo:Brewery ?var1 . dbr:Australia dbo:Brewery ?var1 } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Film . ?var0 dbo:Film dbr:Steven_Spielberg . ?var0 dbo:Film ?var1 . FILTER( xsd:double(?var1) >= 8.0E7 ) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> dbo:Film . dbr:Steven_Spielberg dbo:Film ?var0 . ?var0 dbo:Film ?var1 . FILTER( xsd:double(?var1) >= 8.0E7 ) }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:SoccerClub { ?var0 dbo:SoccerClub dbr:Spain } UNION { ?var0 dbp:ground ?var1 FILTER regex(?var1, \"Spain\") } }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbo:SoccerClub a ?var0 { ?var0 dbo:SoccerClub dbr:Spain } UNION { ?var0 dbp:ground ?var1 FILTER regex(?var1, \"Spain\") } }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var1 a dbo:Film ; dbo:Film dbr:Natalie_Portman ; dbo:Film ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Natalie_Portman a dbo:Film ; dbo:Film ?var1 ; dbo:Film ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbp:breed dbr:German_Shepherd }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { dbr:German_Shepherd dbp:breed ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person ; dbo:Person ?var1 { ?var0 dbp:team dbr:Chicago_Bulls } UNION { ?var0 dbp:team dbr:Chicago_Bulls } UNION { ?var0 dbo:Person dbr:Chicago_Bulls } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT DISTINCT ?var0 WHERE { ?var0 a dbo:Person ; dbo:Person ?var1 { ?var0 dbp:team dbr:Chicago_Bulls } UNION { dbr:Chicago_Bulls dbp:team ?var0 } UNION { ?var0 dbo:Person dbr:Chicago_Bulls } } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spokenIn dbr:Estonia }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Estonia dbo:spokenIn ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Country ; dbo:areaTotal ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Country rdf:type ?var0 ; dbo:areaTotal ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:United_States dbo:largestCity ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:largestCity dbr:United_States }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var0 rdf:type dbo:Pope . dbr:Vatican_Television_Center dbo:foundedBy ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var0 rdf:type dbo:Pope . ?var0 dbo:foundedBy dbr:Vatican_Television_Center }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Ceres_(dwarf_planet) dbo:discoverer ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:discoverer dbr:Ceres_(dwarf_planet) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Netherlands dbo:leader ?var0 . ?var0 rdf:type dbo:Royalty }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Netherlands dbo:leader ?var0 . dbo:Royalty rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Cola rdf:type dbo:Beverage }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbo:Beverage rdf:type dbr:Cola }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Angela_Merkel dbo:almaMater ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:almaMater dbr:Angela_Merkel }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:The_Pillars_of_the_Earth }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Yeti_Airlines dbo:targetAirport ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:targetAirport dbr:Yeti_Airlines }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Johann_Wolfgang_von_Goethe dbo:birthPlace ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:birthPlace dbr:Johann_Wolfgang_von_Goethe }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Cuban_Missile_Crisis dbo:date ?var0 . dbr:Bay_of_Pigs_Invasion dbo:date ?var1 FILTER ( ?var0 < ?var1 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:date dbr:Cuban_Missile_Crisis . dbr:Bay_of_Pigs_Invasion dbo:date ?var1 FILTER ( ?var0 < ?var1 ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Carrot_cake dbo:ingredient ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:ingredient dbr:Carrot_cake }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Wikipedia dbo:author ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:Wikipedia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:mountainRange dbr:Ore_Mountains ; dbo:elevation ?var1 } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var1 dbo:mountainRange dbr:Ore_Mountains ; dbo:elevation ?var0 } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:Federal_Ministry_of_Finance_(Germany) dbo:leader ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 dbo:leader dbr:Federal_Ministry_of_Finance_(Germany) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Mecca dbo:country ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:country dbr:Mecca }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Gus_Fring dbo:portrayer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:portrayer dbr:Gus_Fring }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Nile dbo:sourceCountry ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:sourceCountry dbr:Nile }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Pennsylvania_State_University dbo:state ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:state dbr:Pennsylvania_State_University }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Stadium ; dbo:location dbr:Spain ; dbo:seatingCapacity ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Spain rdf:type dbo:Stadium ; dbo:location ?var0 ; dbo:seatingCapacity ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:city dbr:Ankara ; dbo:league dbr:Turkish_Ice_Hockey_First_League ; dbo:coach ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:city dbr:Ankara ; dbo:league dbr:Turkish_Ice_Hockey_First_League ; dbo:coach ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:United_Kingdom dbo:areaTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:areaTotal dbr:United_Kingdom }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Batman dbo:creator ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:creator dbr:Batman }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Sigmund_Freud dbo:spouse ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:spouse dbr:Sigmund_Freud }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:DBpedia dbo:developer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:developer dbr:DBpedia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:director dbr:Francis_Ford_Coppola }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Francis_Ford_Coppola rdf:type dbo:Film ; dbo:director ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Hylidae dbo:class dbr:Amphibian }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Amphibian dbo:class dbr:Hylidae }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Palace_of_Westminster dbo:location ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:location dbr:Palace_of_Westminster }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Düsseldorf_Airport dbo:elevation ?var0 } LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:elevation dbr:Düsseldorf_Airport } LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Mexico_City dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Mexico_City }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:French_Fifth_Republic dbo:foundingDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:foundingDate dbr:French_Fifth_Republic }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Royalty ; rdf:type yago:WikicatEnglishMonarchs ; dbo:activeYearsStartYear ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX yago: <http:\/\/dbpedia.org\/class\/yago\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Royalty rdf:type ?var0 ; rdf:type yago:WikicatEnglishMonarchs ; dbo:activeYearsStartYear ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Forbes dbo:editor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:editor dbr:Forbes }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Douglas_Hofstadter dbo:award ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:award dbr:Douglas_Hofstadter }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:DartsPlayer ; dbo:birthDate ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:DartsPlayer ; dbo:birthDate ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Horse_racing rdf:type dbo:Sport }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbo:Sport rdf:type dbr:Horse_racing }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Brooklyn_Bridge dbo:crosses ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:crosses dbr:Brooklyn_Bridge }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Poland dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Poland }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Friends dbo:completionDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:completionDate dbr:Friends }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { dbr:Barack_Obama dbo:spouse ?var0 . ?var0 rdfs:label ?var1 FILTER regex(?var1, \"Michelle\") }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { ?var0 dbo:spouse dbr:Barack_Obama . ?var0 rdfs:label ?var1 FILTER regex(?var1, \"Michelle\") }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:8th_President_of_the_United_States dbo:wikiPageRedirects ?var1 . ?var1 dbp:name ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:8th_President_of_the_United_States dbo:wikiPageRedirects ?var1 . ?var0 dbp:name ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:European_Union dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:populationTotal dbr:European_Union }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:LaunchPad ; dbo:operator dbr:NASA }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:LaunchPad rdf:type ?var0 ; dbo:operator dbr:NASA }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:World_of_Warcraft dbo:developer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:developer dbr:World_of_Warcraft }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Adele dbo:birthName ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:birthName dbr:Adele }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Cairo dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Cairo }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { OPTIONAL { dbr:Frank_Herbert dbo:deathDate ?var0 } FILTER ( ! bound(?var0) ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { OPTIONAL { ?var0 dbo:deathDate dbr:Frank_Herbert } FILTER ( ! bound(?var0) ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { { ?var0 dbo:author dbr:Dan_Brown . ?var0 dbp:releaseDate ?var1 } UNION { ?var0 dbo:author dbr:Dan_Brown . ?var0 dbo:publicationDate ?var1} } ORDER BY DESC(xsd:date(?var1)) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { { ?var0 dbo:author dbr:Dan_Brown . ?var1 dbp:releaseDate ?var0 } UNION { ?var0 dbo:author dbr:Dan_Brown . ?var0 dbo:publicationDate ?var1} } ORDER BY DESC(xsd:date(?var1)) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sungkyunkwan_University dbo:city ?var1 ; dbo:country ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:city dbr:Sungkyunkwan_University ; dbo:country ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:The_Interpretation_of_Dreams dbo:author ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:author dbr:The_Interpretation_of_Dreams }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:William_Shakespeare dbo:deathDate ?var0 } LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:deathDate dbr:William_Shakespeare } LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:product dbr:Slack_(software) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Slack_(software dbo:product ?var0) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Carolina_Reaper dbo:origin ?var0}",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:origin dbr:Carolina_Reaper}"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rachel_Stevens dbo:birthYear ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthYear dbr:Rachel_Stevens }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Jane_Fonda dbo:spouse ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:spouse dbr:Jane_Fonda }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { dbr:Abraham_Lincoln dbo:spouse ?var0 . ?var0 rdfs:label ?var1 FILTER regex(?var1, \"Mary\") }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> ASK WHERE { dbr:Abraham_Lincoln dbo:spouse ?var0 . ?var1 rdfs:label ?var0 FILTER regex(?var1, \"Mary\") }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Weser dbo:city ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:city dbr:Weser }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:GIMP dbo:programmingLanguage ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:programmingLanguage dbr:GIMP }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Angela_Merkel dbo:almaMater ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:almaMater dbr:Angela_Merkel }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Musical ; dbo:musicBy dbr:Elton_John }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Elton_John rdf:type dbo:Musical ; dbo:musicBy ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Aldi dbo:numberOfLocations ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:numberOfLocations dbr:Aldi }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var0 rdf:type dbo:BodyOfWater ; dbo:length ?var1 } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var1 rdf:type dbo:BodyOfWater ; dbo:length ?var0 } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_Adams dbo:birthDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthDate dbr:John_Adams }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:product dbr:Hovercraft }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Company rdf:type ?var0 ; dbo:product dbr:Hovercraft }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Abraham_Lincoln dbo:spouse ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spouse dbr:Abraham_Lincoln }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Elephant dbp:species ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:species dbr:Elephant }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Australia dbo:capital ?var1 . ?var1 dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:capital dbr:Australia . ?var1 dbo:populationTotal ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:Cocoa_bean }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Cocoa_bean dbo:currency ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var0) AS ?var1) WHERE { dbr:Albert_Einstein dbo:knownFor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var0) AS ?var1) WHERE { ?var0 dbo:knownFor dbr:Albert_Einstein }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Titanic_(1997_film) dbo:musicComposer ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:musicComposer dbr:Titanic_(1997_film) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Toy_Story dbo:runtime ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:runtime dbr:Toy_Story }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Geography_of_Iran dbp:borders ?var0 } LIMIT 8",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:borders dbr:Geography_of_Iran } LIMIT 8"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:industry dbr:Electronics ; dbo:foundationPlace dbr:Beijing }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Beijing rdf:type dbo:Company ; dbo:industry dbr:Electronics ; dbo:foundationPlace ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:successor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:successor dbr:John_F._Kennedy }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Paris dbo:mayor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:mayor dbr:Paris }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Arnold_Schwarzenegger dbo:almaMater ?var0 . ?var0 rdf:type dbo:University }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { ?var0 dbo:almaMater dbr:Arnold_Schwarzenegger . ?var0 rdf:type dbo:University }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:James_Bond dbo:spouse ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:spouse dbr:James_Bond }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { ?var0 dbo:inflow dbr:Isar ; rdf:type dbo:Lake }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbo:Lake dbo:inflow dbr:Isar ; rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Company ; dbo:location dbr:India ; dbo:numberOfEmployees ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Company rdf:type ?var0 ; dbo:location dbr:India ; dbo:numberOfEmployees ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:vicePresident ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:vicePresident dbr:John_F._Kennedy }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Miffy dbo:creator ?var1 . ?var1 dbo:nationality ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Miffy dbo:creator ?var1 . ?var0 dbo:nationality ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Heineken dbo:manufacturer ?var1 . ?var1 dbo:locationCity ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Heineken dbo:manufacturer ?var1 . ?var0 dbo:locationCity ?var1 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Barack_Obama dbo:party dbr:Democratic_Party_(United_States) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Democratic_Party_(United_States dbo:party dbr:Barack_Obama) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Margaret_Thatcher dbo:child ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:child dbr:Margaret_Thatcher }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Melon_de_Bourgogne dbo:wineRegion ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:wineRegion dbr:Melon_de_Bourgogne }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:North_Rhine-Westphalia dbo:areaTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:areaTotal dbr:North_Rhine-Westphalia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City ; dbo:populationTotal ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:City ; dbo:populationTotal ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:owner dbr:Donald_Trump }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Donald_Trump dbo:owner ?var0 }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:2018_FIFA_World_Cup dbp:date ?var0 } ORDER BY DESC(?var0) LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:date dbr:2018_FIFA_World_Cup } ORDER BY DESC(?var0) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Stanley_Kubrick }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Stanley_Kubrick dbo:director ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Iraq dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Iraq }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Canada dbo:largestCity ?var1 . ?var1 dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Canada dbo:largestCity ?var1 . ?var0 dbo:populationTotal ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:French_Polynesia dbo:capital ?var1 . ?var1 dbo:mayor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:French_Polynesia dbo:capital ?var1 . ?var0 dbo:mayor ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:director dbr:William_Shatner ; dbo:starring ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:William_Shatner dbo:director ?var1 ; dbo:starring ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Claudia_Schiffer dbo:height ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:height dbr:Claudia_Schiffer }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Germany dbp:populationDensityRank ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:populationDensityRank dbr:Germany }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Mountain ; dbo:locatedInArea dbr:Italy ; dbo:elevation ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Mountain ; dbo:locatedInArea dbr:Italy ; dbo:elevation ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:publisher dbr:GMT_Games }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:GMT_Games dbo:publisher ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Suriname dbo:officialLanguage ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:officialLanguage dbr:Suriname }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Nikos_Kazantzakis dbo:deathPlace ?var0 . ?var0 rdf:type dbo:Town }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathPlace dbr:Nikos_Kazantzakis . ?var0 rdf:type dbo:Town }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Chocolate_chip_cookie dbo:ingredient ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:ingredient dbr:Chocolate_chip_cookie }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Limerick_Lake dbo:country ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:country dbr:Limerick_Lake }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:VideoGame ; dbo:publisher dbr:Mean_Hamster_Software }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:VideoGame rdf:type ?var0 ; dbo:publisher dbr:Mean_Hamster_Software }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Prodigy dbo:bandMember ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:bandMember dbr:The_Prodigy }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rome dbo:timeZone ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:timeZone dbr:Rome }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Colombo_Lighthouse dbo:height ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:height dbr:Colombo_Lighthouse }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:The_Wall dbp:writer ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:writer dbr:The_Wall }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Rotterdam dbo:leaderName ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:leaderName dbr:Rotterdam }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Australia dbo:largestCity ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:largestCity dbr:Australia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Jacques_Chirac dbo:spouse ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:spouse dbr:Jacques_Chirac }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:South_Africa dbo:governmentType ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:governmentType dbr:South_Africa }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Yokohama_Marine_Tower dbo:height ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:height dbr:Yokohama_Marine_Tower }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Holiday }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Holiday rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:BasketballPlayer ; dbo:height ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:BasketballPlayer ; dbo:height ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Turkmenistan dbo:language ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:language dbr:Turkmenistan }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Che_Guevara dbo:child ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:child dbr:Che_Guevara }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Aki_Kaurismäki dbo:award dbr:Grand_Prix_(Cannes_Film_Festival) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Grand_Prix_(Cannes_Film_Festival dbo:award dbr:Aki_Kaurismäki) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Paris dbo:mayor ?var1 . ?var1 dbo:party ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:mayor dbr:Paris . ?var1 dbo:party ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:FormulaOneRacer ; dbo:races ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:FormulaOneRacer rdf:type ?var0 ; dbo:races ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sitecore dbo:foundationPlace ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:foundationPlace dbr:Sitecore }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Frank_Sinatra dbo:birthPlace ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthPlace dbr:Frank_Sinatra }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Velvet_Goldmine dbo:starring dbr:Christian_Bale }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Christian_Bale dbo:starring dbr:Velvet_Goldmine }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:parent dbr:Cher ; dbo:parent dbr:Sonny_Bono }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Cher dbo:parent ?var0 ; dbo:parent dbr:Sonny_Bono }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Slovenia dbo:ethnicGroup ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:ethnicGroup dbr:Slovenia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Cameroon dbo:capital ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:capital dbr:Cameroon }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Natalie_Portman dbo:birthPlace ?var0 . ?var0 dbo:country dbr:United_States }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Natalie_Portman dbo:birthPlace ?var0 . dbr:United_States dbo:country ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:War_and_Peace dbo:numberOfPages ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:numberOfPages dbr:War_and_Peace }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Meryl_Streep dbo:child ?var0 . ?var0 dbo:birthDate ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Meryl_Streep dbo:child ?var0 . ?var1 dbo:birthDate ?var0 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:TelevisionShow ; dbo:creator dbr:Walt_Disney }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Walt_Disney rdf:type dbo:TelevisionShow ; dbo:creator ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:abbreviation \"IYCM\" }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { \"IYCM\" dbo:abbreviation ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Oregon_wine dbo:growingGrape ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:growingGrape dbr:Oregon_wine }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Andrew_Jackson dbo:battle ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:battle dbr:Andrew_Jackson }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:RMS_Titanic dbo:completionDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:completionDate dbr:RMS_Titanic }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Nikola_Tesla dbo:award dbr:Nobel_Prize_in_Physics }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Nobel_Prize_in_Physics dbo:award dbr:Nikola_Tesla }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var0) AS ?var1) WHERE { ?var0 dbo:type dbr:States_of_Mexico }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(?var0) AS ?var1) WHERE { dbr:States_of_Mexico dbo:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:knownFor dbr:Manhattan_Project ; rdf:type dbo:Scientist ; dbo:knownFor dbr:Nobel_Peace_Prize }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Scientist dbo:knownFor dbr:Manhattan_Project ; rdf:type ?var0 ; dbo:knownFor dbr:Nobel_Peace_Prize }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Lego_Movie dbo:budget ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:budget dbr:The_Lego_Movie }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Harold_and_Maude dbo:musicComposer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:musicComposer dbr:Harold_and_Maude }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:The_Sopranos ; dbo:seasonNumber 1 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Sopranos dbo:series ?var0 ; dbo:seasonNumber 1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City ; dbo:populationTotal ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:City rdf:type ?var0 ; dbo:populationTotal ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Syngman_Rhee dbo:restingPlace ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:restingPlace dbr:Syngman_Rhee }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Neymar dbo:team dbr:Real_Madrid_C.F. }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Real_Madrid_C.F. dbo:team dbr:Neymar }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Pillars_of_the_Earth dbo:author ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:The_Pillars_of_the_Earth }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Prince_William,_Duke_of_Cambridge dbo:parent ?var0 . dbr:Prince_Harry dbo:parent ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:parent dbr:Prince_William,_Duke_of_Cambridge . dbr:Prince_Harry dbo:parent ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Albert_Einstein dbo:doctoralAdvisor ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:doctoralAdvisor dbr:Albert_Einstein }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Breaking_Bad dbo:numberOfEpisodes ?var0 . dbr:Game_of_Thrones dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:numberOfEpisodes dbr:Breaking_Bad . dbr:Game_of_Thrones dbo:numberOfEpisodes ?var1 FILTER ( ?var1 > ?var0 ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:influenced dbr:Vincent_van_Gogh }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Vincent_van_Gogh dbo:influenced ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Burj_Khalifa dbo:floorCount ?var1 . ?var0 rdf:type dbo:Building ; dbo:floorCount ?var2 FILTER ( ?var2 < ?var1 ) } ORDER BY DESC(?var2) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Burj_Khalifa dbo:floorCount ?var1 . ?var2 rdf:type dbo:Building ; dbo:floorCount ?var0 FILTER ( ?var2 < ?var1 ) } ORDER BY DESC(?var2) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:isPartOfMilitaryConflict dbr:Wars_of_the_Roses ; dbo:result ?var0 ; dbo:date ?var2 } ORDER BY DESC(?var2) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var2 dbo:isPartOfMilitaryConflict dbr:Wars_of_the_Roses ; dbo:result ?var0 ; dbo:date ?var1 } ORDER BY DESC(?var2) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Pulp_Fiction dbo:budget ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:budget dbr:Pulp_Fiction }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbr:Proinsulin rdf:type dbo:Protein }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbo:Protein rdf:type dbr:Proinsulin }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Urdu dbo:languageFamily ?var0 . dbr:Persian_language dbo:languageFamily ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Urdu dbo:languageFamily ?var0 . ?var0 dbo:languageFamily dbr:Persian_language }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Film ; dbo:country dbr:Spain ; dbo:producer dbr:Benicio_del_Toro ; dbo:starring ?var0 . ?var0 rdf:type dbo:Person }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Film ; dbo:country dbr:Spain ; dbo:producer dbr:Benicio_del_Toro ; dbo:starring ?var0 . dbo:Person rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Lake_Baikal dbo:areaTotal ?var0 . dbr:Great_Bear_Lake dbo:areaTotal ?var1 FILTER ( ?var0 > ?var1 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:areaTotal dbr:Lake_Baikal . dbr:Great_Bear_Lake dbo:areaTotal ?var1 FILTER ( ?var0 > ?var1 ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:series dbr:Foundation_series }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Foundation_series dbo:series ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Johann_Sebastian_Bach dbo:birthPlace ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:birthPlace dbr:Johann_Sebastian_Bach }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var1 dbo:type dbr:Rapid_transit ; dbo:openingYear ?var2 ; dbo:location ?var0 . ?var0 rdf:type dbo:City } ORDER BY ASC(?var2) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT ?var0 WHERE { ?var2 dbo:type dbr:Rapid_transit ; dbo:openingYear ?var1 ; dbo:location ?var0 . ?var0 rdf:type dbo:City } ORDER BY ASC(?var2) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Brooklyn_Bridge dbo:architect ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:architect dbr:Brooklyn_Bridge }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Eurasia dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Eurasia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:BBC_Wildlife_Specials dbo:presenter ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:presenter dbr:BBC_Wildlife_Specials }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { dbr:Melbourne,_Florida dbo:populationTotal ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT ?var0 WHERE { ?var0 dbo:populationTotal dbr:Melbourne,_Florida }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Mount_Everest dbo:locatedInArea ?var0 . ?var0 rdf:type dbo:Country }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:locatedInArea dbr:Mount_Everest . ?var0 rdf:type dbo:Country }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Three_Dancers dbo:author ?var1 . ?var1 dbo:movement ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:The_Three_Dancers dbo:author ?var1 . ?var0 dbo:movement ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Operation_Overlord dbo:date ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:date dbr:Operation_Overlord }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Bridge ; dbo:mainspan ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Bridge ; dbo:mainspan ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { ?var0 rdf:type dbo:VideoGame ; rdfs:label \"Battle Chess\"@en }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> ASK WHERE { dbo:VideoGame rdf:type ?var0 ; rdfs:label \"Battle Chess\"@en }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:restingPlace dbr:Great_Pyramid_of_Giza }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Great_Pyramid_of_Giza dbo:restingPlace ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:assembly dbr:Malaysia ; dbo:manufacturer dbr:Ford_Motor_Company }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Ford_Motor_Company dbo:assembly dbr:Malaysia ; dbo:manufacturer ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Aristotle dbo:influencedBy dbr:Socrates }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Socrates dbo:influencedBy dbr:Aristotle }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { dbr:Benjamin_Franklin dbo:child ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 dbo:child dbr:Benjamin_Franklin }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Michael_Jordan dbo:height ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:height dbr:Michael_Jordan }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Secret_Intelligence_Service dbo:headquarter ?var0 . ?var0 dbo:country dbr:United_Kingdom }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Secret_Intelligence_Service dbo:headquarter ?var0 . dbr:United_Kingdom dbo:country ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Family_Guy dbo:creator ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:creator dbr:Family_Guy }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Chile_Route_68 dbo:routeEnd ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:routeEnd dbr:Chile_Route_68 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Elvis_Presley dbo:child ?var1 . ?var1 dbo:child ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var1 dbo:child dbr:Elvis_Presley . ?var1 dbo:child ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ming_dynasty dbo:dissolutionDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:dissolutionDate dbr:Ming_dynasty }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:T._E._Lawrence dbo:battle ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:battle dbr:T._E._Lawrence }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:San_Pedro_de_Atacama dbo:timeZone ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:timeZone dbr:San_Pedro_de_Atacama }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:author dbr:William_Goldman ; dbo:numberOfPages ?var1 FILTER ( ?var1 > 300 ) }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:William_Goldman rdf:type dbo:Book ; dbo:author ?var0 ; dbo:numberOfPages ?var1 FILTER ( ?var1 > 300 ) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Bruce_Carver dbo:deathCause ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:deathCause dbr:Bruce_Carver }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Lufthansa dbo:subsidiary ?var0 . ?var0 dbo:targetAirport dbr:Dortmund_Airport ; dbo:targetAirport dbr:Berlin_Tegel_Airport }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Lufthansa dbo:subsidiary ?var0 . dbr:Berlin_Tegel_Airport dbo:targetAirport dbr:Dortmund_Airport ; dbo:targetAirport ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Abraham_Lincoln dbo:deathPlace ?var0 . ?var0 dbo:website ?var1 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:deathPlace dbr:Abraham_Lincoln . ?var0 dbo:website ?var1 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Elvis_Presley dbo:child ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { ?var0 dbo:child dbr:Elvis_Presley }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Barack_Obama dbo:spouse dbr:Michelle_Obama }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Michelle_Obama dbo:spouse dbr:Barack_Obama }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City . dbr:Sylvester_Stallone dbo:residence ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:City . ?var0 dbo:residence dbr:Sylvester_Stallone }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:publisher dbr:Viking_Press ; dbo:author dbr:Jack_Kerouac }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Viking_Press rdf:type dbo:Book ; dbo:publisher ?var0 ; dbo:author dbr:Jack_Kerouac }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Hotel_California dbo:writer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:writer dbr:Hotel_California }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Canada dbo:capital ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:capital dbr:Canada }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Tel_Aviv dbo:leaderName ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:leaderName dbr:Tel_Aviv }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Russia dbo:governmentType ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:governmentType dbr:Russia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Book ; dbo:author dbr:Muhammad_Ali }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Muhammad_Ali rdf:type dbo:Book ; dbo:author ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Mount_Everest dbo:firstAscentPerson ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:firstAscentPerson dbr:Mount_Everest }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 rdf:type dbo:Language . dbr:Colombia dbo:language ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT (COUNT(DISTINCT ?var0) AS ?var1) WHERE { ?var0 rdf:type dbo:Language . ?var0 dbo:language dbr:Colombia }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Czech_Republic dbo:currency ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:Czech_Republic }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:wineProduced dbr:Sparkling_wine ; dbo:location dbr:France }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sparkling_wine dbo:wineProduced ?var0 ; dbo:location dbr:France }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Boris_Becker dbo:activeYearsEndDate ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:activeYearsEndDate dbr:Boris_Becker }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Mickey_Rourke ; dbo:director dbr:Guy_Ritchie }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Film rdf:type ?var0 ; dbo:starring dbr:Mickey_Rourke ; dbo:director dbr:Guy_Ritchie }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Julia_Roberts ; dbo:starring dbr:Richard_Gere }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Film rdf:type ?var0 ; dbo:starring dbr:Julia_Roberts ; dbo:starring dbr:Richard_Gere }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:author dbr:Ernest_Hemingway ; dbo:literaryGenre dbr:Autobiography }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ernest_Hemingway dbo:author ?var0 ; dbo:literaryGenre dbr:Autobiography }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Amazon_Eve dbo:height ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:height dbr:Amazon_Eve }"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:governmentType dbr:Borough_(New_York_City) }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> SELECT DISTINCT ?var0 WHERE { dbr:Borough_(New_York_City dbo:governmentType ?var0) }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:RecordLabel ; dbo:genre dbr:Grunge ; dbo:country dbr:Canada }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Canada rdf:type dbo:RecordLabel ; dbo:genre dbr:Grunge ; dbo:country ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Ganges dbo:sourceCountry ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:sourceCountry dbr:Ganges }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Penguin_Books dbo:founder ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:founder dbr:Penguin_Books }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Game_of_Thrones dbo:composer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:composer dbr:Game_of_Thrones }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Eritrea dbo:leader ?var0 ; dbo:leaderTitle \"President\"@en }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { \"President\"@en dbo:leader ?var0 ; dbo:leaderTitle dbr:Eritrea }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:deathPlace ?var0 . ?var0 rdf:type dbo:City }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:John_F._Kennedy dbo:deathPlace ?var0 . dbo:City rdf:type ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Mountain ; dbo:locatedInArea dbr:Australia ; dbo:elevation ?var1 } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Australia rdf:type dbo:Mountain ; dbo:locatedInArea ?var0 ; dbo:elevation ?var1 } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { dbr:Farmers'_Almanac dbp:editor ?var0 }",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbp: <http:\/\/dbpedia.org\/property\/> SELECT ?var0 WHERE { ?var0 dbp:editor dbr:Farmers'_Almanac }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:China dbo:currency ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:currency dbr:China }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:field dbr:Oceanography ; dbo:birthPlace dbr:Sweden }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Sweden dbo:field dbr:Oceanography ; dbo:birthPlace ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Headquarters_of_the_United_Nations dbo:location ?var0 . ?var0 rdf:type dbo:City }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:location dbr:Headquarters_of_the_United_Nations . ?var0 rdf:type dbo:City }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Tom_Hanks dbo:spouse dbr:Rita_Wilson }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> ASK WHERE { dbr:Rita_Wilson dbo:spouse dbr:Tom_Hanks }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Country ; dbo:language dbr:Japanese_language }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbr:Japanese_language rdf:type dbo:Country ; dbo:language ?var0 }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:director dbr:Tim_Burton ; dbo:budget ?var1 } ORDER BY ?var1 OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Tim_Burton dbo:director ?var0 ; dbo:budget ?var1 } ORDER BY ?var1 OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Museum ; dbo:location dbr:New_York_City ; dbo:numberOfVisitors ?var1 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Museum ; dbo:location dbr:New_York_City ; dbo:numberOfVisitors ?var0 } ORDER BY DESC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Album ; dbo:artist dbr:Queen_(band) ; dbo:releaseDate ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1",
+    "input":"PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { dbo:Album rdf:type ?var0 ; dbo:artist dbr:Queen_(band) ; dbo:releaseDate ?var1 } ORDER BY ASC(?var1) OFFSET 0 LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Queens_of_the_Stone_Age dbo:alias ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:alias dbr:Queens_of_the_Stone_Age }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var0 rdf:type dbo:Film ; dbo:starring dbr:Alec_Guinness ; dbo:releaseDate ?var1 } ORDER BY DESC(?var1) LIMIT 1",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> SELECT DISTINCT ?var0 WHERE { ?var1 rdf:type dbo:Film ; dbo:starring dbr:Alec_Guinness ; dbo:releaseDate ?var0 } ORDER BY DESC(?var1) LIMIT 1"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { dbr:Last_Action_Hero dbo:starring ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT DISTINCT ?var0 WHERE { ?var0 dbo:starring dbr:Last_Action_Hero }"
+  },
+  {
+    "output":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { dbr:Pluto dbo:discoverer ?var0 }",
+    "input":"PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/> PREFIX dbr: <http:\/\/dbpedia.org\/resource\/> SELECT ?var0 WHERE { ?var0 dbo:discoverer dbr:Pluto }"
+  }
+]
