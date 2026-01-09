@@ -41,7 +41,3 @@ This the cache data use to speed up wikidata api requests for entities and relat
 ## *report.docx*
 
 This is the report about the project.
-
-## *codet5_sparql*
-
-The folder containing the fine-tuned CodeT5+ for TTS and its tokenizer
