@@ -1059,7 +1059,7 @@ qald10_tsc.to_json(QALD10_TSC_FOLDER+'/train.json', orient='records', index=Fals
 '''
 
 # LC-QuAD v.2
-#'''
+'''
 # Creazione dataset stile alpaca
 A_lcquad2_train = make_lcquad_alpaca(LC_QUAD2_TRAIN_PATH)
 A_lcquad2_test = make_lcquad_alpaca(LC_QUAD2_TEST_PATH)
@@ -1076,7 +1076,7 @@ lcquad2_test_tsc['input'] = lcquad2_test_tsc['output'].apply(random_subj_obj_swa
 # Salvataggio in json del nuovo dataset per TSC
 lcquad2_train_tsc.to_json(LC_QUAD2_TSC_FOLDER+'/train.json', orient='records', index=False, force_ascii=False, indent=2)
 lcquad2_test_tsc.to_json(LC_QUAD2_TSC_FOLDER+'/test.json', orient='records', index=False, force_ascii=False, indent=2)
-#'''
+'''
 # Applicazione SF a dataset TSC
 '''
 # QALD-9p train
@@ -1097,7 +1097,7 @@ TSC_qald10_df = pd.read_json(TSC_QALD10_PATH)
 SF_qald10 = apply_SF('QALD-10', TSC_qald10_df)
 SF_qald10.to_json(TSC_QALD10_PATH, orient='records', index=False, force_ascii=False, indent=2)
 '''
-#'''
+'''
 # LC-QuAD2 train
 TSC_LCQAUD2_TRAIN_PATH = LC_QUAD2_TSC_FOLDER + '/train.json'
 TSC_lcquad2_train_df = pd.read_json(TSC_LCQAUD2_TRAIN_PATH)
@@ -1108,7 +1108,7 @@ TSC_LCQAUD2_TEST_PATH = LC_QUAD2_TSC_FOLDER + '/test.json'
 TSC_lcquad2_test_df = pd.read_json(TSC_LCQAUD2_TEST_PATH)
 SF_lcquad2_test = apply_SF('LC-QuAD2', TSC_lcquad2_test_df)
 SF_lcquad2_test.to_json(TSC_LCQAUD2_TEST_PATH, orient='records', index=False, force_ascii=False, indent=2)
-#'''
+'''
 ################################
 
 def apply_SB(name_dataset, serie:pd.Series) -> pd.Series:
@@ -1143,7 +1143,7 @@ def apply_SB(name_dataset, serie:pd.Series) -> pd.Series:
     # Semantic Backwarding (SB)
     dataset_ids_labels_map = _get_dataset(name_dataset=name_dataset)
     
-    if dataset_ids_labels_map == None:
+    if dataset_ids_labels_map is None:
         return print('Impossibile eseguire labeling degli id perché il dataset '\
                      'di riferimento non è nel file json della mappatura.')
 
