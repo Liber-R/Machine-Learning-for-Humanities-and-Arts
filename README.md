@@ -2,7 +2,7 @@
 
 In this repository you will find three fine-tuning process files:
 1. *tsc_fine_tuning.py*
-2. *final_fine_tuning.py*
+2. *sequential.py*
 
 The first is for the Triple Sentence Correction (TSC) task.
 The second is the fine-tuning process for the Text-to-Sparql (TTS) task including the lora from tsc_fine_tuning.py.
